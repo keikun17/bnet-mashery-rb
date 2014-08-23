@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Mashery::VERSION
   spec.authors       = ["Buddy Magsipoc"]
   spec.email         = ["keikun17@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "Ruby gem for accessing Blizzard's Mashery API"
+  spec.description   = "This repository (will) contain various libraries for interfacing with takes a deep breath Blizzard's-Battle.net-Mashery- API."
   spec.homepage      = ""
   spec.license       = "MIT"
 
