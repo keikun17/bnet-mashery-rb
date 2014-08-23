@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bnet/mashery/rb2/version'
+require 'mashery/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bnet-mashery-rb2"
-  spec.version       = Bnet::Mashery::Rb2::VERSION
+  spec.name          = "mashery"
+  spec.version       = Mashery::VERSION
   spec.authors       = ["Buddy Magsipoc"]
   spec.email         = ["keikun17@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
