@@ -1,15 +1,11 @@
 module Mashery
   class API
-    def initialize(args={})
-      @region = args[:region].downcase if args[:region]
-    end
+    attr_accessor :region, :secret, :key
 
-    def region=(region)
-      @region = region
-    end
-
-    def region
-      @region
+    def initialize args
+      args.each do |k,v|
+        instance_variable_set("@#{k}", v) unless v.nil?
+      end
     end
 
     def url
