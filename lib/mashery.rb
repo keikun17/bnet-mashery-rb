@@ -1,6 +1,6 @@
 require "mashery/version"
 require "mashery/api"
-# require 'mashery/account'
+require 'mashery/account'
 # require 'mashery/community'
 # require 'mashery/diablo3'
 # require 'mashery/starcraft2'
