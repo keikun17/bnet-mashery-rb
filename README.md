@@ -13,3 +13,8 @@ TODOs:
 - Mashery::Starcraft2
 - Mashery::Wow
 - Mashery::Rails
+
+### Diablo
+
+- Mashery::Diabo3::Career
+- Mashery::Diabo3::Hero

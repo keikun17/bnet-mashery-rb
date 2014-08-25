@@ -1,10 +1,11 @@
 module Mashery
   class Diablo3 < Mashery::API
-    attr_accessor :battletag
+    attr_accessor
 
     def url
-      super + "d3/profile/#{self.battletag}/"
+      super + "d3/"
     end
+
   end
 
 end
