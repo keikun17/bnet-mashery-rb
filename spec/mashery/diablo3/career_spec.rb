@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Mashery::Diablo3::Career do
 
-  describe ".new" do
+  describe ".from_api" do
     let(:attrs){
       ["heroes",
        "lastHeroPlayed",
@@ -15,13 +15,13 @@ describe Mashery::Diablo3::Career do
        "battleTag",
        "progression"]
     }
-    subject{ described_class.new(attrs)}
-    it "Can be initialized" do
-      pending
+    subject{ described_class.from_api(attrs)}
+    it "is initialized" do
+      expect(subject).to be_a_kind_of(described_class)
     end
   end
 
-  describe ".find" do
+  describe ".find", vcr: { cassette_name: 'find_diablo_career_player_one '} do
     subject { described_class.find(args) }
     let(:args) do
       {battletag: 'PlayerOne-1306', region: 'us', key: 'any'}

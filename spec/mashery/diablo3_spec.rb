@@ -11,12 +11,11 @@ describe Mashery::Diablo3 do
       expect(instance.region).to eq("us")
       expect(instance.key).to eq("somekey")
       expect(instance.secret).to eq("somesecret")
-      expect(instance.battletag).to eq("PlayerOne-1309")
     end
   end
 
   describe "url" do
     subject{ instance.url }
-    it { is_expected.to eq("https://us.api.battle.net/d3/profile/PlayerOne-1309/") }
+    it { is_expected.to eq("https://us.api.battle.net/d3/") }
   end
 end

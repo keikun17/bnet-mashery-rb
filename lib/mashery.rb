@@ -1,5 +1,7 @@
 require "mashery/version"
 require 'open-uri'
+require 'json'
+
 require "mashery/api"
 require 'mashery/account'
 require 'mashery/diablo3'

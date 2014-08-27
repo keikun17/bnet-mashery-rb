@@ -17,13 +17,24 @@ class Mashery::Diablo3::Career
     secret = args.delete(:secret)
 
     base_api = Mashery::Diablo3.new(region: region, secret: secret)
-    call_url = base_api.url + "peofile/#{battletag}?key=#{key}"
-    response = URI.parse(call_url).read
+    call_url = base_api.url + "profile/#{battletag}/?apikey=#{key}"
+    response = JSON.parse( URI.parse(call_url).read )
+
+    career = from_api(response)
+  end
+
+  def self.from_api(response)
+    new_hash = {}
+    response.each do |k,v|
+      new_key = career_params_mapping[k]
+      new_hash[new_key] = v
+    end
+    new(new_hash)
   end
 
   private
 
-  def career_params_mapping
+  def self.career_params_mapping
     {
       "heroes" => :heroes,
       "lastHeroPlayed" => :last_hero_played,
