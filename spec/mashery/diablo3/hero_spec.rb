@@ -3,7 +3,27 @@ require 'spec_helper'
 describe Mashery::Diablo3::Hero do
 
   describe ".find" do
-    it "is instatiated from with an API call"
+
+    context "Given the correct battletag and hero id", vcr: {cassette_name: 'diablo_hero_found'} do
+      let(:args) do 
+        {
+          battletag: 'PlayerOne-1309',
+          region: 'us',
+          key: VCR::SECRETS["api_key"],
+          hero_id: 1304986
+        }
+      end
+
+      subject {described_class.find(args)}
+
+      it "Instantiates a hero " do
+        is_expected.to be_a_kind_of(described_class) 
+        expect(subject.name).to eq('PlayerOne')
+        expect(subject.hero_class).to eq('wizard')
+      end
+
+    end
+
   end
 
   describe ".from_api" do
