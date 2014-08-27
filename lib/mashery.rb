@@ -6,6 +6,7 @@ require "mashery/api"
 require 'mashery/account'
 require 'mashery/diablo3'
 require 'mashery/diablo3/career'
+require 'mashery/diablo3/hero'
 # require 'mashery/community'
 # require 'mashery/starcraft2'
 # require 'mashery/wow'
