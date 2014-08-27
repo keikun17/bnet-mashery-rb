@@ -20,7 +20,13 @@ class Mashery::Diablo3::Career
     call_url = base_api.url + "profile/#{battletag}/?apikey=#{key}"
     response = JSON.parse( URI.parse(call_url).read )
 
-    career = from_api(response)
+    if !response["battleTag"].nil?
+      career = from_api(response)
+    else
+      career = nil
+    end
+
+    return career
   end
 
   def self.from_api(response)
