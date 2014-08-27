@@ -33,7 +33,7 @@ class Mashery::Diablo3::Hero
     data = open(call_url)
     parsed_response = JSON.parse(data.read)
 
-    if data.status == ['200', 'OK'] && !parsed_response["code"] != 'NOTFOUND'
+    if data.status == ['200', 'OK'] && parsed_response["code"] != 'NOTFOUND'
       hero = from_api(parsed_response)
     else
       hero = nil

@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/d3/profile/DOESNTEXIST-666/hero/666?apikey=api_key_from_secrets_rb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 27 Aug 2014 15:51:49 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-c3-us-east-1d-03.mashery.com
+      Content-Length:
+      - '91'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "code" : "NOTFOUND",
+          "reason" : "The account could not be found."
+        }
+    http_version: 
+  recorded_at: Wed, 27 Aug 2014 15:51:49 GMT
+recorded_with: VCR 2.9.2
