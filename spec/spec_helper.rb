@@ -9,6 +9,7 @@ require 'pry'
 require 'mashery'
 require 'vcr'
 require 'ostruct'
+require 'secrets_and_all_that'
 
 VCR.configure do |vcr|
   vcr.cassette_library_dir = 'fixtures/cassettes'

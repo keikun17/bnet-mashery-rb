@@ -6,6 +6,7 @@
 /doc/
 /pkg/
 /spec/reports/
+/spec/secrets_and_all_that.rb
 /tmp/
 *.bundle
 *.so
