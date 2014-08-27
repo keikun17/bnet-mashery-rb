@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/?apikey=wae9fv8fdmav7u4zaxnakc4aph2km3u7
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/?apikey=api_key_from_secrets_rb
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 27 Aug 2014 00:50:11 GMT
+      - Wed, 27 Aug 2014 03:12:43 GMT
       Server:
       - Apache
       Vary:
@@ -31,7 +31,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-35.mashery.com
+      - prod-j-worker-c3-us-east-1b-01.mashery.com
       Content-Length:
       - '623'
       Connection:
@@ -157,5 +157,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Wed, 27 Aug 2014 00:50:59 GMT
+  recorded_at: Wed, 27 Aug 2014 03:12:50 GMT
 recorded_with: VCR 2.9.2
