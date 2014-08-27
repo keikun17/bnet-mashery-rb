@@ -24,7 +24,7 @@ describe Mashery::Diablo3::Career do
   describe ".find", vcr: { cassette_name: 'find_diablo_career_player_one '} do
     subject { described_class.find(args) }
     let(:args) do
-      {battletag: 'PlayerOne-1306', region: 'us', key: 'any'}
+      {battletag: 'PlayerOne-1309', region: 'us', key: 'wae9fv8fdmav7u4zaxnakc4aph2km3u7'}
     end
 
     context "Playertag for the server exists" do
