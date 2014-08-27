@@ -20,8 +20,11 @@ class Mashery::Diablo3::Career
     call_url = base_api.url + "profile/#{battletag}/?apikey=#{key}"
     response = JSON.parse( URI.parse(call_url).read )
 
-    if !response["battleTag"].nil?
-      career = from_api(response)
+    data = open(call_url)
+    parsed_response = JSON.parse(data.read)
+
+    if data.status == ['200', 'OK'] && parsed_response["code"] != "NOTFOUND"
+      career = from_api(parsed_response)
     else
       career = nil
     end

@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 27 Aug 2014 03:12:43 GMT
+      - Wed, 27 Aug 2014 15:39:22 GMT
       Server:
       - Apache
       Vary:
@@ -33,7 +33,7 @@ http_interactions:
       X-Mashery-Responder:
       - prod-j-worker-c3-us-east-1b-01.mashery.com
       Content-Length:
-      - '623'
+      - '624'
       Connection:
       - keep-alive
     body:
@@ -66,7 +66,7 @@ http_interactions:
             "gender" : 0,
             "dead" : false,
             "class" : "crusader",
-            "last-updated" : 1397841949
+            "last-updated" : 1409150700
           }, {
             "paragonLevel" : 0,
             "seasonal" : false,
@@ -102,7 +102,7 @@ http_interactions:
             "last-updated" : 1337857100
           } ],
           "lastHeroPlayed" : 44149625,
-          "lastUpdated" : 1397841949,
+          "lastUpdated" : 1409150700,
           "kills" : {
             "monsters" : 55459,
             "elites" : 5236,
@@ -112,7 +112,7 @@ http_interactions:
           "highestHardcoreLevel" : 0,
           "timePlayed" : {
             "barbarian" : 0.0010,
-            "crusader" : 0.106,
+            "crusader" : 0.107,
             "demon-hunter" : 0.0,
             "monk" : 0.0,
             "witch-doctor" : 0.0010,
@@ -138,7 +138,7 @@ http_interactions:
               },
               "timePlayed" : {
                 "barbarian" : 0.0010,
-                "crusader" : 0.106,
+                "crusader" : 0.107,
                 "demon-hunter" : 0.0,
                 "monk" : 0.0,
                 "witch-doctor" : 0.0010,
@@ -157,5 +157,163 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Wed, 27 Aug 2014 03:12:50 GMT
+  recorded_at: Wed, 27 Aug 2014 15:39:22 GMT
+- request:
+    method: get
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/?apikey=api_key_from_secrets_rb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 27 Aug 2014 15:39:22 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-38.mashery.com
+      Content-Length:
+      - '624'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "battleTag" : "PlayerOne#1309",
+          "paragonLevel" : 0,
+          "paragonLevelHardcore" : 0,
+          "paragonLevelSeason" : 0,
+          "paragonLevelSeasonHardcore" : 0,
+          "heroes" : [ {
+            "paragonLevel" : 0,
+            "seasonal" : false,
+            "name" : "PlayerOne",
+            "id" : 1304986,
+            "level" : 70,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "wizard",
+            "last-updated" : 1397322512
+          }, {
+            "paragonLevel" : 0,
+            "seasonal" : false,
+            "name" : "Neggromancer",
+            "id" : 44149625,
+            "level" : 70,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "crusader",
+            "last-updated" : 1409150700
+          }, {
+            "paragonLevel" : 0,
+            "seasonal" : false,
+            "name" : "AuctionHouse",
+            "id" : 17253136,
+            "level" : 2,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "witch-doctor",
+            "last-updated" : 1339162517
+          }, {
+            "paragonLevel" : 0,
+            "seasonal" : false,
+            "name" : "CedardDain",
+            "id" : 1366097,
+            "level" : 2,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "barbarian",
+            "last-updated" : 1337092369
+          }, {
+            "paragonLevel" : 0,
+            "seasonal" : false,
+            "name" : "ChackyJan",
+            "id" : 11756870,
+            "level" : 1,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "monk",
+            "last-updated" : 1337857100
+          } ],
+          "lastHeroPlayed" : 44149625,
+          "lastUpdated" : 1409150700,
+          "kills" : {
+            "monsters" : 55459,
+            "elites" : 5236,
+            "hardcoreMonsters" : 0
+          },
+          "highestDifficulty" : 0,
+          "highestHardcoreLevel" : 0,
+          "timePlayed" : {
+            "barbarian" : 0.0010,
+            "crusader" : 0.107,
+            "demon-hunter" : 0.0,
+            "monk" : 0.0,
+            "witch-doctor" : 0.0010,
+            "wizard" : 1.0
+          },
+          "progression" : {
+            "act1" : true,
+            "act2" : true,
+            "act3" : true,
+            "act4" : true,
+            "act5" : true
+          },
+          "fallenHeroes" : [ ],
+          "seasonalProfiles" : {
+            "0" : {
+              "seasonId" : 0,
+              "paragonLevel" : 100,
+              "paragonLevelHardcore" : 100,
+              "kills" : {
+                "monsters" : 55459,
+                "elites" : 5236,
+                "hardcoreMonsters" : 0
+              },
+              "timePlayed" : {
+                "barbarian" : 0.0010,
+                "crusader" : 0.107,
+                "demon-hunter" : 0.0,
+                "monk" : 0.0,
+                "witch-doctor" : 0.0010,
+                "wizard" : 1.0
+              },
+              "highestDifficulty" : 0,
+              "highestHardcoreLevel" : 0,
+              "progression" : {
+                "act1" : true,
+                "act2" : true,
+                "act3" : true,
+                "act4" : true,
+                "act5" : true
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 27 Aug 2014 15:39:24 GMT
 recorded_with: VCR 2.9.2
