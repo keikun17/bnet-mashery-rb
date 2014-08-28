@@ -4,6 +4,7 @@ cache: bundler
 rvm:
   - 2.0.0
 
+before_script: 'cp spec/secrets_and_all_that.rb.sample spec/secrets_and_all_that.rb'
 script: 'bundle exec rake'
 
 # notifications:
