@@ -29,9 +29,10 @@ class Mashery::Diablo3::Hero
     # NOTE common tasks below -- marker for easier method extraction
     new_hash = {}
     association_hash ||= {}
-    response.each do |k,v|
-      new_key = hero_params_mapping[k]
-      new_hash[new_key] = v
+    params_mapping.each do |old_key, new_key|
+      if response.has_key?(old_key)
+        new_hash[new_key] = response[old_key]
+      end
     end
 
     new_hash.merge!(association_hash)
@@ -72,7 +73,7 @@ class Mashery::Diablo3::Hero
 
   private
 
-  def self.hero_params_mapping
+  def self.params_mapping
     {
       "paragonLevel" => :paragon_level,
       "seasonal" => :seasonal,

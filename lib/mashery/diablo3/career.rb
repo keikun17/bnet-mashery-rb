@@ -34,16 +34,17 @@ class Mashery::Diablo3::Career
 
   def self.from_api(response)
     new_hash = {}
-    response.each do |k,v|
-      new_key = career_params_mapping[k]
-      new_hash[new_key] = v
+    params_mapping.each do |old_key, new_key|
+      if response.has_key?(old_key)
+        new_hash[new_key] = response[old_key]
+      end
     end
     new(new_hash)
   end
 
   private
 
-  def self.career_params_mapping
+  def self.params_mapping
     {
       "heroes" => :heroes,
       "lastHeroPlayed" => :last_hero_played,
