@@ -21,6 +21,21 @@ describe Mashery::Diablo3::Hero do
         expect(subject.hero_class).to eq('wizard')
       end
 
+      it "assigns skills" do
+        expect(subject.active_skills.map(&:name)).
+          to match_array([ "Magic Missile", "Arcane Orb",
+                           "Hydra", "Familiar", "Magic Weapon",
+                           "Teleport" ])
+
+        expect(subject.active_skills.map(&:rune)).
+          to match_array([ "Seeker", "Frozen Orb", "Frost Hydra", "Sparkflint",
+                           "Force Weapon", "Fracture"])
+
+        expect(subject.passive_skills.map(&:name)).
+          to match_array([ "Elemental Exposure", "Prodigy", "Astral Presence",
+                           "Cold Blooded" ])
+      end
+
     end
 
     context "Given the hero does not exist on that tag/realm", vcr: {cassette_name: 'diablo_hero_notf_found'} do
@@ -47,6 +62,7 @@ describe Mashery::Diablo3::Hero do
           "dead" => false, "class" => "wizard", "last-updated" => 1397322512
         }
       end
+
       subject { described_class.from_api(api_args) }
 
       it "can be initialized" do
