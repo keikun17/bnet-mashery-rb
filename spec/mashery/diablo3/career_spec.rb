@@ -4,16 +4,12 @@ describe Mashery::Diablo3::Career do
 
   describe ".from_api" do
     let(:attrs){
-      ["heroes",
-       "lastHeroPlayed",
-       "lastUpdated",
-       "kills",
-       "timePlayed",
-       "fallenHeroes",
-       "paragonLevel",
-       "paragonLevelHardcore",
-       "battleTag",
-       "progression"]
+      {
+        "heroes" => 'val', "lastheroplayed" => 'val', "lastupdated" => 'val',
+        "kills" => 'val', "timeplayed" => 'val', "fallenheroes" => 'val',
+        "paragonlevel" => 'val', "paragonlevelhardcore" => 'val',
+        "battletag" => 'val', "progression" => 'val'
+      }
     }
     subject{ described_class.from_api(attrs)}
     it "is initialized" do
