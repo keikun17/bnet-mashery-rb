@@ -7,14 +7,25 @@ This repository (will) contain various libraries for interfacing with *takes a d
 
 TODOs:
 
-- Mashery::Account
-- Mashery::Community
-- Mashery::Diablo3
-- Mashery::Starcraft2
-- Mashery::Wow
-- Mashery::Rails
+[] Mashery::Account
+[] Mashery::Community
+[] Mashery::Diablo3
+[] Mashery::Starcraft2
+[] Mashery::Wow
+-] Mashery::Rails
 
 ### Diablo
 
-- Mashery::Diabo3::Career
-- Mashery::Diabo3::Hero
+[x] Mashery::Diabo3::Career
+[x] Mashery::Diabo3::Hero
+    - [x] Mashery::Diablo3::Skill
+
+### Starcraft
+
+[x] MAshery::Starcraft2::Profile
+    - [] Mashery::Starcraft2::Matches
+    - [] Mashery::Starcraft2::Ladder
+    - [] Mashery::Starcraft2::Career
+
+
+### WOW
