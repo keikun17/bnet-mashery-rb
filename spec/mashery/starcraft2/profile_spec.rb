@@ -33,11 +33,12 @@ describe Mashery::Starcraft2::Profile do
         expect(subject.achievement_points).to eq(550)
       end
 
-      # TODO:
-      # expect(subject.terran_level).to eq(0)
-      # expect(subject.protoss_level).to eq(2)
-      # expect(subject.zerg_level).to eq(0)
-      it "sets the level information" 
+      it "sets the level information"  do
+        expect(subject.swarm_level).to eq(2)
+        expect(subject.terran_level).to eq(0)
+        expect(subject.protoss_level).to eq(2)
+        expect(subject.zerg_level).to eq(0)
+      end
     end
 
     context "specified user does not exist on the server", {vcr: {cassette_name: "sc2_profile_not_found" }} do

@@ -1,10 +1,9 @@
 class Mashery::Starcraft2::Profile
 
   attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag,
-    :achievement_points
+    :achievement_points, :swarm_level, :terran_level, :zerg_level,
+    :protoss_level, :acievement_points
 
-    # TODO: accessors for :overall_level, :terran_level, :zerg_level,
-    #                     :protoss_level, :acievement_points
     # TODO: Associations for career, current_season
   #
   def career
@@ -62,17 +61,25 @@ class Mashery::Starcraft2::Profile
 
   def self.from_api(response)
     new_hash = {}
+    association_hash ||= {}
+    other_attributes ||= {}
 
     if response["achievements"]
       achievement_points = response["achievements"]["points"]["totalPoints"]
-
-      other_attributes = {achievement_points: achievement_points}
+      other_attributes.merge!({achievement_points: achievement_points})
     end
 
+    if response["swarmLevels"]
+      other_attributes.merge!({
+        :swarm_level   => response["swarmLevels"]["level"],
+        :terran_level  => response["swarmLevels"]["terran"]["level"],
+        :protoss_level => response["swarmLevels"]["protoss"]["level"],
+        :zerg_level    => response["swarmLevels"]["zerg"]["level"]
+      })
+    end
+
+
     # NOTE common tasks below -- marker for easier method extraction
-    new_hash = {}
-    association_hash ||= {}
-    other_attributes ||= {}
     params_mapping.each do |old_key, new_key|
       if response.has_key?(old_key)
         new_hash[new_key] = response[old_key]
