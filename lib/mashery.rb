@@ -9,8 +9,10 @@ require 'mashery/diablo3/career'
 require 'mashery/diablo3/hero'
 require 'mashery/diablo3/skill'
 # require 'mashery/community'
-# require 'mashery/starcraft2'
-# require 'mashery/wow'
+require 'mashery/starcraft2'
+require 'mashery/starcraft2/profile'
+require 'mashery/wow'
+require 'mashery/wow/character'
 # require 'mashery/rails'
 
 module Mashery

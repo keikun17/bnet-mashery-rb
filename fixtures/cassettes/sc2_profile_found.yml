@@ -1,0 +1,523 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/sc2/profile/2143215/1/PlayerOne/?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Fri, 29 Aug 2014 08:40:06 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-44.mashery.com
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id" : 2143215,
+          "realm" : 1,
+          "displayName" : "PlayerOne",
+          "clanName" : "",
+          "clanTag" : "",
+          "profilePath" : "/profile/2143215/1/PlayerOne/",
+          "portrait" : {
+            "x" : 0,
+            "y" : -90,
+            "w" : 90,
+            "h" : 90,
+            "offset" : 6,
+            "url" : "http://media.blizzard.com/sc2/portraits/1-90.jpg"
+          },
+          "career" : {
+            "primaryRace" : "PROTOSS",
+            "terranWins" : 0,
+            "protossWins" : 0,
+            "zergWins" : 0,
+            "highest1v1Rank" : "DIAMOND",
+            "highestTeamRank" : "MASTER",
+            "seasonTotalGames" : 0,
+            "careerTotalGames" : 780
+          },
+          "swarmLevels" : {
+            "level" : 2,
+            "terran" : {
+              "level" : 0,
+              "totalLevelXP" : 5000,
+              "currentLevelXP" : 0
+            },
+            "zerg" : {
+              "level" : 0,
+              "totalLevelXP" : 5000,
+              "currentLevelXP" : 0
+            },
+            "protoss" : {
+              "level" : 2,
+              "totalLevelXP" : 65000,
+              "currentLevelXP" : 57819
+            }
+          },
+          "campaign" : { },
+          "season" : {
+            "seasonId" : 19,
+            "seasonNumber" : 3,
+            "seasonYear" : 2014,
+            "totalGamesThisSeason" : 0
+          },
+          "rewards" : {
+            "selected" : [ 18730036, 863976264, 2359737029, 2420367594 ],
+            "earned" : [ 19065053, 199895074, 234481452, 328039243, 354595443, 382993515, 547085114, 595375415, 615147322, 637508413, 700641953, 716760434, 722125123, 744177281, 863976264, 868991824, 943692309, 1002357867, 1079649078, 1177038943, 1202205842, 1232091643, 1294733777, 1330937594, 1399145799, 1435566629, 1548839636, 1563607663, 1605367309, 1702690519, 1728751618, 1750262021, 1756072743, 1798698573, 1807193192, 2000337393, 2031806605, 2071251289, 2119427912, 2340900877, 2420367594, 2449282564, 2636717639, 2665125299, 2710644389, 2718858952, 2730379211, 2753058248, 2809480242, 2825428175, 2951203821, 3030985253, 3045219362, 3152244759, 3205179785, 3281768270, 3318566415, 3319454886, 3587635379, 3621197834, 3690831617, 3692299263, 3798567608, 3821720584, 3918875355, 3968752759, 3992742131, 4000903407, 4017064141, 4017588258, 4162301223, 4179975174, 4180779287 ]
+          },
+          "achievements" : {
+            "points" : {
+              "totalPoints" : 550,
+              "categoryPoints" : {
+                "4325382" : 0,
+                "4325380" : 40,
+                "4325408" : 0,
+                "4325379" : 0,
+                "4325410" : 0,
+                "4325377" : 510
+              }
+            },
+            "achievements" : [ {
+              "achievementId" : 91475320768606,
+              "completionDate" : 1396671948
+            }, {
+              "achievementId" : 91475320767775,
+              "completionDate" : 1368029156
+            }, {
+              "achievementId" : 91475035553834,
+              "completionDate" : 1354107134
+            }, {
+              "achievementId" : 91475035553841,
+              "completionDate" : 1354014903
+            }, {
+              "achievementId" : 91475320766492,
+              "completionDate" : 1350300196
+            }, {
+              "achievementId" : 91475320766634,
+              "completionDate" : 1343996428
+            }, {
+              "achievementId" : 91475320766498,
+              "completionDate" : 1341843914
+            }, {
+              "achievementId" : 91475320767600,
+              "completionDate" : 1338806355
+            }, {
+              "achievementId" : 91475320766465,
+              "completionDate" : 1336394804
+            }, {
+              "achievementId" : 91475320766536,
+              "completionDate" : 1335712460
+            }, {
+              "achievementId" : 91475035553806,
+              "completionDate" : 1335365314
+            }, {
+              "achievementId" : 91475320767590,
+              "completionDate" : 1331389537
+            }, {
+              "achievementId" : 91475320767197,
+              "completionDate" : 1331389537
+            }, {
+              "achievementId" : 91475320766518,
+              "completionDate" : 1331299230
+            }, {
+              "achievementId" : 91475320766510,
+              "completionDate" : 1330182719
+            }, {
+              "achievementId" : 91475320766527,
+              "completionDate" : 1329143944
+            }, {
+              "achievementId" : 91475035553811,
+              "completionDate" : 1328363000
+            }, {
+              "achievementId" : 91475035553843,
+              "completionDate" : 1328195495
+            }, {
+              "achievementId" : 91475035553831,
+              "completionDate" : 1328194594
+            }, {
+              "achievementId" : 91475035553839,
+              "completionDate" : 1328192795
+            }, {
+              "achievementId" : 91475035553824,
+              "completionDate" : 1328191703
+            }, {
+              "achievementId" : 91475035553823,
+              "completionDate" : 1328191653
+            }, {
+              "achievementId" : 91475035553822,
+              "completionDate" : 1328027355
+            }, {
+              "achievementId" : 91475035553832,
+              "completionDate" : 1328026021
+            }, {
+              "achievementId" : 91475035553829,
+              "completionDate" : 1328024724
+            }, {
+              "achievementId" : 91475035553820,
+              "completionDate" : 1328019701
+            }, {
+              "achievementId" : 91475035553818,
+              "completionDate" : 1328018550
+            }, {
+              "achievementId" : 91475035553817,
+              "completionDate" : 1328018520
+            }, {
+              "achievementId" : 91475035553830,
+              "completionDate" : 1328017162
+            }, {
+              "achievementId" : 91475320766633,
+              "completionDate" : 1326551472
+            }, {
+              "achievementId" : 91475320767210,
+              "completionDate" : 1312135930
+            }, {
+              "achievementId" : 91475320767586,
+              "completionDate" : 1312135930
+            }, {
+              "achievementId" : 91475320766542,
+              "completionDate" : 1311347836
+            }, {
+              "achievementId" : 91475035553838,
+              "completionDate" : 1305469000
+            }, {
+              "achievementId" : 91475035553848,
+              "completionDate" : 1293202143
+            }, {
+              "achievementId" : 91475035553821,
+              "completionDate" : 1291461608
+            }, {
+              "achievementId" : 91475035553847,
+              "completionDate" : 1290828618
+            }, {
+              "achievementId" : 91475035553833,
+              "completionDate" : 1290691549
+            }, {
+              "achievementId" : 91475320766710,
+              "completionDate" : 1290689257
+            }, {
+              "achievementId" : 91475035553814,
+              "completionDate" : 1289752302
+            }, {
+              "achievementId" : 91475035553840,
+              "completionDate" : 1289752244
+            }, {
+              "achievementId" : 91475035553816,
+              "completionDate" : 1285425069
+            }, {
+              "achievementId" : 91475035553819,
+              "completionDate" : 1285425015
+            }, {
+              "achievementId" : 91475035553844,
+              "completionDate" : 1285259329
+            }, {
+              "achievementId" : 91475035553798,
+              "completionDate" : 1285258370
+            }, {
+              "achievementId" : 91475320766506,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475320766709,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475320766700,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475320766707,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475035553828,
+              "completionDate" : 1285256239
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 29 Aug 2014 08:40:06 GMT
+- request:
+    method: get
+    uri: https://us.api.battle.net/sc2/profile/2143215/1/PlayerOne/?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Fri, 29 Aug 2014 08:40:06 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-40.mashery.com
+      Content-Length:
+      - '1549'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id" : 2143215,
+          "realm" : 1,
+          "displayName" : "PlayerOne",
+          "clanName" : "",
+          "clanTag" : "",
+          "profilePath" : "/profile/2143215/1/PlayerOne/",
+          "portrait" : {
+            "x" : 0,
+            "y" : -90,
+            "w" : 90,
+            "h" : 90,
+            "offset" : 6,
+            "url" : "http://media.blizzard.com/sc2/portraits/1-90.jpg"
+          },
+          "career" : {
+            "primaryRace" : "PROTOSS",
+            "terranWins" : 0,
+            "protossWins" : 0,
+            "zergWins" : 0,
+            "highest1v1Rank" : "DIAMOND",
+            "highestTeamRank" : "MASTER",
+            "seasonTotalGames" : 0,
+            "careerTotalGames" : 780
+          },
+          "swarmLevels" : {
+            "level" : 2,
+            "terran" : {
+              "level" : 0,
+              "totalLevelXP" : 5000,
+              "currentLevelXP" : 0
+            },
+            "zerg" : {
+              "level" : 0,
+              "totalLevelXP" : 5000,
+              "currentLevelXP" : 0
+            },
+            "protoss" : {
+              "level" : 2,
+              "totalLevelXP" : 65000,
+              "currentLevelXP" : 57819
+            }
+          },
+          "campaign" : { },
+          "season" : {
+            "seasonId" : 19,
+            "seasonNumber" : 3,
+            "seasonYear" : 2014,
+            "totalGamesThisSeason" : 0
+          },
+          "rewards" : {
+            "selected" : [ 18730036, 863976264, 2359737029, 2420367594 ],
+            "earned" : [ 19065053, 199895074, 234481452, 328039243, 354595443, 382993515, 547085114, 595375415, 615147322, 637508413, 700641953, 716760434, 722125123, 744177281, 863976264, 868991824, 943692309, 1002357867, 1079649078, 1177038943, 1202205842, 1232091643, 1294733777, 1330937594, 1399145799, 1435566629, 1548839636, 1563607663, 1605367309, 1702690519, 1728751618, 1750262021, 1756072743, 1798698573, 1807193192, 2000337393, 2031806605, 2071251289, 2119427912, 2340900877, 2420367594, 2449282564, 2636717639, 2665125299, 2710644389, 2718858952, 2730379211, 2753058248, 2809480242, 2825428175, 2951203821, 3030985253, 3045219362, 3152244759, 3205179785, 3281768270, 3318566415, 3319454886, 3587635379, 3621197834, 3690831617, 3692299263, 3798567608, 3821720584, 3918875355, 3968752759, 3992742131, 4000903407, 4017064141, 4017588258, 4162301223, 4179975174, 4180779287 ]
+          },
+          "achievements" : {
+            "points" : {
+              "totalPoints" : 550,
+              "categoryPoints" : {
+                "4325382" : 0,
+                "4325380" : 40,
+                "4325408" : 0,
+                "4325379" : 0,
+                "4325410" : 0,
+                "4325377" : 510
+              }
+            },
+            "achievements" : [ {
+              "achievementId" : 91475320768606,
+              "completionDate" : 1396671948
+            }, {
+              "achievementId" : 91475320767775,
+              "completionDate" : 1368029156
+            }, {
+              "achievementId" : 91475035553834,
+              "completionDate" : 1354107134
+            }, {
+              "achievementId" : 91475035553841,
+              "completionDate" : 1354014903
+            }, {
+              "achievementId" : 91475320766492,
+              "completionDate" : 1350300196
+            }, {
+              "achievementId" : 91475320766634,
+              "completionDate" : 1343996428
+            }, {
+              "achievementId" : 91475320766498,
+              "completionDate" : 1341843914
+            }, {
+              "achievementId" : 91475320767600,
+              "completionDate" : 1338806355
+            }, {
+              "achievementId" : 91475320766465,
+              "completionDate" : 1336394804
+            }, {
+              "achievementId" : 91475320766536,
+              "completionDate" : 1335712460
+            }, {
+              "achievementId" : 91475035553806,
+              "completionDate" : 1335365314
+            }, {
+              "achievementId" : 91475320767590,
+              "completionDate" : 1331389537
+            }, {
+              "achievementId" : 91475320767197,
+              "completionDate" : 1331389537
+            }, {
+              "achievementId" : 91475320766518,
+              "completionDate" : 1331299230
+            }, {
+              "achievementId" : 91475320766510,
+              "completionDate" : 1330182719
+            }, {
+              "achievementId" : 91475320766527,
+              "completionDate" : 1329143944
+            }, {
+              "achievementId" : 91475035553811,
+              "completionDate" : 1328363000
+            }, {
+              "achievementId" : 91475035553843,
+              "completionDate" : 1328195495
+            }, {
+              "achievementId" : 91475035553831,
+              "completionDate" : 1328194594
+            }, {
+              "achievementId" : 91475035553839,
+              "completionDate" : 1328192795
+            }, {
+              "achievementId" : 91475035553824,
+              "completionDate" : 1328191703
+            }, {
+              "achievementId" : 91475035553823,
+              "completionDate" : 1328191653
+            }, {
+              "achievementId" : 91475035553822,
+              "completionDate" : 1328027355
+            }, {
+              "achievementId" : 91475035553832,
+              "completionDate" : 1328026021
+            }, {
+              "achievementId" : 91475035553829,
+              "completionDate" : 1328024724
+            }, {
+              "achievementId" : 91475035553820,
+              "completionDate" : 1328019701
+            }, {
+              "achievementId" : 91475035553818,
+              "completionDate" : 1328018550
+            }, {
+              "achievementId" : 91475035553817,
+              "completionDate" : 1328018520
+            }, {
+              "achievementId" : 91475035553830,
+              "completionDate" : 1328017162
+            }, {
+              "achievementId" : 91475320766633,
+              "completionDate" : 1326551472
+            }, {
+              "achievementId" : 91475320767210,
+              "completionDate" : 1312135930
+            }, {
+              "achievementId" : 91475320767586,
+              "completionDate" : 1312135930
+            }, {
+              "achievementId" : 91475320766542,
+              "completionDate" : 1311347836
+            }, {
+              "achievementId" : 91475035553838,
+              "completionDate" : 1305469000
+            }, {
+              "achievementId" : 91475035553848,
+              "completionDate" : 1293202143
+            }, {
+              "achievementId" : 91475035553821,
+              "completionDate" : 1291461608
+            }, {
+              "achievementId" : 91475035553847,
+              "completionDate" : 1290828618
+            }, {
+              "achievementId" : 91475035553833,
+              "completionDate" : 1290691549
+            }, {
+              "achievementId" : 91475320766710,
+              "completionDate" : 1290689257
+            }, {
+              "achievementId" : 91475035553814,
+              "completionDate" : 1289752302
+            }, {
+              "achievementId" : 91475035553840,
+              "completionDate" : 1289752244
+            }, {
+              "achievementId" : 91475035553816,
+              "completionDate" : 1285425069
+            }, {
+              "achievementId" : 91475035553819,
+              "completionDate" : 1285425015
+            }, {
+              "achievementId" : 91475035553844,
+              "completionDate" : 1285259329
+            }, {
+              "achievementId" : 91475035553798,
+              "completionDate" : 1285258370
+            }, {
+              "achievementId" : 91475320766506,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475320766709,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475320766700,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475320766707,
+              "completionDate" : 1285258347
+            }, {
+              "achievementId" : 91475035553828,
+              "completionDate" : 1285256239
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 29 Aug 2014 08:40:07 GMT
+recorded_with: VCR 2.9.2
