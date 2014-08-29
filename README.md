@@ -19,6 +19,10 @@ TODOs:
 - [x] Mashery::Diabo3::Career
 - [x] Mashery::Diabo3::Hero
   - [x] Mashery::Diablo3::Skill
+- [ ] Mashery::Diablo3::Data
+  - [ ] Items
+  - [ ] Followers
+  - [ ] Artisan
 
 ### Starcraft
 
@@ -26,6 +30,10 @@ TODOs:
   - [ ] Mashery::Starcraft2::Matches
   - [ ] Mashery::Starcraft2::Ladder
   - [ ] Mashery::Starcraft2::Career
+- [ ] Mashery::Starcraft2::Ladder
+- [ ] Mashery::Starcraft2::Data
+  - [ ] Achievements
+  - [ ] Rewards
 
 ### WOW
 
