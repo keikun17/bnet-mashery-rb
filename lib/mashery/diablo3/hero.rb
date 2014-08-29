@@ -59,16 +59,21 @@ class Mashery::Diablo3::Hero
     base_api = Mashery::Diablo3.new(region: region, secret: secret)
     call_url = base_api.url + "profile/#{battletag}/hero/#{hero_id}?apikey=#{key}"
 
-    data = open(call_url)
-    parsed_response = JSON.parse(data.read)
+    begin
+      data = open(call_url)
+      parsed_response = JSON.parse(data.read)
 
-    if data.status == ['200', 'OK'] && parsed_response["code"] != 'NOTFOUND'
-      hero = from_api(parsed_response)
-    else
-      hero = nil
+      if data.status == ['200', 'OK'] && parsed_response["code"] != 'NOTFOUND'
+        bnet_object = from_api(parsed_response)
+      else
+        bnet_object = nil
+      end
+
+    rescue OpenURI::HTTPError => e
+      bnet_object = nil
     end
 
-    return hero
+    return bnet_object
   end
 
   private
