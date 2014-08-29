@@ -29,9 +29,9 @@ describe Mashery::Starcraft2::Profile do
         expect(subject.display_name).to eq("PlayerOne")
       end
 
-      # TODO
-      # expect(subject.achievement_points).to eq(550)
-      it "sets the achievement point details"
+      it "sets the achievement point details" do
+        expect(subject.achievement_points).to eq(550)
+      end
 
       # TODO:
       # expect(subject.terran_level).to eq(0)

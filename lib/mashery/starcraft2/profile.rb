@@ -1,6 +1,7 @@
 class Mashery::Starcraft2::Profile
 
-  attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag
+  attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag,
+    :achievement_points
 
     # TODO: accessors for :overall_level, :terran_level, :zerg_level,
     #                     :protoss_level, :acievement_points
@@ -61,12 +62,27 @@ class Mashery::Starcraft2::Profile
 
   def self.from_api(response)
     new_hash = {}
+
+    if response["achievements"]
+      achievement_points = response["achievements"]["points"]["totalPoints"]
+
+      other_attributes = {achievement_points: achievement_points}
+    end
+
+    # NOTE common tasks below -- marker for easier method extraction
+    new_hash = {}
+    association_hash ||= {}
+    other_attributes ||= {}
     params_mapping.each do |old_key, new_key|
       if response.has_key?(old_key)
         new_hash[new_key] = response[old_key]
       end
     end
+
+    new_hash.merge!(association_hash)
+    new_hash.merge!(other_attributes)
     new(new_hash)
+    # NOTE end of common tasks
   end
 
   private
