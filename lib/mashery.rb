@@ -12,6 +12,7 @@ require 'mashery/diablo3/skill'
 require 'mashery/starcraft2'
 require 'mashery/starcraft2/profile'
 require 'mashery/wow'
+require 'mashery/wow/data'
 require 'mashery/wow/character'
 # require 'mashery/rails'
 

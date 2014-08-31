@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/data/battlegroups/?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 31 Aug 2014 14:41:08 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-40.mashery.com
+      Content-Length:
+      - '222'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"battlegroups":[{"name":"Bloodlust","slug":"bloodlust"},{"name":"Coliseum
+        1","slug":"coliseum-1"},{"name":"Cyclone","slug":"cyclone"},{"name":"Emberstorm","slug":"emberstorm"},{"name":"Nightfall","slug":"nightfall"},{"name":"Rampage","slug":"rampage"},{"name":"Reckoning","slug":"reckoning"},{"name":"Retaliation","slug":"retaliation"},{"name":"Ruin","slug":"ruin"},{"name":"Shadowburn","slug":"shadowburn"},{"name":"Stormstrike","slug":"stormstrike"},{"name":"Vengeance","slug":"vengeance"},{"name":"Vindication","slug":"vindication"},{"name":"Whirlwind","slug":"whirlwind"}]}'
+    http_version: 
+  recorded_at: Sun, 31 Aug 2014 14:41:12 GMT
+recorded_with: VCR 2.9.2
