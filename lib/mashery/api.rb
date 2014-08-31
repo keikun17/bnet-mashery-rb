@@ -14,5 +14,9 @@ module Mashery
       "https://#{region}.api.battle.net/"
     end
 
+    def self.valid_call?(status, response)
+      status == ['200', 'OK'] && response["code"] != 'NOTFOUND'
+    end
+
   end
 end
