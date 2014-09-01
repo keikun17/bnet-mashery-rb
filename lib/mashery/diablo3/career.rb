@@ -33,19 +33,34 @@ class Mashery::Diablo3::Career
 
   def self.from_api(response)
     new_hash = {}
+    association_hash ||= {}
+    other_attributes ||= {}
+
+    if response["heroes"]
+      heroes = response["heroes"].collect do |raw_hero_attrs|
+        Mashery::Diablo3::Hero.from_api(raw_hero_attrs)
+      end
+
+      association_hash = {heroes: heroes}
+    end
+
+    # NOTE common tasks below -- marker for easier method extraction
     params_mapping.each do |old_key, new_key|
       if response.has_key?(old_key)
         new_hash[new_key] = response[old_key]
       end
     end
+
+    new_hash.merge!(association_hash)
+    new_hash.merge!(other_attributes)
     new(new_hash)
+    # NOTE end of common tasks
   end
 
   private
 
   def self.params_mapping
     {
-      "heroes" => :heroes,
       "lastHeroPlayed" => :last_hero_played,
       "lastUpdated" => :last_updated,
       "kills" => :kills,

@@ -17,6 +17,7 @@ TODOs:
 ### Diablo
 
 - [x] Mashery::Diabo3::Career
+  - [ ] Heroes (as `Hero`)
 - [x] Mashery::Diabo3::Hero
   - [x] Mashery::Diablo3::Skill
 - [ ] Mashery::Diablo3::Data

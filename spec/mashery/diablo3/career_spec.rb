@@ -4,8 +4,8 @@ describe Mashery::Diablo3::Career do
 
   describe ".from_api" do
     let(:attrs){
-      {
-        "heroes" => 'val', "lastheroplayed" => 'val', "lastupdated" => 'val',
+      { 
+        "heroes" => [], "lastheroplayed" => 'val', "lastupdated" => 'val',
         "kills" => 'val', "timeplayed" => 'val', "fallenheroes" => 'val',
         "paragonlevel" => 'val', "paragonlevelhardcore" => 'val',
         "battletag" => 'val', "progression" => 'val'
@@ -18,13 +18,19 @@ describe Mashery::Diablo3::Career do
   end
 
   describe ".find" do
-    subject { described_class.find(args) }
+    subject(:career) { described_class.find(args) }
 
     context "Playertag for the server exists" ,vcr: { cassette_name: 'find_diablo_career_player_one '} do
       let(:args) do
         { battletag: 'PlayerOne-1309', region: 'us', key: VCR::SECRETS["api_key"] }
       end
       it { is_expected.to_not be_nil }
+      it "assigns the heroes attribute" do
+        expect(career.heroes).to_not be_empty
+        career.heroes.each do |hero|
+          expect(hero).to be_a_kind_of(Mashery::Diablo3::Hero)
+        end
+      end
     end
 
     context "Playertag for the server does not exist", vcr: { cassette_name: 'find_diablo_career_doesnt_exist'} do
