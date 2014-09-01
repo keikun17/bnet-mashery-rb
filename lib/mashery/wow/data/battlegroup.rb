@@ -30,4 +30,13 @@ class Mashery::WOW::Data::Battlegroup < Mashery::WOW::Data::Base
     { "name" => :name, "slug" => :slug }
   end
 
+  private
+
+  def self.scopes
+    {
+      url: 'battlegroups',
+      collection_root: 'battlegroups'
+    }
+  end
+
 end

@@ -6,8 +6,8 @@ class Mashery::WOW::Data::Base
     end
   end
 
-  def scope
-    raise "scope is not defined"
+  def self.scopes
+    raise "scopes not defined for this subclass."
   end
 
   # Query Battlenet API for the the data based on the subclass's scope
@@ -26,7 +26,7 @@ class Mashery::WOW::Data::Base
     locale     = args.delete(:locale) || 'en_US'
 
     base_api = Mashery::WOW.new(region: region)
-    call_url = base_api.url + 'data/' + self.scope + "/?locale=#{locale}&apikey=#{key}"
+    call_url = base_api.url + 'data/' + self.scopes[:url] + "/?locale=#{locale}&apikey=#{key}"
 
     begin
       data = open(call_url)
@@ -49,7 +49,7 @@ class Mashery::WOW::Data::Base
   private
 
   def self.collection_from_api(response_collection)
-    response_collection[scope].collect do |attrs|
+    response_collection[ self.scopes[:collection_root] ].collect do |attrs|
       new(attrs)
     end
   end
