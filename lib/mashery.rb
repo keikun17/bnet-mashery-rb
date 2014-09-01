@@ -2,6 +2,18 @@ require "mashery/version"
 require 'open-uri'
 require 'json'
 
+require "mashery/configuration"
+
+module Mashery
+  def self.configuration
+    @configuration ||= Mashery::Configuration.new
+  end
+
+  def self.configuration=(configuration)
+    @configuration = configuration
+  end
+end
+
 require "mashery/api"
 require 'mashery/account'
 require 'mashery/diablo3'

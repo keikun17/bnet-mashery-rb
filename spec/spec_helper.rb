@@ -22,5 +22,8 @@ RSpec.configure do |config|
   config.color = true
   config.tty = true
   config.failure_color = :magenta
-  # optional config here
+
+  config.before(:example) do
+    Mashery.configuration.api_key = VCR::SECRETS["api_key"]
+  end
 end

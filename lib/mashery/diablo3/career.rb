@@ -13,10 +13,10 @@ class Mashery::Diablo3::Career
   def self.find args
     battletag = args.delete(:battletag)
     region = args.delete(:region)
-    key = args.delete(:key)
+    api_key = args.delete(:api_key) || Mashery.configuration.api_key
 
     base_api = Mashery::Diablo3.new(region: region)
-    call_url = base_api.url + "profile/#{battletag}/?apikey=#{key}"
+    call_url = base_api.url + "profile/#{battletag}/?apikey=#{api_key}"
     response = JSON.parse( URI.parse(call_url).read )
 
     data = open(call_url)

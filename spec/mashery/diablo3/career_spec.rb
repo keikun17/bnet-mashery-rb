@@ -22,7 +22,7 @@ describe Mashery::Diablo3::Career do
 
     context "Playertag for the server exists" ,vcr: { cassette_name: 'find_diablo_career_player_one '} do
       let(:args) do
-        { battletag: 'PlayerOne-1309', region: 'us', key: VCR::SECRETS["api_key"] }
+        { battletag: 'PlayerOne-1309', region: 'us' }
       end
       it { is_expected.to_not be_nil }
       it "assigns the heroes attribute" do
@@ -35,7 +35,7 @@ describe Mashery::Diablo3::Career do
 
     context "Playertag for the server does not exist", vcr: { cassette_name: 'find_diablo_career_doesnt_exist'} do
       let(:args) do
-        { battletag: 'DoesntExist-42', region: 'us', key: VCR::SECRETS["api_key"] }
+        { battletag: 'DoesntExist-42', region: 'us' }
       end
       it { is_expected.to be_nil }
     end
