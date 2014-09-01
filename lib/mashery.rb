@@ -26,8 +26,8 @@ require 'mashery/starcraft2/profile'
 require 'mashery/wow'
 require 'mashery/wow/data'
 require 'mashery/wow/character'
-# require 'mashery/rails'
 
-module Mashery
-  # Your code goes here...
-end
+# Separate gem for rails...
+# require 'mashery/rails' if defined?(::Rails) && ::Rails::VERSION::MAJOR >= 3
+# or as a railtie...
+# require 'mashery/railtie' if defined?(::Rails) && ::Rails::VERSION::MAJOR >= 3
