@@ -1,18 +1,12 @@
 class Mashery::WOW::Data::Battlegroup < Mashery::WOW::Data::Base
-
   attr :name, :slug
 
-  def self.params_mapping
-    { "name" => :name, "slug" => :slug }
-  end
+  SCOPES = {
+    url: 'battlegroups',
+    collection_root: 'battlegroups'
+  }
 
-  private
-
-  def self.scopes
-    {
-      url: 'battlegroups',
-      collection_root: 'battlegroups'
-    }
-  end
+  PARAMS_MAPPING = { "name" => :name, "slug" => :slug }
 
 end
+
