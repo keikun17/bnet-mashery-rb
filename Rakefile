@@ -8,3 +8,7 @@ RSpec::Core::RakeTask.new(:spec) do |task|
 end
 
 task default: :spec
+
+task :console do
+  sh "irb -rubygems -I lib -r mashery.rb"
+end
