@@ -23,7 +23,7 @@ describe Mashery::Starcraft2::Profile do
     subject { described_class.find(attrs) }
     context "Specified user exists for the server", vcr: {cassette_name: 'sc2_profile_found'} do
       let (:attrs) {
-        {region: 'us', profile_id: 2143215, name: 'PlayerOne', key: VCR::SECRETS["api_key"]}
+        {region: 'us', profile_id: 2143215, name: 'PlayerOne'}
       }
       it "returns an instance" do
         expect(subject.display_name).to eq("PlayerOne")
@@ -43,7 +43,7 @@ describe Mashery::Starcraft2::Profile do
 
     context "specified user does not exist on the server", {vcr: {cassette_name: "sc2_profile_not_found" }} do
       let (:attrs) {
-        {region: 'us', profile_id: 2143215, name: 'PlayeZero', key: VCR::SECRETS["api_key"]}
+        {region: 'us', profile_id: 2143215, name: 'PlayeZero'}
       }
 
       it {is_expected.to be_nil}

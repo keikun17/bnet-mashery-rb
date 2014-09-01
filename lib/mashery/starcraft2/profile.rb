@@ -36,7 +36,7 @@ class Mashery::Starcraft2::Profile
     name       = args.delete(:name)
     realm      = args.delete(:realm) || '1'
     locale     = args.delete(:locale) || 'en_US'
-    key        = args.delete(:key)
+    key        = args.delete(:key) || Mashery.configuration.api_key
 
     base_api = Mashery::Starcraft2.new(region: region, key: key)
     call_url = base_api.url + "profile/#{profile_id}/#{realm}/#{name}/?locale=#{locale}&apikey=#{key}"
