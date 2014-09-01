@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/data/character/races?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 01 Sep 2014 06:49:28 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-44.mashery.com
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"races":[{"id":6,"mask":32,"side":"horde","name":"Tauren"},{"id":5,"mask":16,"side":"horde","name":"Undead"},{"id":2,"mask":2,"side":"horde","name":"Orc"},{"id":7,"mask":64,"side":"alliance","name":"Gnome"},{"id":9,"mask":256,"side":"horde","name":"Goblin"},{"id":1,"mask":1,"side":"alliance","name":"Human"},{"id":8,"mask":128,"side":"horde","name":"Troll"},{"id":24,"mask":8388608,"side":"neutral","name":"Pandaren"},{"id":11,"mask":1024,"side":"alliance","name":"Draenei"},{"id":22,"mask":2097152,"side":"alliance","name":"Worgen"},{"id":10,"mask":512,"side":"horde","name":"Blood
+        Elf"},{"id":4,"mask":8,"side":"alliance","name":"Night Elf"},{"id":3,"mask":4,"side":"alliance","name":"Dwarf"},{"id":25,"mask":16777216,"side":"alliance","name":"Pandaren"},{"id":26,"mask":33554432,"side":"horde","name":"Pandaren"}]}'
+    http_version: 
+  recorded_at: Mon, 01 Sep 2014 06:49:28 GMT
+recorded_with: VCR 2.9.2

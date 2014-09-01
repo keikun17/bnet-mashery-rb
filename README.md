@@ -69,7 +69,7 @@ TODOs:
 - [ ] Mashery::WOW::Spell
 - [x] Mashery::WOW::Data
   - [x] Battlegroups
-  - [ ] CharacterRaces
+  - [X] CharacterRaces
   - [ ] CharacterClasses
   - [ ] CharacterAchivements ( as `Achievement`)
   - [ ] GuildRewards
