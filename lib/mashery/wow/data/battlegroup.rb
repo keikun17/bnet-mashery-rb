@@ -2,7 +2,7 @@ class Mashery::WOW::Data::Battlegroup < Mashery::WOW::Data::Base
   attr :name, :slug
 
   SCOPES = {
-    url: 'battlegroups',
+    url: 'battlegroups/',
     collection_root: 'battlegroups'
   }
 

@@ -22,7 +22,7 @@ class Mashery::WOW::Data::Base
     locale     = args.delete(:locale) || 'en_US'
 
     base_api = Mashery::WOW.new(region: region)
-    call_url = base_api.url + 'data/' + scopes[:url] + "/?locale=#{locale}&apikey=#{key}"
+    call_url = base_api.url + 'data/' + scopes[:url] + "?locale=#{locale}&apikey=#{key}"
 
     begin
       data = open(call_url)
