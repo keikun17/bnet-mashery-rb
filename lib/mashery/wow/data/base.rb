@@ -46,7 +46,7 @@ class Mashery::WOW::Data::Base
 
   def self.collection_from_api(response_collection)
     response_collection[scopes[:collection_root]].collect do |attrs|
-      new(attrs)
+      from_api(attrs)
     end
   end
 
@@ -69,8 +69,8 @@ class Mashery::WOW::Data::Base
 
     # NOTE common tasks below -- marker for easier method extraction
     params_mapping.each do |old_key, new_key|
-      if response.has_key?(old_key)
-        new_hash[new_key] = response[old_key]
+      if raw_hash.has_key?(old_key)
+        new_hash[new_key] = raw_hash[old_key]
       end
     end
 
