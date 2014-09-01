@@ -10,7 +10,6 @@ describe Mashery::Diablo3::Hero do
         {
           battletag: 'PlayerOne-1309',
           region: 'us',
-          key: VCR::SECRETS["api_key"],
           hero_id: 1304986
         }
       end
@@ -43,7 +42,6 @@ describe Mashery::Diablo3::Hero do
         {
           battletag: 'DOESNTEXIST-666',
           region: 'us',
-          key: VCR::SECRETS["api_key"],
           hero_id: 666
         }
       end
@@ -72,4 +70,12 @@ describe Mashery::Diablo3::Hero do
     end
   end
 
+
+  describe "#reload" do
+    let(:hero) do
+      described_class.new(name: 'PlayerOne', hero_id: 1304986, level: 69)
+    end
+    it "Fetches  update from the API and update the object" 
+    # expect{hero.reload}.to change{hero.level}.from(69).to(70)
+  end
 end
