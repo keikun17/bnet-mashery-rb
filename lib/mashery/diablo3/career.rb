@@ -50,7 +50,7 @@ class Mashery::Diablo3::Career
       "lastUpdated" => :last_updated,
       "kills" => :kills,
       "timePlayed" => :time_played,
-      "fallenHeroes" => :fallen_heroesj,
+      "fallenHeroes" => :fallen_heroes,
       "paragonLevel" => :paragon_level,
       "paragonLevelHardcore" => :paragon_level_hardcore,
       "battleTag" => :battle_tag,
