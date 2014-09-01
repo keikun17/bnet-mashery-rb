@@ -67,8 +67,8 @@ TODOs:
     - [ ] Status
 - [ ] Mashery::WOW::Recipe
 - [ ] Mashery::WOW::Spell
-- [ ] Mashery::WOW::Data
-  - [ ] Battlegroups
+- [x] Mashery::WOW::Data
+  - [x] Battlegroups
   - [ ] CharacterRaces
   - [ ] CharacterClasses
   - [ ] CharacterAchivements ( as `Achievement`)
