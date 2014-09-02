@@ -8,6 +8,7 @@ This repository (will) contain various libraries for interfacing with *takes a d
 TODOs:
 
 - [ ] Mashery::Account
+- [x] Mashery::Configuration
 - [ ] Mashery::Community
 - [ ] Mashery::Diablo3
 - [ ] Mashery::Starcraft2
