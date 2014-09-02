@@ -2,7 +2,7 @@ class Mashery::Diablo3::Career
 
   attr_accessor :heroes, :last_hero_played, :last_updated, :kills, :time_played,
     :fallen_heroes, :paragon_level, :paragon_level_hardcore, :battle_tag,
-    :progression
+    :progression, :region
 
   def initialize args
     args.each do |k,v|
@@ -32,6 +32,27 @@ class Mashery::Diablo3::Career
       career = from_api(parsed_response)
     else
       career = nil
+    end
+    # NOTE end of common tasks
+
+    if career
+      career.battle_tag = battle_tag
+      career.region = region
+
+      # Association tasks (TODO: convert to hook)
+      if parsed_response["heroes"]
+        heroes = response["heroes"].collect do |raw_hero_attrs|
+          hero = Mashery::Diablo3::Hero.from_api(raw_hero_attrs)
+          hero.career = career
+          hero.battle_tag = career.battle_tag
+          hero.region = career.region
+          hero
+        end
+
+        career.heroes = heroes
+      end
+      # End of association tasks
+
     end
 
     return career
@@ -76,7 +97,7 @@ class Mashery::Diablo3::Career
       "paragonLevel" => :paragon_level,
       "paragonLevelHardcore" => :paragon_level_hardcore,
       "battleTag" => :battle_tag,
-      "progression" => :progression 
+      "progression" => :progression
     }
   end
 end
