@@ -1,14 +1,19 @@
-class Mashery::Starcraft2::Profile
+# TODO: Associations for career, current_season
+class Mashery::Starcraft2::Profile < Mashery::BnetResource
 
   attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag,
     :achievement_points, :swarm_level, :terran_level, :zerg_level,
     :protoss_level, :acievement_points
 
-    # TODO: Associations for career, current_season
-  #
-  def career
-    @career ||= []
-  end
+  PARAMS_MAPPING = {
+      "id" => :profile_id,
+      "realm" =>  :realm,
+      "displayName" => :display_name,
+      "clanName" => :clan_name,
+      "clanTag" => :clan_tag,
+      "career" => :career
+    }
+
   def initialize args
     args.each do |k,v|
       instance_variable_set("@#{k}", v) unless v.nil?
@@ -59,50 +64,23 @@ class Mashery::Starcraft2::Profile
 
   end
 
+  def career
+    @career ||= []
+  end
+
   def self.from_api(response)
-    new_hash = {}
-    association_hash ||= {}
-    other_attributes ||= {}
-
-    if response["achievements"]
-      achievement_points = response["achievements"]["points"]["totalPoints"]
-      other_attributes.merge!({achievement_points: achievement_points})
+    bnet_resource = super(response)
+    if bnet_resource && response["achievements"]
+      bnet_resource.achievement_points = response["achievements"]["points"]["totalPoints"]
     end
 
-    if response["swarmLevels"]
-      other_attributes.merge!({
-        :swarm_level   => response["swarmLevels"]["level"],
-        :terran_level  => response["swarmLevels"]["terran"]["level"],
-        :protoss_level => response["swarmLevels"]["protoss"]["level"],
-        :zerg_level    => response["swarmLevels"]["zerg"]["level"]
-      })
+    if bnet_resource && response["swarmLevels"]
+      bnet_resource.swarm_level   = response["swarmLevels"]["level"]
+      bnet_resource.terran_level  = response["swarmLevels"]["terran"]["level"]
+      bnet_resource.protoss_level = response["swarmLevels"]["protoss"]["level"]
+      bnet_resource.zerg_level    = response["swarmLevels"]["zerg"]["level"]
     end
 
-
-    # NOTE common tasks below -- marker for easier method extraction
-    params_mapping.each do |old_key, new_key|
-      if response.has_key?(old_key)
-        new_hash[new_key] = response[old_key]
-      end
-    end
-
-    new_hash.merge!(association_hash)
-    new_hash.merge!(other_attributes)
-    new(new_hash)
-    # NOTE end of common tasks
+    bnet_resource
   end
-
-  private
-
-  def self.params_mapping
-    {
-      "id" => :profile_id,
-      "realm" =>  :realm,
-      "displayName" => :display_name,
-      "clanName" => :clan_name,
-      "clanTag" => :clan_tag,
-      "career" => :career
-    }
-  end
-
 end
