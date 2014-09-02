@@ -1,43 +1,33 @@
-class Mashery::Diablo3::Hero
+class Mashery::Diablo3::Hero < Mashery::BnetResource
 
   attr_accessor :paragon_level, :seasonal, :name, :hero_id,
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
     :active_skills, :passive_skills, :region, :battle_tag, :career
 
-  def initialize args
-    args.each do |k,v|
-      instance_variable_set("@#{k}", v) unless v.nil?
-    end
-  end
-
   # Create an instance by passing in the args from the response
   def self.from_api(response)
+    bnet_resource = super(response)
 
-    if response["skills"]
-      active_skills = response["skills"]["active"].collect do |active|
+    if bnet_resource && response["skills"]
+      bnet_resource.active_skills = response["skills"]["active"].collect do |active|
         Mashery::Diablo3::Skill.new(name: active["skill"]["name"],
                                     rune: active["rune"]["name"])
       end
 
-      passive_skills = response["skills"]["passive"].collect do |passive|
+      bnet_resource.passive_skills = response["skills"]["passive"].collect do |passive|
         Mashery::Diablo3::Skill.new(name: passive["skill"]["name"])
       end
-
-      association_hash = {passive_skills: passive_skills, active_skills: active_skills}
     end
 
-    # NOTE common tasks below -- marker for easier method extraction
-    new_hash = {}
-    association_hash ||= {}
-    params_mapping.each do |old_key, new_key|
-      if response.has_key?(old_key)
-        new_hash[new_key] = response[old_key]
-      end
-    end
+    bnet_resource
+  end
 
-    new_hash.merge!(association_hash)
-    new(new_hash)
-    # NOTE end of common tasks
+  def active_skills
+    @active_skills ||= []
+  end
+
+  def passive_skills
+    @passive_skills ||= []
   end
 
   def reload
