@@ -32,10 +32,10 @@ class Mashery::Diablo3::Career < Mashery::BnetResource
     response = JSON.parse( URI.parse(call_url).read )
 
     data = open(call_url)
-    parsed_response = JSON.parse(data.read)
+    raw_response = JSON.parse(data.read)
 
-    if Mashery::API.valid_call?(data.status, parsed_response)
-      career = from_api(parsed_response)
+    if Mashery::API.valid_call?(data.status, raw_response)
+      career = from_api(raw_response)
     else
       career = nil
     end
@@ -46,7 +46,7 @@ class Mashery::Diablo3::Career < Mashery::BnetResource
       career.region = region
 
       # Association tasks (TODO: convert to hook)
-      if parsed_response["heroes"]
+      if raw_response["heroes"]
         heroes = response["heroes"].collect do |raw_hero_attrs|
           hero = Mashery::Diablo3::Hero.from_api(raw_hero_attrs)
           hero.career = career

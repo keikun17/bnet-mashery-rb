@@ -48,10 +48,10 @@ class Mashery::Starcraft2::Profile < Mashery::BnetResource
 
     begin
       data = open(call_url)
-      parsed_response = JSON.parse(data.read)
+      raw_response = JSON.parse(data.read)
 
-      if Mashery::API.valid_call?(data.status, parsed_response)
-        bnet_object = from_api(parsed_response)
+      if Mashery::API.valid_call?(data.status, raw_response)
+        bnet_object = from_api(raw_response)
       else
         bnet_object = nil
       end

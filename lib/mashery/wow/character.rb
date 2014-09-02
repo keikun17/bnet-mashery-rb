@@ -25,10 +25,10 @@ class Mashery::WOW::Character < Mashery::BnetResource
 
     begin
       data = open(call_url)
-      parsed_response = JSON.parse(data.read)
+      raw_response = JSON.parse(data.read)
 
-      if data.status == ['200', 'OK'] && parsed_response["code"] != 'NOTFOUND'
-        bnet_object = from_api(parsed_response)
+      if data.status == ['200', 'OK'] && raw_response["code"] != 'NOTFOUND'
+        bnet_object = from_api(raw_response)
       else
         bnet_object = nil
       end

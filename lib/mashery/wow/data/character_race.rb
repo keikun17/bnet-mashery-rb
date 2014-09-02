@@ -12,6 +12,4 @@ class Mashery::WOW::Data::CharacterRace < Mashery::WOW::Data::Base
     "side" => :side, "name" => :name
   }
 
-  private
-
 end

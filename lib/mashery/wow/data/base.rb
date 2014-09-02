@@ -19,10 +19,10 @@ class Mashery::WOW::Data::Base < Mashery::BnetResource
 
     begin
       data = open(call_url)
-      parsed_response = JSON.parse(data.read)
+      raw_response = JSON.parse(data.read)
 
-      if Mashery::API.valid_call?(data.status, parsed_response)
-        collection = collection_from_api(parsed_response)
+      if Mashery::API.valid_call?(data.status, raw_response)
+        collection = collection_from_api(raw_response)
       else
         collection = []
       end
