@@ -47,5 +47,8 @@ class Mashery::WOW::Data::Base < Mashery::BnetResource
     "#{Mashery::WOW.url}/data/#{collection_scope}"
   end
 
+  def self.scopes
+    self::SCOPES
+  end
 
 end
