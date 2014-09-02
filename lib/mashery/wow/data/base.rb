@@ -1,11 +1,4 @@
-class Mashery::WOW::Data::Base
-
-  def initialize args
-    args.each do |k,v|
-      instance_variable_set("@#{k}", v) unless v.nil?
-    end
-  end
-
+class Mashery::WOW::Data::Base < Mashery::BnetResource
   # Query Battlenet API for the the data based on the subclass's scope
   #
   # Hash Params:
@@ -54,29 +47,5 @@ class Mashery::WOW::Data::Base
     "#{Mashery::WOW.url}/data/#{collection_scope}"
   end
 
-  def self.scopes
-    self::SCOPES
-  end
 
-  def self.params_mapping
-    self::PARAMS_MAPPING
-  end
-
-  def self.from_api(raw_hash)
-    new_hash = {}
-    association_hash ||= {}
-    other_attributes ||= {}
-
-    # NOTE common tasks below -- marker for easier method extraction
-    params_mapping.each do |old_key, new_key|
-      if raw_hash.has_key?(old_key)
-        new_hash[new_key] = raw_hash[old_key]
-      end
-    end
-
-    new_hash.merge!(association_hash)
-    new_hash.merge!(other_attributes)
-    new(new_hash)
-    # NOTE end of common tasks
-  end
 end
