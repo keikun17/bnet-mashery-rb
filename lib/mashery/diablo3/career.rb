@@ -52,6 +52,7 @@ class Mashery::Diablo3::Career < Mashery::BnetResource
           hero.career = career
           hero.battle_tag = career.battle_tag
           hero.region = career.region
+          hero.reload
           hero
         end
 
