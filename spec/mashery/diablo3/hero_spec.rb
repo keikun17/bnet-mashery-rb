@@ -72,10 +72,12 @@ describe Mashery::Diablo3::Hero do
 
 
   describe "#reload" do
-    let(:hero) do
-      described_class.new(name: 'PlayerOne', hero_id: 1304986, level: 69)
-    end
-    it "Fetches  update from the API and update the object" 
-    # expect{hero.reload}.to change{hero.level}.from(69).to(70)
+    context "Hero since last update was level 69", vcr: {cassette_name: 'diablo_hero_reload'} do
+      let(:hero) do
+        described_class.new(battle_tag: 'PlayerOne#1309',region: 'us', hero_id: 1304986, level: 69)
+      end
+      it "Fetches  update from the API and update the object"
+      # expect{hero.reload}.to change{hero.level}.from(69).to(70)
+  end
   end
 end

@@ -15,6 +15,7 @@ module Mashery
 end
 
 require "mashery/api"
+require "mashery/bnet_resource"
 require 'mashery/account'
 require 'mashery/diablo3'
 require 'mashery/diablo3/career'
