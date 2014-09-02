@@ -13,16 +13,16 @@ class Mashery::WOW::Data::Base
   #   :name            - String name of the toon
   #   :realm           - String name of the server the character is on (String)
   #   :locale          - String locale (defaults to 'en_US')
-  #   :key             - String api key
+  #   :api_key         - String api key
   #
-  # Example : IF a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
+  # Example : If a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
   def self.find_all(args)
     region = args.delete(:region)
-    key    = args.delete(:key)
+    api_key    = args.delete(:api_key) || Mashery::configuration.api_key
     locale     = args.delete(:locale) || 'en_US'
 
     base_api = Mashery::WOW.new(region: region)
-    call_url = base_api.url + 'data/' + scopes[:url] + "?locale=#{locale}&apikey=#{key}"
+    call_url = base_api.url + 'data/' + scopes[:url] + "?locale=#{locale}&apikey=#{api_key}"
 
     begin
       data = open(call_url)

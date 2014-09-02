@@ -55,9 +55,10 @@ class Mashery::Diablo3::Hero
     battletag = args.delete(:battletag)
     region = args.delete(:region)
     hero_id = args.delete(:hero_id)
+    api_key = args.delete(:api_key) || Mashery.configuration.api_key
 
     base_api = Mashery::Diablo3.new(region: region)
-    call_url = base_api.url + "profile/#{battletag}/hero/#{hero_id}?apikey=#{Mashery.configuration.api_key}"
+    call_url = base_api.url + "profile/#{battletag}/hero/#{hero_id}?apikey=#{api_key}"
 
     begin
       data = open(call_url)

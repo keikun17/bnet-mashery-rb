@@ -24,22 +24,22 @@ class Mashery::Starcraft2::Profile
   #                 localized Battletag is unique enough)
   #   :name       - Just the name string in the Battle tag.
   #   :locale     - (defaults to 'en_US')
-  #   :key        - the api key
+  #   :api_key        - the api key
   #
   # Example: If US account 'Playerone#1309' the profile can be accessible via
   # web from 'http://us.battle.net/sc2/en/profile/2143215/1/PlayerOne/'
   #
-  #   find(region: 'us', id: 2143215, name: 'PlayerOne', key: your_api_key)
+  #   find(region: 'us', id: 2143215, name: 'PlayerOne', api_key: your_api_key)
   def self.find args
     region     = args.delete(:region)
     profile_id = args.delete(:profile_id)
     name       = args.delete(:name)
     realm      = args.delete(:realm) || '1'
     locale     = args.delete(:locale) || 'en_US'
-    key        = args.delete(:key) || Mashery.configuration.api_key
+    api_key        = args.delete(:api_key) || Mashery.configuration.api_key
 
-    base_api = Mashery::Starcraft2.new(region: region, key: key)
-    call_url = base_api.url + "profile/#{profile_id}/#{realm}/#{name}/?locale=#{locale}&apikey=#{key}"
+    base_api = Mashery::Starcraft2.new(region: region)
+    call_url = base_api.url + "profile/#{profile_id}/#{realm}/#{name}/?locale=#{locale}&apikey=#{api_key}"
 
     begin
       data = open(call_url)
