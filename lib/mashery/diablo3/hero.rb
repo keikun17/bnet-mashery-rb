@@ -49,10 +49,14 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
 
   # Query the Diablo 3 api to find and create an instance of a hero
   def self.find args
-    battle_tag = args.delete(:battle_tag)
-    region = args.delete(:region)
-    hero_id = args.delete(:hero_id)
-    api_key = args.delete(:api_key) || Mashery.configuration.api_key
+    battle_tag = args[:battle_tag]
+    region = args[:region]
+    hero_id = args[:hero_id]
+    api_key = args[:api_key] || Mashery.configuration.api_key
+
+    if battle_tag
+      battle_tag.gsub!('#', '-')
+    end
 
     base_api = Mashery::Diablo3.new(region: region)
     call_url = base_api.url + "profile/#{battle_tag}/hero/#{hero_id}?apikey=#{api_key}"
