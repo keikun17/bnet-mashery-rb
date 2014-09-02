@@ -21,10 +21,6 @@ class Mashery::BnetResource
 
   private
 
-  def self.scopes
-    self::SCOPES
-  end
-
   def self.params_mapping
     self::PARAMS_MAPPING
   end

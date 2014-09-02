@@ -8,5 +8,11 @@ class Mashery::WOW::Data::Battlegroup < Mashery::WOW::Data::Base
 
   PARAMS_MAPPING = { "name" => :name, "slug" => :slug }
 
+  private
+
+  def self.scopes
+    self::SCOPES
+  end
+
 end
 

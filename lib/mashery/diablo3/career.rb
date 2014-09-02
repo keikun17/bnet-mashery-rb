@@ -4,6 +4,18 @@ class Mashery::Diablo3::Career < Mashery::BnetResource
     :fallen_heroes, :paragon_level, :paragon_level_hardcore, :battle_tag,
     :progression, :region
 
+  PARAMS_MAPPING =  {
+      "lastHeroPlayed" => :last_hero_played,
+      "lastUpdated" => :last_updated,
+      "kills" => :kills,
+      "timePlayed" => :time_played,
+      "fallenHeroes" => :fallen_heroes,
+      "paragonLevel" => :paragon_level,
+      "paragonLevelHardcore" => :paragon_level_hardcore,
+      "battleTag" => :battle_tag,
+      "progression" => :progression
+  }
+
   def battle_tag
     @battle_tag.gsub('-', '#')
   end
@@ -52,19 +64,5 @@ class Mashery::Diablo3::Career < Mashery::BnetResource
     return career
   end
 
-  private
 
-  def self.params_mapping
-    {
-      "lastHeroPlayed" => :last_hero_played,
-      "lastUpdated" => :last_updated,
-      "kills" => :kills,
-      "timePlayed" => :time_played,
-      "fallenHeroes" => :fallen_heroes,
-      "paragonLevel" => :paragon_level,
-      "paragonLevelHardcore" => :paragon_level_hardcore,
-      "battleTag" => :battle_tag,
-      "progression" => :progression
-    }
-  end
 end
