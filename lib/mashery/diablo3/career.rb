@@ -10,13 +10,19 @@ class Mashery::Diablo3::Career
     end
   end
 
+  def battle_tag
+    @battle_tag.gsub('-', '#')
+  end
+
   def self.find args
-    battletag = args.delete(:battletag)
-    region = args.delete(:region)
-    api_key = args.delete(:api_key) || Mashery.configuration.api_key
+    battle_tag = args[:battle_tag].gsub('#', '-')
+    region = args[:region]
+    api_key = args[:api_key] || Mashery.configuration.api_key
 
     base_api = Mashery::Diablo3.new(region: region)
-    call_url = base_api.url + "profile/#{battletag}/?apikey=#{api_key}"
+    call_url = base_api.url + "profile/#{battle_tag}/?apikey=#{api_key}"
+
+    # NOTE common tasks below - marker for easier method extraction
     response = JSON.parse( URI.parse(call_url).read )
 
     data = open(call_url)
@@ -32,6 +38,7 @@ class Mashery::Diablo3::Career
   end
 
   def self.from_api(response)
+    # NOTE common tasks below -- marker for easier method extraction
     new_hash = {}
     association_hash ||= {}
     other_attributes ||= {}
