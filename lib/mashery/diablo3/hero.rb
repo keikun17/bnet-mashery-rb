@@ -40,16 +40,6 @@ class Mashery::Diablo3::Hero
     # NOTE end of common tasks
   end
 
-  # TODO : Check if we still need this
-  def active_skills
-    @active_skills ||= []
-  end
-
-  # TODO : Check if we still need this
-  def passive_skills
-    @passive_skills ||= []
-  end
-
   def reload
     find(battle_tag: battle_tag, region: region, hero_id: hero_id)
   end
