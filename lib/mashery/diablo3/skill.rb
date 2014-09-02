@@ -1,12 +1,7 @@
-class Mashery::Diablo3::Skill
+class Mashery::Diablo3::Skill < Mashery::BnetResource
 
   attr_accessor :name, :rune
 
-  def initialize args
-    args.each do |k,v|
-      instance_variable_set("@#{k}", v) unless v.nil?
-    end
-  end
 
   # Ags :
   #      {
