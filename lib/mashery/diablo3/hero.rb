@@ -4,6 +4,19 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
     :active_skills, :passive_skills, :region, :battle_tag, :career
 
+    PARAMS_MAPPING = {
+      "paragonLevel" => :paragon_level,
+      "seasonal" => :seasonal,
+      "name" => :name,
+      "id" => :hero_id,
+      "level" => :level,
+      "hardcore" => :hardcore,
+      "gender" => :gender,
+      "dead" => :dead,
+      "class" => :hero_class,
+      "last-updated" => :last_updated
+    }
+
   # Create an instance by passing in the args from the response
   def self.from_api(response)
     bnet_resource = super(response)
@@ -61,20 +74,4 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
     return bnet_object
   end
 
-  private
-
-  def self.params_mapping
-    {
-      "paragonLevel" => :paragon_level,
-      "seasonal" => :seasonal,
-      "name" => :name,
-      "id" => :hero_id,
-      "level" => :level,
-      "hardcore" => :hardcore,
-      "gender" => :gender,
-      "dead" => :dead,
-      "class" => :hero_class,
-      "last-updated" => :last_updated
-    }
-  end
 end
