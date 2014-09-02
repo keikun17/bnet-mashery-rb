@@ -34,7 +34,7 @@ class Mashery::Diablo3::Career < Mashery::BnetResource
     data = open(call_url)
     parsed_response = JSON.parse(data.read)
 
-    if data.status == ['200', 'OK'] && parsed_response["code"] != "NOTFOUND"
+    if Mashery::API.valid_call?(data.status, parsed_response)
       career = from_api(parsed_response)
     else
       career = nil
