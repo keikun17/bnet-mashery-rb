@@ -43,6 +43,10 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
     @passive_skills ||= []
   end
 
+  def battle_tag
+    @battle_tag.gsub("#", "-")
+  end
+
   def reload
     find(battle_tag: battle_tag, region: region, hero_id: hero_id)
   end
