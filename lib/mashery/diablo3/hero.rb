@@ -2,7 +2,7 @@ class Mashery::Diablo3::Hero
 
   attr_accessor :paragon_level, :seasonal, :name, :hero_id,
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
-    :active_skills, :passive_skills
+    :active_skills, :passive_skills, :region, :battle_tag, :career
 
   def initialize args
     args.each do |k,v|
@@ -50,15 +50,19 @@ class Mashery::Diablo3::Hero
     @passive_skills ||= []
   end
 
+  def reload
+    find(battle_tag: battle_tag, region: region, hero_id: hero_id)
+  end
+
   # Query the Diablo 3 api to find and create an instance of a hero
   def self.find args
-    battletag = args.delete(:battletag)
+    battle_tag = args.delete(:battle_tag)
     region = args.delete(:region)
     hero_id = args.delete(:hero_id)
     api_key = args.delete(:api_key) || Mashery.configuration.api_key
 
     base_api = Mashery::Diablo3.new(region: region)
-    call_url = base_api.url + "profile/#{battletag}/hero/#{hero_id}?apikey=#{api_key}"
+    call_url = base_api.url + "profile/#{battle_tag}/hero/#{hero_id}?apikey=#{api_key}"
 
     begin
       data = open(call_url)

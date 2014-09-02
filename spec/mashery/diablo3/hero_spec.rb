@@ -5,10 +5,10 @@ describe Mashery::Diablo3::Hero do
   describe ".find" do
     subject {described_class.find(args)}
 
-    context "Given the correct battletag and hero id", vcr: {cassette_name: 'diablo_hero_found'} do
+    context "Given the correct battle tag and hero id", vcr: {cassette_name: 'diablo_hero_found'} do
       let(:args) do
         {
-          battletag: 'PlayerOne-1309',
+          battle_tag: 'PlayerOne-1309',
           region: 'us',
           hero_id: 1304986
         }
@@ -40,7 +40,7 @@ describe Mashery::Diablo3::Hero do
     context "Given the hero does not exist on that tag/realm", vcr: {cassette_name: 'diablo_hero_notf_found'} do
       let(:args) do
         {
-          battletag: 'DOESNTEXIST-666',
+          battle_tag: 'DOESNTEXIST-666',
           region: 'us',
           hero_id: 666
         }
