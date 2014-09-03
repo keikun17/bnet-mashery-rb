@@ -31,7 +31,7 @@ describe Mashery::Diablo3::Career do
         expect(career.region).to eq('us')
       end
 
-      it "assigns the heroes attribute" do
+      it "assigns autoloads the heroes" do
         expect(career.heroes).to_not be_empty
 
         career.heroes.each do |hero|
@@ -39,6 +39,8 @@ describe Mashery::Diablo3::Career do
           expect(hero.battle_tag).to eq('PlayerOne#1309')
           expect(hero.region).to eq(career.region)
           expect(hero.career).to be(career)
+          expect(hero.passive_skills).to_not be_empty
+          expect(hero.active_skills).to_not be_empty
         end
 
       end
