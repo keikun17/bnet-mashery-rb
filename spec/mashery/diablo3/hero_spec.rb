@@ -76,8 +76,9 @@ describe Mashery::Diablo3::Hero do
       let(:hero) do
         described_class.new(battle_tag: 'PlayerOne#1309',region: 'us', hero_id: 1304986, level: 69)
       end
-      it "Fetches  update from the API and update the object"
-      # expect{hero.reload}.to change{hero.level}.from(69).to(70)
+      it "Fetches  update from the API and update the object" do
+        expect{hero.reload}.to change{hero.level}.from(69).to(70)
+      end
   end
   end
 end

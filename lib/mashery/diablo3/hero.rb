@@ -4,36 +4,19 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
     :active_skills, :passive_skills, :region, :battle_tag, :career
 
-    PARAMS_MAPPING = {
-      "paragonLevel" => :paragon_level,
-      "seasonal" => :seasonal,
-      "name" => :name,
-      "id" => :hero_id,
-      "level" => :level,
-      "hardcore" => :hardcore,
-      "gender" => :gender,
-      "dead" => :dead,
-      "class" => :hero_class,
-      "last-updated" => :last_updated
-    }
+  PARAMS_MAPPING = {
+    "paragonLevel" => :paragon_level,
+    "seasonal" => :seasonal,
+    "name" => :name,
+    "id" => :hero_id,
+    "level" => :level,
+    "hardcore" => :hardcore,
+    "gender" => :gender,
+    "dead" => :dead,
+    "class" => :hero_class,
+    "last-updated" => :last_updated
+  }
 
-  # Create an instance by passing in the args from the response
-  def self.from_api(response)
-    bnet_resource = super(response)
-
-    if bnet_resource && response["skills"]
-      bnet_resource.active_skills = response["skills"]["active"].collect do |active|
-        Mashery::Diablo3::Skill.new(name: active["skill"]["name"],
-                                    rune: active["rune"]["name"])
-      end
-
-      bnet_resource.passive_skills = response["skills"]["passive"].collect do |passive|
-        Mashery::Diablo3::Skill.new(name: passive["skill"]["name"])
-      end
-    end
-
-    bnet_resource
-  end
 
   def active_skills
     @active_skills ||= []
@@ -44,11 +27,17 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
   end
 
   def battle_tag
-    @battle_tag.gsub("#", "-")
+    @battle_tag.gsub("-", "#")
   end
 
+  #TODO Extract finder_args to a method then move this `reload ` method to super
+  #class
   def reload
-    find(battle_tag: battle_tag, region: region, hero_id: hero_id)
+    finder_args = {battle_tag: battle_tag, region: region, hero_id: hero_id}
+    fetched_record = self.class.find(finder_args)
+    fetched_record.instance_variables.each do |ivar|
+      self.instance_variable_set(ivar, fetched_record.instance_variable_get(ivar))
+    end
   end
 
   # Query the Diablo 3 api to find and create an instance of a hero
@@ -80,6 +69,37 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
     end
 
     return bnet_object
+  end
+
+  # Create an instance by passing in the args from the response
+  def self.from_api(response)
+    bnet_resource = super(response)
+
+    if bnet_resource && response["skills"]
+      bnet_resource.active_skills = response["skills"]["active"].collect do |active|
+
+        skill = Mashery::Diablo3::Skill.new
+        if active["skill"]
+          skill.name = active["skill"]["name"]
+        end
+        if active["rune"]
+          skill.rune = active["rune"]["name"]
+        end
+
+        skill
+
+      end
+
+      bnet_resource.passive_skills = response["skills"]["passive"].collect do |passive|
+        skill =  Mashery::Diablo3::Skill.new
+        if passive["skill"]
+          skill.name = passive["skill"]["name"]
+        end
+        skill
+      end
+    end
+
+    bnet_resource
   end
 
 end
