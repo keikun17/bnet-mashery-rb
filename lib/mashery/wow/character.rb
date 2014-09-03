@@ -40,6 +40,15 @@ class Mashery::WOW::Character < Mashery::BnetResource
     return bnet_object
   end
 
+  def gender
+    case @gender
+    when 0
+      'Female'
+    when 1
+      'Male'
+    end
+  end
+
   private
 
   def self.params_mapping

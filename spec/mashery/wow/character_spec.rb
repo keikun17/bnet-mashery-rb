@@ -24,6 +24,7 @@ describe Mashery::WOW::Character do
       expect(subject.name).to eq("Alexeistukov")
       expect(subject.level).to eq(85)
       expect(subject.realm).to eq('Dalvengyr')
+      expect(subject.gender).to eq('Male')
       #TODO assigns :gender, :class, :race
     end
   end
