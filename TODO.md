@@ -21,7 +21,7 @@
 
 ### Starcraft
 
-- [x] Bnet::Starcraft2::Profile                   [ ] doc
+- [x] Bnet::Starcraft2::Profile                   [x] doc
   - [ ] Bnet::Starcraft2::Matches                 [ ] doc
   - [ ] Bnet::Starcraft2::Ladder                  [ ] doc
   - [ ] Bnet::Starcraft2::Career                  [ ] doc
@@ -32,7 +32,7 @@
 
 ### WOW
 
-- [ ] Bnet::WOW::Profile                          [ ] doc
+- [x] Bnet::WOW::Profile                          [x] doc
     - [ ] Achievements (as `Achievement`)         [ ] doc
     - [ ] Appearance                              [ ] doc
     - [ ] Feed                                    [ ] doc

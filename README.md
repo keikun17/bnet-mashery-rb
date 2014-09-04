@@ -92,6 +92,28 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
 
     Bnet::Starcraft2::profile.find(region: 'us', profile_id: 2143215, name: 'PlayerOne')
 
+## World of Warcraft
+
+    # Query Battlenet API for the character profile
+    #
+    # Hash Params:
+    #   Required
+    #     :region          - (e.g. 'us', 'ea')
+    #     :name            - String name of the toon
+    #     :realm           - String name of the server the character is on (String)
+    #   Optional
+    #     :locale          - String locale (defaults to 'en_US')
+    #     :api_key         - String api key
+    #
+    # Returns a Character with the following attributes
+    #
+    #   :name, :realm, :battlegroup, :class, :race, :gender, :level,
+    #   :achievement_points, :total_honorable_kills, :calc_class
+    #
+    # Example : IF a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
+
+    Bnet::WOW::Character.find(region: 'us', name: 'AlexeiStukov', realm: 'Dragonmaw')
+
 ### License
 
 
