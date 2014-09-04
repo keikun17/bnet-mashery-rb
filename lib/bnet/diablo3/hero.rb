@@ -45,19 +45,40 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
     end
   end
 
-  # Query the Diablo 3 api to find and create an instance of a hero
+  # Perform a query for the D3 career's hero
+  #
+  # Arguments
+  #   Required
+  #     :battle_tag - Player Battletag (ex. PlayerOne#1309)
+  #     :region     - Account region (ex. 'us')
+  #     :hero_id    - You can get this from an existing Career object
+  #                   or from the website url when you view a hero
+  #   Optional
+  #     :locale     - String locale (default: 'en_US')
+  #     :api_key    - String API key
+  #
+  # Example
+  #
+  # Bnet::Diablo3::Hero.find(battle_tag: 'PlayerOne-1309', region: 'us', hero_id: 1304986)
+  #
+  # Returns a Hero object with the following attributes
+  #
+  #  :paragon_level, :seasonal, :name, :hero_id,
+  #  :level, :hardcore, :gender, :dead, :hero_class, :last_update,
+  #  :active_skills, :passive_skills, :region, :battle_tag, :career
   def self.find args
     battle_tag = args[:battle_tag]
-    region = args[:region]
-    hero_id = args[:hero_id]
-    api_key = args[:api_key] || Bnet.configuration.api_key
+    region     = args[:region]
+    hero_id    = args[:hero_id]
+    locale     = args[:locale] || 'en_US'
+    api_key    = args[:api_key] || Bnet.configuration.api_key
 
     if battle_tag
       battle_tag.gsub!('#', '-')
     end
 
     base_api = Bnet::Diablo3.new(region: region)
-    call_url = base_api.url + "profile/#{battle_tag}/hero/#{hero_id}?apikey=#{api_key}"
+    call_url = base_api.url + "profile/#{battle_tag}/hero/#{hero_id}?apikey=#{api_key}&locale=#{locale}"
 
     begin
       data = open(call_url)

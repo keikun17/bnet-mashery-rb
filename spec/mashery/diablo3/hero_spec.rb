@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Bnet::Diablo3::Hero do
 
-  describe ".find" do
+  describe ".find(battle_tag: 'PlayerOne-1309', region: 'us', hero_id: 1304986)" do
     subject {described_class.find(args)}
 
     context "Given the correct battle tag and hero id", vcr: {cassette_name: 'diablo_hero_found'} do
