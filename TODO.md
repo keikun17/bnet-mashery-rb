@@ -1,74 +1,74 @@
-TODOs:
+## TODOs:
 
-- [ ] Bnet::Account
-- [x] Bnet::Configuration
-- [ ] Bnet::Community
-- [ ] Bnet::Diablo3
-- [ ] Bnet::Starcraft2
-- [ ] Bnet::Wow
-- [ ] Bnet::Rails
+- [ ] Bnet::Account                               [ ] doc
+- [x] Bnet::Configuration                         [x] doc
+- [ ] Bnet::Community                             [ ] doc
+- [ ] Bnet::Diablo3                               [ ] doc
+- [ ] Bnet::Starcraft2                            [ ] doc
+- [ ] Bnet::Wow                                   [ ] doc
+- [ ] Bnet::Rails                                 [ ] doc
 
 ### Diablo
 
-- [x] Bnet::Diabo3::Career
-  - [ ] Heroes (as `Hero`)
-- [x] Bnet::Diabo3::Hero
-  - [x] Bnet::Diablo3::Skill
-- [ ] Bnet::Diablo3::Data
-  - [ ] Items
-  - [ ] Followers
-  - [ ] Artisan
+- [x] Bnet::Diabo3::Career                        [x] doc
+  - [x] Heroes (as `Hero`)                        [x] doc
+- [x] Bnet::Diabo3::Hero                          [x] doc
+  - [x] Bnet::Diablo3::Skill                      [ ] doc
+- [ ] Bnet::Diablo3::Data                         [ ] doc
+  - [ ] Items                                     [ ] doc
+  - [ ] Followers                                 [ ] doc
+  - [ ] Artisan                                   [ ] doc
 
 ### Starcraft
 
-- [x] Bnet::Starcraft2::Profile
-  - [ ] Bnet::Starcraft2::Matches
-  - [ ] Bnet::Starcraft2::Ladder
-  - [ ] Bnet::Starcraft2::Career
-- [ ] Bnet::Starcraft2::Ladder
-- [ ] Bnet::Starcraft2::Data
-  - [ ] Achievements
-  - [ ] Rewards
+- [x] Bnet::Starcraft2::Profile                   [ ] doc
+  - [ ] Bnet::Starcraft2::Matches                 [ ] doc
+  - [ ] Bnet::Starcraft2::Ladder                  [ ] doc
+  - [ ] Bnet::Starcraft2::Career                  [ ] doc
+- [ ] Bnet::Starcraft2::Ladder                    [ ] doc
+- [ ] Bnet::Starcraft2::Data                      [ ] doc
+  - [ ] Achievements                              [ ] doc
+  - [ ] Rewards                                   [ ] doc
 
 ### WOW
 
-- [ ] Bnet::WOW::Profile
-    - [ ] Achievements (as `Achievement`)
-    - [ ] Appearance
-    - [ ] Feed
-    - [ ] Guild
-    - [ ] HunterPets
-    - [ ] Items (as `Item`)
-    - [ ] Mounts
-    - [ ] PetSlots
-    - [ ] Progression
-    - [ ] PVP
-    - [ ] Quests (as `Quest`)
-    - [ ] Reputation
-    - [ ] Stats
-    - [ ] Talents (as `Talent`)
-    - [ ] Titles
-    - [ ] Audit
-- [ ] Bnet::WOW::Item (as `Item`)
-    - [ ] Set
-- [ ] Bnet::WOW::Guild
-    - [ ] Members
-    - [ ] Achievements (as `Achievement`)
-    - [ ] News
-    - [ ] Challenge
-- [ ] Bnet::WOW::PVP
-- [ ] Bnet::WOW::Quest (as `Quest`)
-- [ ] Bnet::WOW::Realm
-    - [ ] Status
-- [ ] Bnet::WOW::Recipe
-- [ ] Bnet::WOW::Spell
-- [x] Bnet::WOW::Data
-  - [x] Battlegroups
-  - [X] CharacterRaces
-  - [ ] CharacterClasses
-  - [ ] CharacterAchivements ( as `Achievement`)
-  - [ ] GuildRewards
-  - [ ] GuildAchievements (as `Achievement`)
-  - [ ] ItemClasses
-  - [ ] Talents (as `Talent`)
-  - [ ] PetTypes
+- [ ] Bnet::WOW::Profile                          [ ] doc
+    - [ ] Achievements (as `Achievement`)         [ ] doc
+    - [ ] Appearance                              [ ] doc
+    - [ ] Feed                                    [ ] doc
+    - [ ] Guild                                   [ ] doc
+    - [ ] HunterPets                              [ ] doc
+    - [ ] Items (as `Item`)                       [ ] doc
+    - [ ] Mounts                                  [ ] doc
+    - [ ] PetSlots                                [ ] doc
+    - [ ] Progression                             [ ] doc
+    - [ ] PVP                                     [ ] doc
+    - [ ] Quests (as `Quest`)                     [ ] doc
+    - [ ] Reputation                              [ ] doc
+    - [ ] Stats                                   [ ] doc
+    - [ ] Talents (as `Talent`)                   [ ] doc
+    - [ ] Titles                                  [ ] doc
+    - [ ] Audit                                   [ ] doc
+- [ ] Bnet::WOW::Item (as `Item`)                 [ ] doc
+    - [ ] Set                                     [ ] doc
+- [ ] Bnet::WOW::Guild                            [ ] doc
+    - [ ] Members                                 [ ] doc
+    - [ ] Achievements (as `Achievement`)         [ ] doc
+    - [ ] News                                    [ ] doc
+    - [ ] Challenge                               [ ] doc
+- [ ] Bnet::WOW::PVP                              [ ] doc
+- [ ] Bnet::WOW::Quest (as `Quest`)               [ ] doc
+- [ ] Bnet::WOW::Realm                            [ ] doc
+    - [ ] Status                                  [ ] doc
+- [ ] Bnet::WOW::Recipe                           [ ] doc
+- [ ] Bnet::WOW::Spell                            [ ] doc
+- [x] Bnet::WOW::Data                             [ ] doc
+  - [x] Battlegroups                              [ ] doc
+  - [X] CharacterRaces                            [ ] doc
+  - [ ] CharacterClasses                          [ ] doc
+  - [ ] CharacterAchivements ( as `Achievement`)  [ ] doc
+  - [ ] GuildRewards                              [ ] doc
+  - [ ] GuildAchievements (as `Achievement`)      [ ] doc
+  - [ ] ItemClasses                               [ ] doc
+  - [ ] Talents (as `Talent`)                     [ ] doc
+  - [ ] PetTypes                                  [ ] doc
