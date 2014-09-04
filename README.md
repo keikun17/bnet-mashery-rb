@@ -79,3 +79,7 @@ TODOs:
   - [ ] ItemClasses
   - [ ] Talents (as `Talent`)
   - [ ] PetTypes
+
+### License
+
+Licensed under the MIT license (see MIT-LICENSE file)
