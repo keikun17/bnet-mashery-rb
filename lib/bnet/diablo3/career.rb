@@ -32,7 +32,7 @@ class Bnet::Diablo3::Career < Bnet::BnetResource
   #
   # Example
   #
-  # Bnet::Diablo3.find(battle_tag: 'PlayerOne#1309', region: 'us')
+  # Bnet::Diablo3::Career.find(battle_tag: 'PlayerOne#1309', region: 'us')
   #
   # Returns a Career object with the following attributes
   #
