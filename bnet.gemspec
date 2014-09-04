@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mashery/version'
+require 'bnet/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "mashery"
-  spec.version       = Mashery::VERSION
+  spec.name          = "bnet"
+  spec.version       = Bnet::VERSION
   spec.authors       = ["Buddy Magsipoc"]
   spec.email         = ["keikun17@gmail.com"]
   spec.summary       = "Ruby gem for accessing Blizzard's Mashery API"

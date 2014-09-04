@@ -1,4 +1,4 @@
-class Mashery::Configuration
+class Bnet::Configuration
   attr_accessor :api_key
 
   def initialize

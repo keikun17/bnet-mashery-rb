@@ -6,7 +6,7 @@ Coveralls.wear! #  Load this ffirst before the tested library
 ########## Usual things ##########
 
 require 'pry'
-require 'mashery'
+require 'bnet'
 require 'vcr'
 require 'ostruct'
 require 'secrets_and_all_that'
@@ -24,6 +24,6 @@ RSpec.configure do |config|
   config.failure_color = :magenta
 
   config.before(:example) do
-    Mashery.configuration.api_key = VCR::SECRETS["api_key"]
+    Bnet.configuration.api_key = VCR::SECRETS["api_key"]
   end
 end

@@ -1,3 +1,3 @@
-module Mashery
+module Bnet
   VERSION = "0.0.1"
 end
