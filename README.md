@@ -10,7 +10,7 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
 ### Installation
 
     # Gemfile for your Rails / Sinatra project.
-    gem 'bnet
+    gem 'bnet'
 
 ## Configuration
 
