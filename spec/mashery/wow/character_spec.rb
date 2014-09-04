@@ -19,7 +19,7 @@ describe Bnet::WOW::Character do
     }
     subject{ described_class.from_api(attrs)}
 
-    it "initializes and instance when passed with mashery json args" do
+    it "initializes and instance when passed with bnet json args" do
       expect(subject).to be_a_kind_of(described_class)
       expect(subject.name).to eq("Alexeistukov")
       expect(subject.level).to eq(85)

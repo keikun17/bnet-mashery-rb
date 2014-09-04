@@ -10,5 +10,5 @@ end
 task default: :spec
 
 task :console do
-  sh "irb -rubygems -I lib -r mashery.rb"
+  sh "irb -rubygems -I lib -r bnet.rb"
 end
