@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/DoesntExist-42/?apikey=api_key_from_secrets_rb
+    uri: https://us.api.battle.net/d3/profile/DoesntExist-42/?apikey=api_key_from_secrets_rb&locale=en_US
     body:
       encoding: US-ASCII
       string: ''
@@ -23,52 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 02 Sep 2014 02:47:07 GMT
-      Server:
-      - Apache
-      Vary:
-      - Accept-Encoding
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-45.mashery.com
-      Content-Length:
-      - '91'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "code" : "NOTFOUND",
-          "reason" : "The account could not be found."
-        }
-    http_version: 
-  recorded_at: Tue, 02 Sep 2014 02:47:08 GMT
-- request:
-    method: get
-    uri: https://us.api.battle.net/d3/profile/DoesntExist-42/?apikey=api_key_from_secrets_rb
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Language:
-      - en-US
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Tue, 02 Sep 2014 02:47:07 GMT
+      - Thu, 04 Sep 2014 16:13:54 GMT
       Server:
       - Apache
       Vary:
@@ -89,5 +44,50 @@ http_interactions:
           "reason" : "The account could not be found."
         }
     http_version: 
-  recorded_at: Tue, 02 Sep 2014 02:47:09 GMT
+  recorded_at: Thu, 04 Sep 2014 16:13:54 GMT
+- request:
+    method: get
+    uri: https://us.api.battle.net/d3/profile/DoesntExist-42/?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 04 Sep 2014 16:13:54 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-43.mashery.com
+      Content-Length:
+      - '91'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "code" : "NOTFOUND",
+          "reason" : "The account could not be found."
+        }
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 16:13:56 GMT
 recorded_with: VCR 2.9.2

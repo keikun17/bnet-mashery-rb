@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/DOESNTEXIST-666/hero/666?apikey=api_key_from_secrets_rb
+    uri: https://us.api.battle.net/d3/profile/DOESNTEXIST-666/hero/666?apikey=api_key_from_secrets_rb&locale=en_US
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 02 Sep 2014 03:38:48 GMT
+      - Thu, 04 Sep 2014 16:13:17 GMT
       Server:
       - Apache
       Vary:
@@ -31,9 +31,9 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-45.mashery.com
-      Content-Length:
-      - '91'
+      - prod-j-worker-us-east-1b-39.mashery.com
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
@@ -44,5 +44,5 @@ http_interactions:
           "reason" : "The account could not be found."
         }
     http_version: 
-  recorded_at: Tue, 02 Sep 2014 03:38:49 GMT
+  recorded_at: Thu, 04 Sep 2014 16:13:17 GMT
 recorded_with: VCR 2.9.2

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/?apikey=api_key_from_secrets_rb
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/?apikey=api_key_from_secrets_rb&locale=en_US
     body:
       encoding: US-ASCII
       string: ''
@@ -23,467 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 02 Sep 2014 08:53:02 GMT
-      Server:
-      - Apache
-      Vary:
-      - Accept-Encoding
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-39.mashery.com
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "battleTag" : "PlayerOne#1309",
-          "paragonLevel" : 101,
-          "paragonLevelHardcore" : 0,
-          "paragonLevelSeason" : 0,
-          "paragonLevelSeasonHardcore" : 0,
-          "heroes" : [ {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "PlayerOne",
-            "id" : 1304986,
-            "level" : 70,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "wizard",
-            "last-updated" : 1397322512
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "Neggromancer",
-            "id" : 44149625,
-            "level" : 70,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "crusader",
-            "last-updated" : 1409332075
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "AuctionHouse",
-            "id" : 17253136,
-            "level" : 2,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "witch-doctor",
-            "last-updated" : 1339162517
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "CedardDain",
-            "id" : 1366097,
-            "level" : 2,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "barbarian",
-            "last-updated" : 1337092369
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "ChackyJan",
-            "id" : 11756870,
-            "level" : 1,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "monk",
-            "last-updated" : 1337857100
-          } ],
-          "lastHeroPlayed" : 44149625,
-          "lastUpdated" : 1409332075,
-          "kills" : {
-            "monsters" : 55502,
-            "elites" : 5264,
-            "hardcoreMonsters" : 0
-          },
-          "highestDifficulty" : 0,
-          "highestHardcoreLevel" : 0,
-          "timePlayed" : {
-            "barbarian" : 0.0010,
-            "crusader" : 0.109,
-            "demon-hunter" : 0.0,
-            "monk" : 0.0,
-            "witch-doctor" : 0.0010,
-            "wizard" : 1.0
-          },
-          "progression" : {
-            "act1" : true,
-            "act2" : true,
-            "act3" : true,
-            "act4" : true,
-            "act5" : true
-          },
-          "fallenHeroes" : [ ],
-          "blacksmith" : {
-            "slug" : "blacksmith",
-            "level" : 12,
-            "stepCurrent" : 0,
-            "stepMax" : 5
-          },
-          "jeweler" : {
-            "slug" : "jeweler",
-            "level" : 12,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mystic" : {
-            "slug" : "mystic",
-            "level" : 12,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "blacksmithHardcore" : {
-            "slug" : "blacksmith",
-            "level" : 0,
-            "stepCurrent" : -1,
-            "stepMax" : 5
-          },
-          "jewelerHardcore" : {
-            "slug" : "jeweler",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mysticHardcore" : {
-            "slug" : "mystic",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "blacksmithSeason" : {
-            "slug" : "blacksmith",
-            "level" : 0,
-            "stepCurrent" : -1,
-            "stepMax" : 5
-          },
-          "jewelerSeason" : {
-            "slug" : "jeweler",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mysticSeason" : {
-            "slug" : "mystic",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "blacksmithSeasonHardcore" : {
-            "slug" : "blacksmith",
-            "level" : 0,
-            "stepCurrent" : -1,
-            "stepMax" : 5
-          },
-          "jewelerSeasonHardcore" : {
-            "slug" : "jeweler",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mysticSeasonHardcore" : {
-            "slug" : "mystic",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "seasonalProfiles" : {
-            "0" : {
-              "seasonId" : 0,
-              "paragonLevel" : 101,
-              "paragonLevelHardcore" : 101,
-              "kills" : {
-                "monsters" : 55502,
-                "elites" : 5264,
-                "hardcoreMonsters" : 0
-              },
-              "timePlayed" : {
-                "barbarian" : 0.0010,
-                "crusader" : 0.109,
-                "demon-hunter" : 0.0,
-                "monk" : 0.0,
-                "witch-doctor" : 0.0010,
-                "wizard" : 1.0
-              },
-              "highestDifficulty" : 0,
-              "highestHardcoreLevel" : 0,
-              "progression" : {
-                "act1" : true,
-                "act2" : true,
-                "act3" : true,
-                "act4" : true,
-                "act5" : true
-              }
-            }
-          }
-        }
-    http_version: 
-  recorded_at: Tue, 02 Sep 2014 08:53:02 GMT
-- request:
-    method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/?apikey=api_key_from_secrets_rb
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Language:
-      - en-US
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Tue, 02 Sep 2014 08:53:02 GMT
-      Server:
-      - Apache
-      Vary:
-      - Accept-Encoding
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-40.mashery.com
-      Content-Length:
-      - '773'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "battleTag" : "PlayerOne#1309",
-          "paragonLevel" : 101,
-          "paragonLevelHardcore" : 0,
-          "paragonLevelSeason" : 0,
-          "paragonLevelSeasonHardcore" : 0,
-          "heroes" : [ {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "PlayerOne",
-            "id" : 1304986,
-            "level" : 70,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "wizard",
-            "last-updated" : 1397322512
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "Neggromancer",
-            "id" : 44149625,
-            "level" : 70,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "crusader",
-            "last-updated" : 1409332075
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "AuctionHouse",
-            "id" : 17253136,
-            "level" : 2,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "witch-doctor",
-            "last-updated" : 1339162517
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "CedardDain",
-            "id" : 1366097,
-            "level" : 2,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "barbarian",
-            "last-updated" : 1337092369
-          }, {
-            "paragonLevel" : 101,
-            "seasonal" : false,
-            "name" : "ChackyJan",
-            "id" : 11756870,
-            "level" : 1,
-            "hardcore" : false,
-            "gender" : 0,
-            "dead" : false,
-            "class" : "monk",
-            "last-updated" : 1337857100
-          } ],
-          "lastHeroPlayed" : 44149625,
-          "lastUpdated" : 1409332075,
-          "kills" : {
-            "monsters" : 55502,
-            "elites" : 5264,
-            "hardcoreMonsters" : 0
-          },
-          "highestDifficulty" : 0,
-          "highestHardcoreLevel" : 0,
-          "timePlayed" : {
-            "barbarian" : 0.0010,
-            "crusader" : 0.109,
-            "demon-hunter" : 0.0,
-            "monk" : 0.0,
-            "witch-doctor" : 0.0010,
-            "wizard" : 1.0
-          },
-          "progression" : {
-            "act1" : true,
-            "act2" : true,
-            "act3" : true,
-            "act4" : true,
-            "act5" : true
-          },
-          "fallenHeroes" : [ ],
-          "blacksmith" : {
-            "slug" : "blacksmith",
-            "level" : 12,
-            "stepCurrent" : 0,
-            "stepMax" : 5
-          },
-          "jeweler" : {
-            "slug" : "jeweler",
-            "level" : 12,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mystic" : {
-            "slug" : "mystic",
-            "level" : 12,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "blacksmithHardcore" : {
-            "slug" : "blacksmith",
-            "level" : 0,
-            "stepCurrent" : -1,
-            "stepMax" : 5
-          },
-          "jewelerHardcore" : {
-            "slug" : "jeweler",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mysticHardcore" : {
-            "slug" : "mystic",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "blacksmithSeason" : {
-            "slug" : "blacksmith",
-            "level" : 0,
-            "stepCurrent" : -1,
-            "stepMax" : 5
-          },
-          "jewelerSeason" : {
-            "slug" : "jeweler",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mysticSeason" : {
-            "slug" : "mystic",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "blacksmithSeasonHardcore" : {
-            "slug" : "blacksmith",
-            "level" : 0,
-            "stepCurrent" : -1,
-            "stepMax" : 5
-          },
-          "jewelerSeasonHardcore" : {
-            "slug" : "jeweler",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "mysticSeasonHardcore" : {
-            "slug" : "mystic",
-            "level" : 0,
-            "stepCurrent" : 0,
-            "stepMax" : 1
-          },
-          "seasonalProfiles" : {
-            "0" : {
-              "seasonId" : 0,
-              "paragonLevel" : 101,
-              "paragonLevelHardcore" : 101,
-              "kills" : {
-                "monsters" : 55502,
-                "elites" : 5264,
-                "hardcoreMonsters" : 0
-              },
-              "timePlayed" : {
-                "barbarian" : 0.0010,
-                "crusader" : 0.109,
-                "demon-hunter" : 0.0,
-                "monk" : 0.0,
-                "witch-doctor" : 0.0010,
-                "wizard" : 1.0
-              },
-              "highestDifficulty" : 0,
-              "highestHardcoreLevel" : 0,
-              "progression" : {
-                "act1" : true,
-                "act2" : true,
-                "act3" : true,
-                "act4" : true,
-                "act5" : true
-              }
-            }
-          }
-        }
-    http_version: 
-  recorded_at: Tue, 02 Sep 2014 08:53:03 GMT
-- request:
-    method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/1304986?apikey=api_key_from_secrets_rb
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Language:
-      - en-US
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Tue, 02 Sep 2014 08:53:04 GMT
+      - Thu, 04 Sep 2014 16:13:36 GMT
       Server:
       - Apache
       Vary:
@@ -497,11 +37,467 @@ http_interactions:
       Connection:
       - keep-alive
     body:
+      encoding: UTF-8
+      string: |-
+        {
+          "battleTag" : "PlayerOne#1309",
+          "paragonLevel" : 102,
+          "paragonLevelHardcore" : 0,
+          "paragonLevelSeason" : 0,
+          "paragonLevelSeasonHardcore" : 0,
+          "heroes" : [ {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "PlayerOne",
+            "id" : 1304986,
+            "level" : 70,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "wizard",
+            "last-updated" : 1397322512
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "Neggromancer",
+            "id" : 44149625,
+            "level" : 70,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "crusader",
+            "last-updated" : 1409761346
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "AuctionHouse",
+            "id" : 17253136,
+            "level" : 2,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "witch-doctor",
+            "last-updated" : 1339162517
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "CedardDain",
+            "id" : 1366097,
+            "level" : 2,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "barbarian",
+            "last-updated" : 1337092369
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "ChackyJan",
+            "id" : 11756870,
+            "level" : 1,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "monk",
+            "last-updated" : 1337857100
+          } ],
+          "lastHeroPlayed" : 44149625,
+          "lastUpdated" : 1409761346,
+          "kills" : {
+            "monsters" : 56231,
+            "elites" : 5317,
+            "hardcoreMonsters" : 0
+          },
+          "highestHardcoreLevel" : 0,
+          "timePlayed" : {
+            "barbarian" : 0.0010,
+            "crusader" : 0.12,
+            "demon-hunter" : 0.0,
+            "monk" : 0.0,
+            "witch-doctor" : 0.0010,
+            "wizard" : 1.0
+          },
+          "progression" : {
+            "act1" : true,
+            "act2" : false,
+            "act3" : false,
+            "act4" : false,
+            "act5" : true
+          },
+          "fallenHeroes" : [ ],
+          "blacksmith" : {
+            "slug" : "blacksmith",
+            "level" : 12,
+            "stepCurrent" : 0,
+            "stepMax" : 5
+          },
+          "jeweler" : {
+            "slug" : "jeweler",
+            "level" : 12,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mystic" : {
+            "slug" : "mystic",
+            "level" : 12,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "blacksmithHardcore" : {
+            "slug" : "blacksmith",
+            "level" : 0,
+            "stepCurrent" : -1,
+            "stepMax" : 5
+          },
+          "jewelerHardcore" : {
+            "slug" : "jeweler",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mysticHardcore" : {
+            "slug" : "mystic",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "blacksmithSeason" : {
+            "slug" : "blacksmith",
+            "level" : 0,
+            "stepCurrent" : -1,
+            "stepMax" : 5
+          },
+          "jewelerSeason" : {
+            "slug" : "jeweler",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mysticSeason" : {
+            "slug" : "mystic",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "blacksmithSeasonHardcore" : {
+            "slug" : "blacksmith",
+            "level" : 0,
+            "stepCurrent" : -1,
+            "stepMax" : 5
+          },
+          "jewelerSeasonHardcore" : {
+            "slug" : "jeweler",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mysticSeasonHardcore" : {
+            "slug" : "mystic",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "seasonalProfiles" : {
+            "season0" : {
+              "seasonId" : 0,
+              "paragonLevel" : 102,
+              "paragonLevelHardcore" : 102,
+              "kills" : {
+                "monsters" : 56231,
+                "elites" : 5317,
+                "hardcoreMonsters" : 0
+              },
+              "timePlayed" : {
+                "barbarian" : 0.0010,
+                "crusader" : 0.12,
+                "demon-hunter" : 0.0,
+                "monk" : 0.0,
+                "witch-doctor" : 0.0010,
+                "wizard" : 1.0
+              },
+              "highestHardcoreLevel" : 0,
+              "progression" : {
+                "act1" : true,
+                "act2" : false,
+                "act3" : false,
+                "act4" : false,
+                "act5" : true
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 16:13:36 GMT
+- request:
+    method: get
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 04 Sep 2014 16:13:36 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1b-45.mashery.com
+      Content-Length:
+      - '762'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "battleTag" : "PlayerOne#1309",
+          "paragonLevel" : 102,
+          "paragonLevelHardcore" : 0,
+          "paragonLevelSeason" : 0,
+          "paragonLevelSeasonHardcore" : 0,
+          "heroes" : [ {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "PlayerOne",
+            "id" : 1304986,
+            "level" : 70,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "wizard",
+            "last-updated" : 1397322512
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "Neggromancer",
+            "id" : 44149625,
+            "level" : 70,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "crusader",
+            "last-updated" : 1409761346
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "AuctionHouse",
+            "id" : 17253136,
+            "level" : 2,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "witch-doctor",
+            "last-updated" : 1339162517
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "CedardDain",
+            "id" : 1366097,
+            "level" : 2,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "barbarian",
+            "last-updated" : 1337092369
+          }, {
+            "paragonLevel" : 102,
+            "seasonal" : false,
+            "name" : "ChackyJan",
+            "id" : 11756870,
+            "level" : 1,
+            "hardcore" : false,
+            "gender" : 0,
+            "dead" : false,
+            "class" : "monk",
+            "last-updated" : 1337857100
+          } ],
+          "lastHeroPlayed" : 44149625,
+          "lastUpdated" : 1409761346,
+          "kills" : {
+            "monsters" : 56231,
+            "elites" : 5317,
+            "hardcoreMonsters" : 0
+          },
+          "highestHardcoreLevel" : 0,
+          "timePlayed" : {
+            "barbarian" : 0.0010,
+            "crusader" : 0.12,
+            "demon-hunter" : 0.0,
+            "monk" : 0.0,
+            "witch-doctor" : 0.0010,
+            "wizard" : 1.0
+          },
+          "progression" : {
+            "act1" : true,
+            "act2" : false,
+            "act3" : false,
+            "act4" : false,
+            "act5" : true
+          },
+          "fallenHeroes" : [ ],
+          "blacksmith" : {
+            "slug" : "blacksmith",
+            "level" : 12,
+            "stepCurrent" : 0,
+            "stepMax" : 5
+          },
+          "jeweler" : {
+            "slug" : "jeweler",
+            "level" : 12,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mystic" : {
+            "slug" : "mystic",
+            "level" : 12,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "blacksmithHardcore" : {
+            "slug" : "blacksmith",
+            "level" : 0,
+            "stepCurrent" : -1,
+            "stepMax" : 5
+          },
+          "jewelerHardcore" : {
+            "slug" : "jeweler",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mysticHardcore" : {
+            "slug" : "mystic",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "blacksmithSeason" : {
+            "slug" : "blacksmith",
+            "level" : 0,
+            "stepCurrent" : -1,
+            "stepMax" : 5
+          },
+          "jewelerSeason" : {
+            "slug" : "jeweler",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mysticSeason" : {
+            "slug" : "mystic",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "blacksmithSeasonHardcore" : {
+            "slug" : "blacksmith",
+            "level" : 0,
+            "stepCurrent" : -1,
+            "stepMax" : 5
+          },
+          "jewelerSeasonHardcore" : {
+            "slug" : "jeweler",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "mysticSeasonHardcore" : {
+            "slug" : "mystic",
+            "level" : 0,
+            "stepCurrent" : 0,
+            "stepMax" : 1
+          },
+          "seasonalProfiles" : {
+            "season0" : {
+              "seasonId" : 0,
+              "paragonLevel" : 102,
+              "paragonLevelHardcore" : 102,
+              "kills" : {
+                "monsters" : 56231,
+                "elites" : 5317,
+                "hardcoreMonsters" : 0
+              },
+              "timePlayed" : {
+                "barbarian" : 0.0010,
+                "crusader" : 0.12,
+                "demon-hunter" : 0.0,
+                "monk" : 0.0,
+                "witch-doctor" : 0.0010,
+                "wizard" : 1.0
+              },
+              "highestHardcoreLevel" : 0,
+              "progression" : {
+                "act1" : true,
+                "act2" : false,
+                "act3" : false,
+                "act4" : false,
+                "act5" : true
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 16:13:38 GMT
+- request:
+    method: get
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/1304986?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 04 Sep 2014 16:13:14 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-46.mashery.com
+      Content-Length:
+      - '8508'
+      Connection:
+      - keep-alive
+    body:
       encoding: ASCII-8BIT
       string: !binary |-
         ewogICJpZCIgOiAxMzA0OTg2LAogICJuYW1lIiA6ICJQbGF5ZXJPbmUiLAog
         ICJjbGFzcyIgOiAid2l6YXJkIiwKICAiZ2VuZGVyIiA6IDAsCiAgImxldmVs
-        IiA6IDcwLAogICJwYXJhZ29uTGV2ZWwiIDogMTAxLAogICJoYXJkY29yZSIg
+        IiA6IDcwLAogICJwYXJhZ29uTGV2ZWwiIDogMTAyLAogICJoYXJkY29yZSIg
         OiBmYWxzZSwKICAic2Vhc29uYWwiIDogZmFsc2UsCiAgInNlYXNvbkNyZWF0
         ZWQiIDogMCwKICAic2tpbGxzIiA6IHsKICAgICJhY3RpdmUiIDogWyB7CiAg
         ICAgICJza2lsbCIgOiB7CiAgICAgICAgInNsdWciIDogIm1hZ2ljLW1pc3Np
@@ -1432,57 +1428,57 @@ http_interactions:
         aWNhbFJlc2lzdCIgOiAxMDIxLAogICAgImZpcmVSZXNpc3QiIDogMTE1MiwK
         ICAgICJjb2xkUmVzaXN0IiA6IDg5NywKICAgICJsaWdodG5pbmdSZXNpc3Qi
         IDogMTE5MCwKICAgICJwb2lzb25SZXNpc3QiIDogODk3LAogICAgImFyY2Fu
-        ZVJlc2lzdCIgOiAxMDQwLAogICAgImNyaXREYW1hZ2UiIDogMy4xNzk5OTk5
-        OTk5OTk5OTk3LAogICAgImJsb2NrQ2hhbmNlIiA6IDAuMCwKICAgICJibG9j
-        a0Ftb3VudE1pbiIgOiAwLAogICAgImJsb2NrQW1vdW50TWF4IiA6IDAsCiAg
-        ICAiZGFtYWdlSW5jcmVhc2UiIDogMC4wLAogICAgImNyaXRDaGFuY2UiIDog
-        MC4zODUwMDAwMDA3NDk5OTk5NiwKICAgICJkYW1hZ2VSZWR1Y3Rpb24iIDog
-        MC4wLAogICAgInRob3JucyIgOiAwLjAsCiAgICAibGlmZVN0ZWFsIiA6IDAu
-        MCwKICAgICJsaWZlUGVyS2lsbCIgOiA2NzAxLjAsCiAgICAiZ29sZEZpbmQi
-        IDogMi4wMywKICAgICJtYWdpY0ZpbmQiIDogMC4wLAogICAgImxpZmVPbkhp
-        dCIgOiA2NTQyLjAsCiAgICAicHJpbWFyeVJlc291cmNlIiA6IDEzMywKICAg
-        ICJzZWNvbmRhcnlSZXNvdXJjZSIgOiAwCiAgfSwKICAia2lsbHMiIDogewog
-        ICAgImVsaXRlcyIgOiA0MTAwCiAgfSwKICAicHJvZ3Jlc3Npb24iIDogewog
-        ICAgImFjdDEiIDogewogICAgICAiY29tcGxldGVkIiA6IGZhbHNlLAogICAg
-        ICAiY29tcGxldGVkUXVlc3RzIiA6IFsgewogICAgICAgICJzbHVnIiA6ICJ0
-        aGUtaW1wcmlzb25lZC1hbmdlbCIsCiAgICAgICAgIm5hbWUiIDogIlRoZSBJ
-        bXByaXNvbmVkIEFuZ2VsIgogICAgICB9IF0KICAgIH0sCiAgICAiYWN0MiIg
-        OiB7CiAgICAgICJjb21wbGV0ZWQiIDogZmFsc2UsCiAgICAgICJjb21wbGV0
-        ZWRRdWVzdHMiIDogWyBdCiAgICB9LAogICAgImFjdDMiIDogewogICAgICAi
-        Y29tcGxldGVkIiA6IHRydWUsCiAgICAgICJjb21wbGV0ZWRRdWVzdHMiIDog
-        WyB7CiAgICAgICAgInNsdWciIDogImhlYXJ0LW9mLXNpbiIsCiAgICAgICAg
-        Im5hbWUiIDogIkhlYXJ0IG9mIFNpbiIKICAgICAgfSBdCiAgICB9LAogICAg
-        ImFjdDQiIDogewogICAgICAiY29tcGxldGVkIiA6IHRydWUsCiAgICAgICJj
-        b21wbGV0ZWRRdWVzdHMiIDogWyB7CiAgICAgICAgInNsdWciIDogImZhbGwt
-        b2YtdGhlLWhpZ2gtaGVhdmVucyIsCiAgICAgICAgIm5hbWUiIDogIkZhbGwg
-        b2YgdGhlIEhpZ2ggSGVhdmVucyIKICAgICAgfSwgewogICAgICAgICJzbHVn
-        IiA6ICJ0aGUtbGlnaHQtb2YtaG9wZSIsCiAgICAgICAgIm5hbWUiIDogIlRo
-        ZSBMaWdodCBvZiBIb3BlIgogICAgICB9LCB7CiAgICAgICAgInNsdWciIDog
-        ImJlbmVhdGgtdGhlLXNwaXJlIiwKICAgICAgICAibmFtZSIgOiAiQmVuZWF0
-        aCB0aGUgU3BpcmUiCiAgICAgIH0sIHsKICAgICAgICAic2x1ZyIgOiAicHJp
-        bWUtZXZpbCIsCiAgICAgICAgIm5hbWUiIDogIlByaW1lIEV2aWwiCiAgICAg
-        IH0gXQogICAgfSwKICAgICJhY3Q1IiA6IHsKICAgICAgImNvbXBsZXRlZCIg
-        OiB0cnVlLAogICAgICAiY29tcGxldGVkUXVlc3RzIiA6IFsgewogICAgICAg
-        ICJzbHVnIiA6ICJ0aGUtZmFsbC1vZi13ZXN0bWFyY2giLAogICAgICAgICJu
-        YW1lIiA6ICJUaGUgRmFsbCBvZiBXZXN0bWFyY2giCiAgICAgIH0sIHsKICAg
-        ICAgICAic2x1ZyIgOiAidGhlLWhhcmJpbmdlciIsCiAgICAgICAgIm5hbWUi
-        IDogIlRoZSBIYXJiaW5nZXIiCiAgICAgIH0sIHsKICAgICAgICAic2x1ZyIg
-        OiAidGhlLXdpdGNoIiwKICAgICAgICAibmFtZSIgOiAiVGhlIFdpdGNoIgog
-        ICAgICB9LCB7CiAgICAgICAgInNsdWciIDogInRoZS1wYW5kZW1vbml1bS1n
-        YXRlIiwKICAgICAgICAibmFtZSIgOiAiVGhlIFBhbmRlbW9uaXVtIEdhdGUi
-        CiAgICAgIH0sIHsKICAgICAgICAic2x1ZyIgOiAidGhlLWJhdHRsZWZpZWxk
-        cy1vZi1ldGVybml0eSIsCiAgICAgICAgIm5hbWUiIDogIlRoZSBCYXR0bGVm
-        aWVsZHMgb2YgRXRlcm5pdHkiCiAgICAgIH0sIHsKICAgICAgICAic2x1ZyIg
-        OiAiYnJlYWNoaW5nLXRoZS1mb3J0cmVzcyIsCiAgICAgICAgIm5hbWUiIDog
-        IkJyZWFjaGluZyB0aGUgRm9ydHJlc3MiCiAgICAgIH0sIHsKICAgICAgICAi
-        c2x1ZyIgOiAiYW5nZWwtb2YtZGVhdGgiLAogICAgICAgICJuYW1lIiA6ICJB
-        bmdlbCBvZiBEZWF0aCIKICAgICAgfSBdCiAgICB9CiAgfSwKICAiZGVhZCIg
-        OiBmYWxzZSwKICAibGFzdC11cGRhdGVkIiA6IDEzOTczMjI1MTIKfQ==
+        ZVJlc2lzdCIgOiAxMDQwLAogICAgImNyaXREYW1hZ2UiIDogMy4xOCwKICAg
+        ICJibG9ja0NoYW5jZSIgOiAwLjAsCiAgICAiYmxvY2tBbW91bnRNaW4iIDog
+        MCwKICAgICJibG9ja0Ftb3VudE1heCIgOiAwLAogICAgImRhbWFnZUluY3Jl
+        YXNlIiA6IDAuMCwKICAgICJjcml0Q2hhbmNlIiA6IDAuMzg1MDAwMDAwNzUs
+        CiAgICAiZGFtYWdlUmVkdWN0aW9uIiA6IDAuMCwKICAgICJ0aG9ybnMiIDog
+        MC4wLAogICAgImxpZmVTdGVhbCIgOiAwLjAsCiAgICAibGlmZVBlcktpbGwi
+        IDogNjcwMS4wLAogICAgImdvbGRGaW5kIiA6IDIuMDMsCiAgICAibWFnaWNG
+        aW5kIiA6IDAuMCwKICAgICJsaWZlT25IaXQiIDogNjU0Mi4wLAogICAgInBy
+        aW1hcnlSZXNvdXJjZSIgOiAxMzMsCiAgICAic2Vjb25kYXJ5UmVzb3VyY2Ui
+        IDogMAogIH0sCiAgImtpbGxzIiA6IHsKICAgICJlbGl0ZXMiIDogNDEwMAog
+        IH0sCiAgInByb2dyZXNzaW9uIiA6IHsKICAgICJhY3QxIiA6IHsKICAgICAg
+        ImNvbXBsZXRlZCIgOiBmYWxzZSwKICAgICAgImNvbXBsZXRlZFF1ZXN0cyIg
+        OiBbIHsKICAgICAgICAic2x1ZyIgOiAidGhlLWltcHJpc29uZWQtYW5nZWwi
+        LAogICAgICAgICJuYW1lIiA6ICJUaGUgSW1wcmlzb25lZCBBbmdlbCIKICAg
+        ICAgfSBdCiAgICB9LAogICAgImFjdDIiIDogewogICAgICAiY29tcGxldGVk
+        IiA6IGZhbHNlLAogICAgICAiY29tcGxldGVkUXVlc3RzIiA6IFsgXQogICAg
+        fSwKICAgICJhY3QzIiA6IHsKICAgICAgImNvbXBsZXRlZCIgOiB0cnVlLAog
+        ICAgICAiY29tcGxldGVkUXVlc3RzIiA6IFsgewogICAgICAgICJzbHVnIiA6
+        ICJoZWFydC1vZi1zaW4iLAogICAgICAgICJuYW1lIiA6ICJIZWFydCBvZiBT
+        aW4iCiAgICAgIH0gXQogICAgfSwKICAgICJhY3Q0IiA6IHsKICAgICAgImNv
+        bXBsZXRlZCIgOiB0cnVlLAogICAgICAiY29tcGxldGVkUXVlc3RzIiA6IFsg
+        ewogICAgICAgICJzbHVnIiA6ICJmYWxsLW9mLXRoZS1oaWdoLWhlYXZlbnMi
+        LAogICAgICAgICJuYW1lIiA6ICJGYWxsIG9mIHRoZSBIaWdoIEhlYXZlbnMi
+        CiAgICAgIH0sIHsKICAgICAgICAic2x1ZyIgOiAidGhlLWxpZ2h0LW9mLWhv
+        cGUiLAogICAgICAgICJuYW1lIiA6ICJUaGUgTGlnaHQgb2YgSG9wZSIKICAg
+        ICAgfSwgewogICAgICAgICJzbHVnIiA6ICJiZW5lYXRoLXRoZS1zcGlyZSIs
+        CiAgICAgICAgIm5hbWUiIDogIkJlbmVhdGggdGhlIFNwaXJlIgogICAgICB9
+        LCB7CiAgICAgICAgInNsdWciIDogInByaW1lLWV2aWwiLAogICAgICAgICJu
+        YW1lIiA6ICJQcmltZSBFdmlsIgogICAgICB9IF0KICAgIH0sCiAgICAiYWN0
+        NSIgOiB7CiAgICAgICJjb21wbGV0ZWQiIDogdHJ1ZSwKICAgICAgImNvbXBs
+        ZXRlZFF1ZXN0cyIgOiBbIHsKICAgICAgICAic2x1ZyIgOiAidGhlLWZhbGwt
+        b2Ytd2VzdG1hcmNoIiwKICAgICAgICAibmFtZSIgOiAiVGhlIEZhbGwgb2Yg
+        V2VzdG1hcmNoIgogICAgICB9LCB7CiAgICAgICAgInNsdWciIDogInRoZS1o
+        YXJiaW5nZXIiLAogICAgICAgICJuYW1lIiA6ICJUaGUgSGFyYmluZ2VyIgog
+        ICAgICB9LCB7CiAgICAgICAgInNsdWciIDogInRoZS13aXRjaCIsCiAgICAg
+        ICAgIm5hbWUiIDogIlRoZSBXaXRjaCIKICAgICAgfSwgewogICAgICAgICJz
+        bHVnIiA6ICJ0aGUtcGFuZGVtb25pdW0tZ2F0ZSIsCiAgICAgICAgIm5hbWUi
+        IDogIlRoZSBQYW5kZW1vbml1bSBHYXRlIgogICAgICB9LCB7CiAgICAgICAg
+        InNsdWciIDogInRoZS1iYXR0bGVmaWVsZHMtb2YtZXRlcm5pdHkiLAogICAg
+        ICAgICJuYW1lIiA6ICJUaGUgQmF0dGxlZmllbGRzIG9mIEV0ZXJuaXR5Igog
+        ICAgICB9LCB7CiAgICAgICAgInNsdWciIDogImJyZWFjaGluZy10aGUtZm9y
+        dHJlc3MiLAogICAgICAgICJuYW1lIiA6ICJCcmVhY2hpbmcgdGhlIEZvcnRy
+        ZXNzIgogICAgICB9LCB7CiAgICAgICAgInNsdWciIDogImFuZ2VsLW9mLWRl
+        YXRoIiwKICAgICAgICAibmFtZSIgOiAiQW5nZWwgb2YgRGVhdGgiCiAgICAg
+        IH0gXQogICAgfQogIH0sCiAgImRlYWQiIDogZmFsc2UsCiAgImxhc3QtdXBk
+        YXRlZCIgOiAxMzk3MzIyNTEyCn0=
     http_version: 
-  recorded_at: Tue, 02 Sep 2014 08:53:05 GMT
+  recorded_at: Thu, 04 Sep 2014 16:13:40 GMT
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/44149625?apikey=api_key_from_secrets_rb
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/44149625?apikey=api_key_from_secrets_rb&locale=en_US
     body:
       encoding: US-ASCII
       string: ''
@@ -1503,7 +1499,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 02 Sep 2014 08:53:06 GMT
+      - Thu, 04 Sep 2014 16:13:42 GMT
       Server:
       - Apache
       Vary:
@@ -1511,7 +1507,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-50.mashery.com
+      - prod-j-worker-us-east-1e-46.mashery.com
       Transfer-Encoding:
       - chunked
       Connection:
@@ -1521,7 +1517,7 @@ http_interactions:
       string: !binary |-
         ewogICJpZCIgOiA0NDE0OTYyNSwKICAibmFtZSIgOiAiTmVnZ3JvbWFuY2Vy
         IiwKICAiY2xhc3MiIDogImNydXNhZGVyIiwKICAiZ2VuZGVyIiA6IDAsCiAg
-        ImxldmVsIiA6IDcwLAogICJwYXJhZ29uTGV2ZWwiIDogMTAxLAogICJoYXJk
+        ImxldmVsIiA6IDcwLAogICJwYXJhZ29uTGV2ZWwiIDogMTAyLAogICJoYXJk
         Y29yZSIgOiBmYWxzZSwKICAic2Vhc29uYWwiIDogZmFsc2UsCiAgInNlYXNv
         bkNyZWF0ZWQiIDogMCwKICAic2tpbGxzIiA6IHsKICAgICJhY3RpdmUiIDog
         WyB7CiAgICAgICJza2lsbCIgOiB7CiAgICAgICAgInNsdWciIDogImp1c3Rp
@@ -2292,7 +2288,7 @@ http_interactions:
         ICJtYWdpY0ZpbmQiIDogMCwKICAgICAgICAiZXhwZXJpZW5jZUJvbnVzIiA6
         IDAKICAgICAgfSwKICAgICAgInNraWxscyIgOiBbIHsgfSwgeyB9LCB7IH0s
         IHsgfSBdCiAgICB9CiAgfSwKICAic3RhdHMiIDogewogICAgImxpZmUiIDog
-        NjgwMDIwLAogICAgImRhbWFnZSIgOiAzMzExNDguMCwKICAgICJhdHRhY2tT
+        NjgwMDIwLAogICAgImRhbWFnZSIgOiAzMzE4ODQuMCwKICAgICJhdHRhY2tT
         cGVlZCIgOiAxLjEwMDAwMDAyMzg0MTg1OCwKICAgICJhcm1vciIgOiAxMzQ3
         MywKICAgICJzdHJlbmd0aCIgOiA4MDUyLAogICAgImRleHRlcml0eSIgOiA3
         NywKICAgICJ2aXRhbGl0eSIgOiA1OTExLAogICAgImludGVsbGlnZW5jZSIg
@@ -2301,15 +2297,15 @@ http_interactions:
         aHRuaW5nUmVzaXN0IiA6IDM5MywKICAgICJwb2lzb25SZXNpc3QiIDogMzkz
         LAogICAgImFyY2FuZVJlc2lzdCIgOiA1NDIsCiAgICAiY3JpdERhbWFnZSIg
         OiAxLjgsCiAgICAiYmxvY2tDaGFuY2UiIDogMC4xMywKICAgICJibG9ja0Ft
-        b3VudE1pbiIgOiAxMzA3MiwKICAgICJibG9ja0Ftb3VudE1heCIgOiAxODI1
-        NSwKICAgICJkYW1hZ2VJbmNyZWFzZSIgOiAwLjAsCiAgICAiY3JpdENoYW5j
+        b3VudE1pbiIgOiAxNzcwMiwKICAgICJibG9ja0Ftb3VudE1heCIgOiAyMjUw
+        NCwKICAgICJkYW1hZ2VJbmNyZWFzZSIgOiAwLjAsCiAgICAiY3JpdENoYW5j
         ZSIgOiAwLjI5MDAwMDAwMDc1LAogICAgImRhbWFnZVJlZHVjdGlvbiIgOiAw
         LjAsCiAgICAidGhvcm5zIiA6IDAuMCwKICAgICJsaWZlU3RlYWwiIDogMC4w
         LAogICAgImxpZmVQZXJLaWxsIiA6IDAuMCwKICAgICJnb2xkRmluZCIgOiAw
         LjY0OTk5OTk5OTk5OTk5OTksCiAgICAibWFnaWNGaW5kIiA6IDAuMCwKICAg
         ICJsaWZlT25IaXQiIDogMzkxNDQuMCwKICAgICJwcmltYXJ5UmVzb3VyY2Ui
         IDogMTMwLAogICAgInNlY29uZGFyeVJlc291cmNlIiA6IDAKICB9LAogICJr
-        aWxscyIgOiB7CiAgICAiZWxpdGVzIiA6IDExNjQKICB9LAogICJwcm9ncmVz
+        aWxscyIgOiB7CiAgICAiZWxpdGVzIiA6IDEyMTcKICB9LAogICJwcm9ncmVz
         c2lvbiIgOiB7CiAgICAiYWN0MSIgOiB7CiAgICAgICJjb21wbGV0ZWQiIDog
         dHJ1ZSwKICAgICAgImNvbXBsZXRlZFF1ZXN0cyIgOiBbIHsKICAgICAgICAi
         c2x1ZyIgOiAidGhlLWZhbGxlbi1zdGFyIiwKICAgICAgICAibmFtZSIgOiAi
@@ -2340,15 +2336,22 @@ http_interactions:
         ICAgIH0sCiAgICAiYWN0NSIgOiB7CiAgICAgICJjb21wbGV0ZWQiIDogdHJ1
         ZSwKICAgICAgImNvbXBsZXRlZFF1ZXN0cyIgOiBbIHsKICAgICAgICAic2x1
         ZyIgOiAidGhlLWhhcmJpbmdlciIsCiAgICAgICAgIm5hbWUiIDogIlRoZSBI
-        YXJiaW5nZXIiCiAgICAgIH0sIHsKICAgICAgICAic2x1ZyIgOiAiYW5nZWwt
-        b2YtZGVhdGgiLAogICAgICAgICJuYW1lIiA6ICJBbmdlbCBvZiBEZWF0aCIK
-        ICAgICAgfSBdCiAgICB9CiAgfSwKICAiZGVhZCIgOiBmYWxzZSwKICAibGFz
-        dC11cGRhdGVkIiA6IDE0MDkzMzIwNzUKfQ==
+        YXJiaW5nZXIiCiAgICAgIH0sIHsKICAgICAgICAic2x1ZyIgOiAidGhlLXBh
+        bmRlbW9uaXVtLWdhdGUiLAogICAgICAgICJuYW1lIiA6ICJUaGUgUGFuZGVt
+        b25pdW0gR2F0ZSIKICAgICAgfSwgewogICAgICAgICJzbHVnIiA6ICJ0aGUt
+        YmF0dGxlZmllbGRzLW9mLWV0ZXJuaXR5IiwKICAgICAgICAibmFtZSIgOiAi
+        VGhlIEJhdHRsZWZpZWxkcyBvZiBFdGVybml0eSIKICAgICAgfSwgewogICAg
+        ICAgICJzbHVnIiA6ICJicmVhY2hpbmctdGhlLWZvcnRyZXNzIiwKICAgICAg
+        ICAibmFtZSIgOiAiQnJlYWNoaW5nIHRoZSBGb3J0cmVzcyIKICAgICAgfSwg
+        ewogICAgICAgICJzbHVnIiA6ICJhbmdlbC1vZi1kZWF0aCIsCiAgICAgICAg
+        Im5hbWUiIDogIkFuZ2VsIG9mIERlYXRoIgogICAgICB9IF0KICAgIH0KICB9
+        LAogICJkZWFkIiA6IGZhbHNlLAogICJsYXN0LXVwZGF0ZWQiIDogMTQwOTc2
+        MTM0Ngp9
     http_version: 
-  recorded_at: Tue, 02 Sep 2014 08:53:06 GMT
+  recorded_at: Thu, 04 Sep 2014 16:13:42 GMT
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/17253136?apikey=api_key_from_secrets_rb
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/17253136?apikey=api_key_from_secrets_rb&locale=en_US
     body:
       encoding: US-ASCII
       string: ''
@@ -2369,7 +2372,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 02 Sep 2014 08:53:07 GMT
+      - Thu, 04 Sep 2014 16:13:46 GMT
       Server:
       - Apache
       Vary:
@@ -2377,9 +2380,9 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-47.mashery.com
-      Transfer-Encoding:
-      - chunked
+      - prod-j-worker-us-east-1e-49.mashery.com
+      Content-Length:
+      - '1086'
       Connection:
       - keep-alive
     body:
@@ -2391,7 +2394,7 @@ http_interactions:
           "class" : "witch-doctor",
           "gender" : 0,
           "level" : 2,
-          "paragonLevel" : 101,
+          "paragonLevel" : 102,
           "hardcore" : false,
           "seasonal" : false,
           "seasonCreated" : 0,
@@ -2494,10 +2497,10 @@ http_interactions:
           "last-updated" : 1339162517
         }
     http_version: 
-  recorded_at: Tue, 02 Sep 2014 08:53:08 GMT
+  recorded_at: Thu, 04 Sep 2014 16:13:46 GMT
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/1366097?apikey=api_key_from_secrets_rb
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/1366097?apikey=api_key_from_secrets_rb&locale=en_US
     body:
       encoding: US-ASCII
       string: ''
@@ -2518,7 +2521,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 02 Sep 2014 08:53:09 GMT
+      - Thu, 04 Sep 2014 16:13:49 GMT
       Server:
       - Apache
       Vary:
@@ -2526,7 +2529,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-44.mashery.com
+      - prod-j-worker-us-east-1e-40.mashery.com
       Transfer-Encoding:
       - chunked
       Connection:
@@ -2540,7 +2543,7 @@ http_interactions:
           "class" : "barbarian",
           "gender" : 0,
           "level" : 2,
-          "paragonLevel" : 101,
+          "paragonLevel" : 102,
           "hardcore" : false,
           "seasonal" : false,
           "seasonCreated" : 0,
@@ -2659,10 +2662,10 @@ http_interactions:
           "last-updated" : 1337092369
         }
     http_version: 
-  recorded_at: Tue, 02 Sep 2014 08:53:09 GMT
+  recorded_at: Thu, 04 Sep 2014 16:13:49 GMT
 - request:
     method: get
-    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/11756870?apikey=api_key_from_secrets_rb
+    uri: https://us.api.battle.net/d3/profile/PlayerOne-1309/hero/11756870?apikey=api_key_from_secrets_rb&locale=en_US
     body:
       encoding: US-ASCII
       string: ''
@@ -2683,7 +2686,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 02 Sep 2014 08:53:10 GMT
+      - Thu, 04 Sep 2014 16:13:52 GMT
       Server:
       - Apache
       Vary:
@@ -2691,9 +2694,9 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-44.mashery.com
-      Content-Length:
-      - '968'
+      - prod-j-worker-us-east-1e-43.mashery.com
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
@@ -2705,7 +2708,7 @@ http_interactions:
           "class" : "monk",
           "gender" : 0,
           "level" : 1,
-          "paragonLevel" : 101,
+          "paragonLevel" : 102,
           "hardcore" : false,
           "seasonal" : false,
           "seasonCreated" : 0,
@@ -2796,5 +2799,5 @@ http_interactions:
           "last-updated" : 1337857100
         }
     http_version: 
-  recorded_at: Tue, 02 Sep 2014 08:53:10 GMT
+  recorded_at: Thu, 04 Sep 2014 16:13:52 GMT
 recorded_with: VCR 2.9.2

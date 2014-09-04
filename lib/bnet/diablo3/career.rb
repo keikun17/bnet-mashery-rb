@@ -45,7 +45,7 @@ class Bnet::Diablo3::Career < Bnet::BnetResource
     battle_tag = args[:battle_tag].gsub('#', '-')
     region     = args[:region]
     api_key    = args[:api_key] || Bnet.configuration.api_key
-    locale     = args.delete(:locale) || 'en_US'
+    locale     = args[:locale] || 'en_US'
 
     base_api = Bnet::Diablo3.new(region: region)
     call_url = base_api.url + "profile/#{battle_tag}/?apikey=#{api_key}&locale=#{locale}"
