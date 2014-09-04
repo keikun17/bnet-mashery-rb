@@ -19,11 +19,21 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
 
 ## Diablo
 
-    # Perform a query for the Diablo 3 character profile
+### Career
+
+    # Perform a query for the Diablo 3 character profile.
     #
-    # Required Arguments
-    #          :battle_tag - Player Battletag. (ex. PlayerOne#1309)
-    #          :region     - Account region (ex. 'us')
+    # Arguments
+    #   Required
+    #     :battle_tag - Player Battletag (ex. PlayerOne#1309)
+    #     :region     - Account region (ex. 'us')
+    #   Optional
+    #     :locale     - String locale (default: 'en_US')
+    #     :api_key    - String API key
+    #
+    # Example
+    #
+    # Bnet::Diablo3.find(battle_tag: 'PlayerOne#1309', region: 'us')
     #
     # Returns a Career object with the following attributes
     #
@@ -34,6 +44,8 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     # Note : Autoloads the associated hero records from the Hero API as well
 
     Bnet::Diablo3.find(battle_tag: 'PlayerOne#1309', region: 'us')
+
+### Hero
 
 ### License
 

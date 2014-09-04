@@ -20,23 +20,35 @@ class Bnet::Diablo3::Career < Bnet::BnetResource
     @battle_tag.gsub('-', '#')
   end
 
-  # Query Battlenet API for the character profile
+  # Perform a query for the Diablo 3 character profile.
   #
-  # Hash Params:
-  #   :region          - (e.g. 'us', 'ea')
-  #   :name            - String name of the toon
-  #   :realm           - String name of the server the character is on (String)
-  #   :locale          - String locale (defaults to 'en_US')
-  #   :key             - String api key
+  # Arguments
+  #   Required
+  #     :battle_tag - Player Battletag (ex. PlayerOne#1309)
+  #     :region     - Account region (ex. 'us')
+  #   Optional
+  #     :locale     - String locale (default: 'en_US')
+  #     :api_key    - String API key
   #
-  # Example : IF a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
+  # Example
+  #
+  # Bnet::Diablo3.find(battle_tag: 'PlayerOne#1309', region: 'us')
+  #
+  # Returns a Career object with the following attributes
+  #
+  #    :heroes, :last_hero_played, :last_updated, :kills, :time_played,
+  #    :fallen_heroes, :paragon_level, :paragon_level_hardcore, :battle_tag,
+  #    :progression, :region
+  #
+  # Note : Autoloads the associated hero records from the Hero API as well
   def self.find args
     battle_tag = args[:battle_tag].gsub('#', '-')
-    region = args[:region]
-    api_key = args[:api_key] || Bnet.configuration.api_key
+    region     = args[:region]
+    api_key    = args[:api_key] || Bnet.configuration.api_key
+    locale     = args.delete(:locale) || 'en_US'
 
     base_api = Bnet::Diablo3.new(region: region)
-    call_url = base_api.url + "profile/#{battle_tag}/?apikey=#{api_key}"
+    call_url = base_api.url + "profile/#{battle_tag}/?apikey=#{api_key}&locale=#{locale}"
 
     # NOTE common tasks below - marker for easier method extraction
     response = JSON.parse( URI.parse(call_url).read )
