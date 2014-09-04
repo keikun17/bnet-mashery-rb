@@ -28,7 +28,7 @@ TODOs:
 
 ### Starcraft
 
-- [x] MAshery::Starcraft2::Profile
+- [x] Bnet::Starcraft2::Profile
   - [ ] Bnet::Starcraft2::Matches
   - [ ] Bnet::Starcraft2::Ladder
   - [ ] Bnet::Starcraft2::Career
