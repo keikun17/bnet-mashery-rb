@@ -1,4 +1,4 @@
-class Mashery::WOW::Data::Base < Mashery::BnetResource
+class Bnet::WOW::Data::Base < Bnet::BnetResource
   # Query Battlenet API for the the data based on the subclass's scope
   #
   # Hash Params:
@@ -11,17 +11,17 @@ class Mashery::WOW::Data::Base < Mashery::BnetResource
   # Example : If a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
   def self.find_all(args)
     region = args.delete(:region)
-    api_key    = args.delete(:api_key) || Mashery::configuration.api_key
+    api_key    = args.delete(:api_key) || Bnet::configuration.api_key
     locale     = args.delete(:locale) || 'en_US'
 
-    base_api = Mashery::WOW.new(region: region)
+    base_api = Bnet::WOW.new(region: region)
     call_url = base_api.url + 'data/' + scopes[:url] + "?locale=#{locale}&apikey=#{api_key}"
 
     begin
       data = open(call_url)
       raw_response = JSON.parse(data.read)
 
-      if Mashery::API.valid_call?(data.status, raw_response)
+      if Bnet::API.valid_call?(data.status, raw_response)
         collection = collection_from_api(raw_response)
       else
         collection = []
@@ -44,7 +44,7 @@ class Mashery::WOW::Data::Base < Mashery::BnetResource
   end
 
   def self.url(collection_scope)
-    "#{Mashery::WOW.url}/data/#{collection_scope}"
+    "#{Bnet::WOW.url}/data/#{collection_scope}"
   end
 
   def self.scopes

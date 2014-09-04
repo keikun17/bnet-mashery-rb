@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::WOW::Data::CharacterRace do
+describe Bnet::WOW::Data::CharacterRace do
   describe ".find_all", vcr: {cassette_name: 'wow_data_character_races_all'} do
     let(:args){ {key: VCR::SECRETS["api_key"], region: 'us'} }
 

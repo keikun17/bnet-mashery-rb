@@ -1,4 +1,4 @@
-module Mashery
-  class Account < Mashery::API
+module Bnet
+  class Account < Bnet::API
   end
 end

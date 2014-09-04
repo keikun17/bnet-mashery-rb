@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::Diablo3::Career do
+describe Bnet::Diablo3::Career do
 
   describe ".from_api" do
     let(:attrs){
@@ -35,7 +35,7 @@ describe Mashery::Diablo3::Career do
         expect(career.heroes).to_not be_empty
 
         career.heroes.each do |hero|
-          expect(hero).to be_a_kind_of(Mashery::Diablo3::Hero)
+          expect(hero).to be_a_kind_of(Bnet::Diablo3::Hero)
           expect(hero.battle_tag).to eq('PlayerOne#1309')
           expect(hero.region).to eq(career.region)
           expect(hero.career).to be(career)

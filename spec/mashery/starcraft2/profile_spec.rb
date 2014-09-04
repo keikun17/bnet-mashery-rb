@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Mashery::Starcraft2::Profile do
+describe Bnet::Starcraft2::Profile do
   describe ".from_api" do
     let(:attrs){
       {

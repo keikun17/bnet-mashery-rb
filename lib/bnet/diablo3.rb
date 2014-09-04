@@ -1,5 +1,5 @@
-module Mashery
-  class Diablo3 < Mashery::API
+module Bnet
+  class Diablo3 < Bnet::API
     attr_accessor
 
     def url

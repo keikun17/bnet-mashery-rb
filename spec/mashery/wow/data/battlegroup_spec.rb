@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::WOW::Data::Battlegroup do
+describe Bnet::WOW::Data::Battlegroup do
   describe ".find_all", vcr: {cassette_name: 'wow_data_battlegroups_all'} do
     let(:args){ {key: VCR::SECRETS["api_key"], region: 'us'} }
 

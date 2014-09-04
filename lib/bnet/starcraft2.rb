@@ -1,5 +1,5 @@
-module Mashery
-  class Starcraft2 < Mashery::API
+module Bnet
+  class Starcraft2 < Bnet::API
     def url
       super + "sc2/"
     end

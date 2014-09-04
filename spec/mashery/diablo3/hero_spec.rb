@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::Diablo3::Hero do
+describe Bnet::Diablo3::Hero do
 
   describe ".find" do
     subject {described_class.find(args)}

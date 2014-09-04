@@ -1,5 +1,5 @@
-module Mashery
-  class WOW < Mashery::API
+module Bnet
+  class WOW < Bnet::API
     def url
       super + "wow/"
     end

@@ -1,4 +1,4 @@
-class Mashery::WOW::Data::Battlegroup < Mashery::WOW::Data::Base
+class Bnet::WOW::Data::Battlegroup < Bnet::WOW::Data::Base
   attr :name, :slug
 
   SCOPES = {

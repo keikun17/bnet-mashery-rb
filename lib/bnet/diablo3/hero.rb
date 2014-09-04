@@ -1,4 +1,4 @@
-class Mashery::Diablo3::Hero < Mashery::BnetResource
+class Bnet::Diablo3::Hero < Bnet::BnetResource
 
   attr_accessor :paragon_level, :seasonal, :name, :hero_id,
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
@@ -45,20 +45,20 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
     battle_tag = args[:battle_tag]
     region = args[:region]
     hero_id = args[:hero_id]
-    api_key = args[:api_key] || Mashery.configuration.api_key
+    api_key = args[:api_key] || Bnet.configuration.api_key
 
     if battle_tag
       battle_tag.gsub!('#', '-')
     end
 
-    base_api = Mashery::Diablo3.new(region: region)
+    base_api = Bnet::Diablo3.new(region: region)
     call_url = base_api.url + "profile/#{battle_tag}/hero/#{hero_id}?apikey=#{api_key}"
 
     begin
       data = open(call_url)
       raw_response = JSON.parse(data.read)
 
-      if Mashery::API.valid_call?(data.status, raw_response)
+      if Bnet::API.valid_call?(data.status, raw_response)
         bnet_object = from_api(raw_response)
       else
         bnet_object = nil
@@ -78,7 +78,7 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
     if bnet_resource && response["skills"]
       bnet_resource.active_skills = response["skills"]["active"].collect do |active|
 
-        skill = Mashery::Diablo3::Skill.new
+        skill = Bnet::Diablo3::Skill.new
         if active["skill"]
           skill.name = active["skill"]["name"]
         end
@@ -91,7 +91,7 @@ class Mashery::Diablo3::Hero < Mashery::BnetResource
       end
 
       bnet_resource.passive_skills = response["skills"]["passive"].collect do |passive|
-        skill =  Mashery::Diablo3::Skill.new
+        skill =  Bnet::Diablo3::Skill.new
         if passive["skill"]
           skill.name = passive["skill"]["name"]
         end

@@ -1,5 +1,5 @@
 # TODO: Associations for career, current_season
-class Mashery::Starcraft2::Profile < Mashery::BnetResource
+class Bnet::Starcraft2::Profile < Bnet::BnetResource
 
   attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag,
     :achievement_points, :swarm_level, :terran_level, :zerg_level,
@@ -41,16 +41,16 @@ class Mashery::Starcraft2::Profile < Mashery::BnetResource
     name       = args.delete(:name)
     realm      = args.delete(:realm) || '1'
     locale     = args.delete(:locale) || 'en_US'
-    api_key        = args.delete(:api_key) || Mashery.configuration.api_key
+    api_key        = args.delete(:api_key) || Bnet.configuration.api_key
 
-    base_api = Mashery::Starcraft2.new(region: region)
+    base_api = Bnet::Starcraft2.new(region: region)
     call_url = base_api.url + "profile/#{profile_id}/#{realm}/#{name}/?locale=#{locale}&apikey=#{api_key}"
 
     begin
       data = open(call_url)
       raw_response = JSON.parse(data.read)
 
-      if Mashery::API.valid_call?(data.status, raw_response)
+      if Bnet::API.valid_call?(data.status, raw_response)
         bnet_object = from_api(raw_response)
       else
         bnet_object = nil

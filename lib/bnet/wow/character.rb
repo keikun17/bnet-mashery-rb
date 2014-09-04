@@ -1,4 +1,4 @@
-class Mashery::WOW::Character < Mashery::BnetResource
+class Bnet::WOW::Character < Bnet::BnetResource
 
   attr_accessor :name, :realm, :battlegroup, :class, :race, :gender, :level,
     :achievement_points, :total_honorable_kills, :calc_class
@@ -20,7 +20,7 @@ class Mashery::WOW::Character < Mashery::BnetResource
     locale     = args.delete(:locale) || 'en_US'
     key        = args.delete(:key)
 
-    base_api = Mashery::WOW.new(region: region, key: key)
+    base_api = Bnet::WOW.new(region: region, key: key)
     call_url = base_api.url + "character/#{realm}/#{name}?locale=#{locale}&apikey=#{key}"
 
     begin

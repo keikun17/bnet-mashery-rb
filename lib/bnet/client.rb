@@ -1,5 +1,5 @@
 
-module Mashery
+module Bnet
   module Client
 
   end

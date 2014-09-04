@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::WOW::Character do
+describe Bnet::WOW::Character do
 
   describe ".from_api" do
     let(:attrs) {

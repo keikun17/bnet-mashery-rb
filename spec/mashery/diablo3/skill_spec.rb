@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::Diablo3::Skill do
+describe Bnet::Diablo3::Skill do
 
   describe ".from_api" do
     subject { described_class.from_api(api_args) }

@@ -7,21 +7,21 @@ This repository (will) contain various libraries for interfacing with *takes a d
 
 TODOs:
 
-- [ ] Mashery::Account
-- [x] Mashery::Configuration
-- [ ] Mashery::Community
-- [ ] Mashery::Diablo3
-- [ ] Mashery::Starcraft2
-- [ ] Mashery::Wow
-- [ ] Mashery::Rails
+- [ ] Bnet::Account
+- [x] Bnet::Configuration
+- [ ] Bnet::Community
+- [ ] Bnet::Diablo3
+- [ ] Bnet::Starcraft2
+- [ ] Bnet::Wow
+- [ ] Bnet::Rails
 
 ### Diablo
 
-- [x] Mashery::Diabo3::Career
+- [x] Bnet::Diabo3::Career
   - [ ] Heroes (as `Hero`)
-- [x] Mashery::Diabo3::Hero
-  - [x] Mashery::Diablo3::Skill
-- [ ] Mashery::Diablo3::Data
+- [x] Bnet::Diabo3::Hero
+  - [x] Bnet::Diablo3::Skill
+- [ ] Bnet::Diablo3::Data
   - [ ] Items
   - [ ] Followers
   - [ ] Artisan
@@ -29,17 +29,17 @@ TODOs:
 ### Starcraft
 
 - [x] MAshery::Starcraft2::Profile
-  - [ ] Mashery::Starcraft2::Matches
-  - [ ] Mashery::Starcraft2::Ladder
-  - [ ] Mashery::Starcraft2::Career
-- [ ] Mashery::Starcraft2::Ladder
-- [ ] Mashery::Starcraft2::Data
+  - [ ] Bnet::Starcraft2::Matches
+  - [ ] Bnet::Starcraft2::Ladder
+  - [ ] Bnet::Starcraft2::Career
+- [ ] Bnet::Starcraft2::Ladder
+- [ ] Bnet::Starcraft2::Data
   - [ ] Achievements
   - [ ] Rewards
 
 ### WOW
 
-- [ ] Mashery::WOW::Profile
+- [ ] Bnet::WOW::Profile
     - [ ] Achievements (as `Achievement`)
     - [ ] Appearance
     - [ ] Feed
@@ -56,20 +56,20 @@ TODOs:
     - [ ] Talents (as `Talent`)
     - [ ] Titles
     - [ ] Audit
-- [ ] Mashery::WOW::Item (as `Item`)
+- [ ] Bnet::WOW::Item (as `Item`)
     - [ ] Set
-- [ ] Mashery::WOW::Guild
+- [ ] Bnet::WOW::Guild
     - [ ] Members
     - [ ] Achievements (as `Achievement`)
     - [ ] News
     - [ ] Challenge
-- [ ] Mashery::WOW::PVP
-- [ ] Mashery::WOW::Quest (as `Quest`)
-- [ ] Mashery::WOW::Realm
+- [ ] Bnet::WOW::PVP
+- [ ] Bnet::WOW::Quest (as `Quest`)
+- [ ] Bnet::WOW::Realm
     - [ ] Status
-- [ ] Mashery::WOW::Recipe
-- [ ] Mashery::WOW::Spell
-- [x] Mashery::WOW::Data
+- [ ] Bnet::WOW::Recipe
+- [ ] Bnet::WOW::Spell
+- [x] Bnet::WOW::Data
   - [x] Battlegroups
   - [X] CharacterRaces
   - [ ] CharacterClasses

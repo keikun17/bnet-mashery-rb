@@ -1,4 +1,4 @@
-class Mashery::WOW::Data::CharacterRace < Mashery::WOW::Data::Base
+class Bnet::WOW::Data::CharacterRace < Bnet::WOW::Data::Base
 
   attr :race_id, :mask, :side, :name
 

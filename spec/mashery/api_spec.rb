@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::API do
+describe Bnet::API do
   let(:instance) do
     described_class.new(region: "eu")
   end

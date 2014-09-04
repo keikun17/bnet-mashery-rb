@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Mashery::Diablo3 do
+describe Bnet::Diablo3 do
   let(:instance) do
     described_class.new(region: "us", key: 'somekey', secret: 'somesecret')
   end

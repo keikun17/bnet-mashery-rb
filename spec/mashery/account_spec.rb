@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Mashery::Account do
+describe Bnet::Account do
 
 end

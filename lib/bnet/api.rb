@@ -1,4 +1,4 @@
-module Mashery
+module Bnet
   class API
     # FIXME : get the API to append the :key param to the end of each 'get' call
     attr_accessor :region
