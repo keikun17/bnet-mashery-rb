@@ -17,6 +17,25 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     # initializer file (cnonfig/initializer/bnet_initializer.rb)
     Bnet.configuration.api_key = 'your_api_key'
 
+## Diablo
+
+    # Perform a query for the Diablo 3 character profile
+    #
+    # Required Arguments
+    #          :battle_tag - Player Battletag. (ex. PlayerOne#1309)
+    #          :region     - Account region (ex. 'us')
+    #
+    # Returns a Career object with the following attributes
+    #
+    #    :heroes, :last_hero_played, :last_updated, :kills, :time_played,
+    #    :fallen_heroes, :paragon_level, :paragon_level_hardcore, :battle_tag,
+    #    :progression, :region
+    #
+    # Note : Autoloads the associated hero records from the Hero API as well
+
+    Bnet::Diablo3.find(battle_tag: 'PlayerOne#1309', region: 'us')
+
 ### License
+
 
 Licensed under the MIT license (see MIT-LICENSE file)

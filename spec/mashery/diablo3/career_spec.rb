@@ -4,7 +4,7 @@ describe Bnet::Diablo3::Career do
 
   describe ".from_api" do
     let(:attrs){
-      { 
+      {
         "heroes" => [], "lastheroplayed" => 'val', "lastupdated" => 'val',
         "kills" => 'val', "timeplayed" => 'val', "fallenheroes" => 'val',
         "paragonlevel" => 'val', "paragonlevelhardcore" => 'val',
@@ -17,7 +17,7 @@ describe Bnet::Diablo3::Career do
     end
   end
 
-  describe ".find" do
+  describe ".find(battle_tag: 'PlayerOne#1309', region: 'us')" do
     subject(:career) { described_class.find(args) }
 
     context "Playertag for the server exists" ,vcr: { cassette_name: 'find_diablo_career_player_one '} do

@@ -20,6 +20,16 @@ class Bnet::Diablo3::Career < Bnet::BnetResource
     @battle_tag.gsub('-', '#')
   end
 
+  # Query Battlenet API for the character profile
+  #
+  # Hash Params:
+  #   :region          - (e.g. 'us', 'ea')
+  #   :name            - String name of the toon
+  #   :realm           - String name of the server the character is on (String)
+  #   :locale          - String locale (defaults to 'en_US')
+  #   :key             - String api key
+  #
+  # Example : IF a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
   def self.find args
     battle_tag = args[:battle_tag].gsub('#', '-')
     region = args[:region]
