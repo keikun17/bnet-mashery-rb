@@ -31,10 +31,6 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     #     :locale     - String locale (default: 'en_US')
     #     :api_key    - String API key
     #
-    # Example
-    #
-    # Bnet::Diablo3.find(battle_tag: 'PlayerOne#1309', region: 'us')
-    #
     # Returns a Career object with the following attributes
     #
     #    :heroes, :last_hero_played, :last_updated, :kills, :time_played,
