@@ -34,8 +34,7 @@ describe Bnet::WOW::Character do
     context "Specified character exists for the server", vcr: {cassette_name: 'wow_character_found'} do
       let(:attrs){
         {
-          region: 'us', name: 'AlexeiStukov', realm: 'Dragonmaw',
-          key: VCR::SECRETS["api_key"]
+          region: 'us', name: 'AlexeiStukov', realm: 'Dragonmaw'
         }
       }
       it "returns the instance" do
