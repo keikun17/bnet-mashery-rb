@@ -18,6 +18,11 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
   }
 
 
+  # TODO:Implement
+  # def career
+  #   @career = #DO
+  # end
+
   def active_skills
     @active_skills ||= []
   end

@@ -79,6 +79,11 @@ describe Bnet::Diablo3::Hero do
       it "Fetches  update from the API and update the object" do
         expect{hero.reload}.to change{hero.level}.from(69).to(70)
       end
+    end
   end
+
+  describe '#career' do
+    it "returns a career object"
   end
+
 end
