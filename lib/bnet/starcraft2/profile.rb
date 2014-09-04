@@ -24,17 +24,25 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
   # SC2 Profile.
   #
   # Hash Params:
-  #   :realm      - (defaults to '1')
-  #   :profile_id - ID (Honestly i do not know why Blizzard still needs this if
-  #                 localized Battletag is unique enough)
-  #   :name       - Just the name string in the Battle tag.
-  #   :locale     - (defaults to 'en_US')
-  #   :api_key        - the api key
+  #   Required
+  #     :realm      - (required but defaults to '1')
+  #     :profile_id - ID (Honestly i do not know why Blizzard still needs this if
+  #                   localized Battletag is unique enough)
+  #     :name       - Just the name string in the Battle tag.
+  #   Optional
+  #     :locale     - (defaults to 'en_US')
+  #     :api_key    - the api key
   #
   # Example: If US account 'Playerone#1309' the profile can be accessible via
   # web from 'http://us.battle.net/sc2/en/profile/2143215/1/PlayerOne/'
   #
-  #   find(region: 'us', id: 2143215, name: 'PlayerOne', api_key: your_api_key)
+  #   find(region: 'us', profile_id: 2143215, name: 'PlayerOne')
+  #
+  # Returns a Profile object with the following attributes
+  #
+  #      :profile_id, :realm, :display_name, :clan_name, :clan_tag,
+  #      :achievement_points, :swarm_level, :terran_level, :zerg_level,
+  #      :protoss_level, :acievement_points
   def self.find args
     region     = args.delete(:region)
     profile_id = args.delete(:profile_id)

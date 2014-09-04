@@ -66,6 +66,32 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
 
     Bnet::Diablo3::Hero.find(battle_tag: 'PlayerOne-1309', region: 'us', hero_id: 1304986)
 
+## Starcraft2
+
+    # Query Battlenet API for the SC2 profile recordand create an instance of an
+    # SC2 Profile.
+    #
+    # Hash Params:
+    #   Required
+    #     :realm      - (required but defaults to '1')
+    #     :profile_id - ID (Honestly i do not know why Blizzard still needs this if
+    #                   localized Battletag is unique enough)
+    #     :name       - Just the name string in the Battle tag.
+    #   Optional
+    #     :locale     - (defaults to 'en_US')
+    #     :api_key    - the api key
+    #
+    # Returns a Profile object with the following attributes
+    #
+    #      :profile_id, :realm, :display_name, :clan_name, :clan_tag,
+    #      :achievement_points, :swarm_level, :terran_level, :zerg_level,
+    #      :protoss_level, :acievement_points
+    #
+    # Example: If US account 'Playerone#1309' the profile can be accessible via
+    # web from 'http://us.battle.net/sc2/en/profile/2143215/1/PlayerOne/'
+
+    Bnet::Starcraft2::profile.find(region: 'us', profile_id: 2143215, name: 'PlayerOne')
+
 ### License
 
 
