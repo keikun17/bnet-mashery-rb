@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Buddy Magsipoc"]
   spec.email         = ["keikun17@gmail.com"]
   spec.summary       = "Ruby gem for accessing Blizzard's Mashery API"
-  spec.description   = "This repository (will) contain various libraries for interfacing with takes a deep breath Blizzard's-Battle.net-Mashery- API."
-  spec.homepage      = ""
+  spec.description   = "This repository (will) contain various libraries for interfacing with Blizzard's Battle.net API."
+  spec.homepage      = "https://github.com/keikun17/bnet-mashery-rb"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
