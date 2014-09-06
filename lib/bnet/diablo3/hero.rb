@@ -124,13 +124,11 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
   private
 
   def self.assign_followers_from_raw_followers(hero, raw_followers)
-    followers = []
-    raw_followers.each do |follower_type, follower_props|
+    hero.followers = raw_followers.collect do |follower_type, follower_props|
       follower = Bnet::Diablo3::Follower.from_api(follower_type, follower_props)
-      followers << follower
     end
 
-    hero.followers = followers
+    return hero
   end
 
   def self.assign_items_from_raw_items(hero, raw_items)
