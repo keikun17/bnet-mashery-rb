@@ -2,7 +2,17 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
 
   attr_accessor :paragon_level, :seasonal, :name, :hero_id,
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
-    :active_skills, :passive_skills, :region, :battle_tag, :career
+    :active_skills, :passive_skills, :region, :battle_tag, :career,
+    :items,
+
+    # stats
+    :life, :damage, :attack_speed, :armor, :strength, :dexterity, :vitality,
+    :intelligence, :physical_resist, :fire_resist, :cold_resist,
+    :lightning_resist, :poison_resist, :arcane_resist, :crit_damage,
+    :block_chance, :block_amount_min, :block_amount_max, :damage_increase,
+    :crit_chance, :damage_reduction, :thorns, :life_steal, :life_per_kill,
+    :gold_find, :magic_find, :life_on_Hit, :primary_resource,
+    :secondary_resource
 
   PARAMS_MAPPING = {
     "paragonLevel" => :paragon_level,
@@ -99,10 +109,10 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
 
   # Create an instance by passing in the args from the response
   def self.from_api(response)
-    bnet_resource = super(response)
+    hero = super(response)
 
-    if bnet_resource && response["skills"]
-      bnet_resource.active_skills = response["skills"]["active"].collect do |active|
+    if hero && response["skills"]
+      hero.active_skills = response["skills"]["active"].collect do |active|
 
         skill = Bnet::Diablo3::Skill.new
         if active["skill"]
@@ -116,7 +126,7 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
 
       end
 
-      bnet_resource.passive_skills = response["skills"]["passive"].collect do |passive|
+      hero.passive_skills = response["skills"]["passive"].collect do |passive|
         skill =  Bnet::Diablo3::Skill.new
         if passive["skill"]
           skill.name = passive["skill"]["name"]
@@ -125,7 +135,43 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
       end
     end
 
-    bnet_resource
+    if hero && response["stats"]
+      hero.assign_stats_from_raw_stats(response["stats"])
+    end
+
+    hero
+  end
+
+  def assign_stats_from_raw_stats(raw_stats)
+    self.life               = raw_stats["life"]
+    self.damage             = raw_stats["damage"]
+    self.attack_speed       = raw_stats["attackSpeed"]
+    self.armor              = raw_stats["armor"]
+    self.strength           = raw_stats["strength"]
+    self.dexterity          = raw_stats["dexterity"]
+    self.vitality           = raw_stats["vitality"]
+    self.intelligence       = raw_stats["intelligence"]
+    self.physical_resist    = raw_stats["physicalResist"]
+    self.fire_resist        = raw_stats["fireResist"]
+    self.cold_resist        = raw_stats["coldResist"]
+    self.lightning_resist   = raw_stats["lightningResist"]
+    self.poison_resist      = raw_stats["poisonResist"]
+    self.arcane_resist      = raw_stats["arcaneResist"]
+    self.crit_damage        = raw_stats["critDamage"]
+    self.block_chance       = raw_stats["blockChance"]
+    self.block_amount_min   = raw_stats["blockAmountMin"]
+    self.block_amount_max   = raw_stats["blockAmountMax"]
+    self.damage_increase    = raw_stats["damageIncrease"]
+    self.crit_chance        = raw_stats["critChance"]
+    self.damage_reduction   = raw_stats["damageReduction"]
+    self.thorns             = raw_stats["thorns"]
+    self.life_steal         = raw_stats["lifeSteal"]
+    self.life_per_kill      = raw_stats["lifePerKill"]
+    self.gold_find          = raw_stats["goldFind"]
+    self.magic_find         = raw_stats["magicFind"]
+    self.life_on_Hit        = raw_stats["lifeOnHit"]
+    self.primary_resource   = raw_stats["primaryResource"]
+    self.secondary_resource = raw_stats["secondaryResource"]
   end
 
 end
