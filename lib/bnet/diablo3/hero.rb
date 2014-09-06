@@ -24,7 +24,7 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
     "gender" => :gender,
     "dead" => :dead,
     "class" => :hero_class,
-    "last-updated" => :last_updated
+    "last-updated" => :last_updated,
   }
 
 
@@ -120,7 +120,15 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
     return hero
   end
 
-        skill
+  def assign_items_from_raw_items(raw_items)
+    self.items = raw_items.collect do |location, item_props|
+      item = Bnet::Diablo3::Item.new
+      item.location = location
+      item.item_id = item_props["id"]
+      item.name = item_props["name"]
+      item
+    end
+  end
 
   def assign_skills_from_raw_skills(raw_skills)
     self.active_skills = raw_skills["active"].collect do |active|

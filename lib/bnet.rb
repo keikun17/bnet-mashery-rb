@@ -19,6 +19,7 @@ require "bnet/bnet_resource"
 require 'bnet/account'
 require 'bnet/diablo3'
 require 'bnet/diablo3/career'
+require 'bnet/diablo3/item'
 require 'bnet/diablo3/hero'
 require 'bnet/diablo3/skill'
 # require 'bnet/community'
