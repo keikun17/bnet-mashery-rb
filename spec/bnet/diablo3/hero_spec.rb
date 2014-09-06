@@ -20,7 +20,23 @@ describe Bnet::Diablo3::Hero do
         expect(subject.hero_class).to eq('wizard')
       end
 
-      it "assigns items"
+      it "assigns items" do
+        expect(subject.items).to match([
+          an_object_having_attributes(location: "head", name: "Leoric's Crown", item_id: "Unique_Helm_002_x1" ),
+          an_object_having_attributes(location: "torso"),
+          an_object_having_attributes(location: "feet"),
+          an_object_having_attributes(location: "hands"),
+          an_object_having_attributes(location: "shoulders"),
+          an_object_having_attributes(location: "legs"),
+          an_object_having_attributes(location: "bracers"),
+          an_object_having_attributes(location: "mainHand"),
+          an_object_having_attributes(location: "offHand"),
+          an_object_having_attributes(location: "waist"),
+          an_object_having_attributes(location: "rightFinger"),
+          an_object_having_attributes(location: "leftFinger"),
+          an_object_having_attributes(location: "neck")
+        ])
+      end
 
       it "assigns stats" do
         expect(subject).to have_attributes({
