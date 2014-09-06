@@ -1,6 +1,5 @@
 ## TODOs:
 
-- [ ] Bnet::Account                               [ ] doc
 - [x] Bnet::Configuration                         [x] doc
 - [ ] Bnet::Community                             [ ] doc
 - [ ] Bnet::Diablo3                               [ ] doc
@@ -14,6 +13,8 @@
   - [x] Heroes (as `Hero`)                        [x] doc
 - [x] Bnet::Diabo3::Hero                          [x] doc
   - [x] Bnet::Diablo3::Skill
+  - [x] Bnet::Diablo3::Item
+  - [ ] Bnet::Diablo3::Follower
 - [ ] Bnet::Diablo3::Data                         [ ] doc
   - [ ] Items                                     [ ] doc
   - [ ] Followers                                 [ ] doc
