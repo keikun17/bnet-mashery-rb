@@ -3,7 +3,7 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
   attr_accessor :paragon_level, :seasonal, :name, :hero_id,
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
     :active_skills, :passive_skills, :region, :battle_tag, :career,
-    :items,
+    :items, :followers,
 
     # stats
     :life, :damage, :attack_speed, :armor, :strength, :dexterity, :vitality,
@@ -24,7 +24,7 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
     "gender" => :gender,
     "dead" => :dead,
     "class" => :hero_class,
-    "last-updated" => :last_updated,
+    "last-updated" => :last_updated
   }
 
 
@@ -115,12 +115,32 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
       assign_skills_from_raw_skills(hero, response["skills"]) if response["skills"]
       assign_stats_from_raw_stats(hero, response["stats"]) if response["stats"]
       assign_items_from_raw_items(hero, response["items"]) if response["items"]
+      assign_followers_from_raw_followers(hero, response["followers"]) if response["followers"]
     end
 
     return hero
   end
 
   private
+
+  def self.assign_followers_from_raw_followers(hero, raw_followers)
+    followers = []
+    raw_followers.each do |follower_type, follower_props|
+      follower = Bnet::Diablo3::Follower.new
+      follower.follower_type = follower_type
+      # follower.raw_attributes = follower_props
+      follower.level = follower_props["level"]
+      # follower.items = follower_props["items"]
+      # follower.skills = follower_props["skills"]
+      follower.magic_find = follower_props["stats"]["magicFind"]
+      follower.gold_find = follower_props["stats"]["goldFind"]
+      follower.experience_bonus =  follower_props["stats"]["experienceBonus"]
+
+      followers << follower
+    end
+
+    hero.followers = followers
+  end
 
   def self.assign_items_from_raw_items(hero, raw_items)
     hero.items = raw_items.collect do |location, item_props|

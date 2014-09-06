@@ -20,6 +20,37 @@ describe Bnet::Diablo3::Hero do
         expect(subject.hero_class).to eq('wizard')
       end
 
+      it "assigns follower" do
+        expect(subject.followers).to match([
+          an_object_having_attributes(
+            follower_type: 'templar', level: 70,
+            gold_find: 11, magic_find: 0, experience_bonus: 19
+            # items: [
+            #   an_object_having_attributes(name: "intrepid trinket", item_id: 'templar_special_203', location: 'special'),
+            #   an_object_having_attributes(name: "cut blast", item_id: "axe_1h_301", location: "mainhand")
+            # ]
+          ),
+
+          an_object_having_attributes(
+            follower_type: 'scoundrel', level: 70,
+            gold_find: 0, magic_find: 0, experience_bonus: 0
+            # items: [
+            #   an_object_having_attributes(name: "intrepid trinket", item_id: 'templar_special_203', location: 'special'),
+            #   an_object_having_attributes(name: "cut blast", item_id: "axe_1h_301", location: "mainhand")
+            # ]
+          ),
+
+          an_object_having_attributes(
+            follower_type: 'enchantress', level: 70,
+            gold_find: 0, magic_find: 0, experience_bonus: 0
+            # items: [
+            #   an_object_having_attributes(name: "intrepid trinket", item_id: 'templar_special_203', location: 'special'),
+            #   an_object_having_attributes(name: "cut blast", item_id: "axe_1h_301", location: "mainhand")
+            # ]
+          )
+        ])
+      end
+
       it "assigns items" do
         expect(subject.items).to match([
           an_object_having_attributes(location: "head", name: "Leoric's Crown", item_id: "Unique_Helm_002_x1" ),
