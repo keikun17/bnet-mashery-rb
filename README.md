@@ -60,9 +60,19 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     #
     # Returns a Hero object with the following attributes
     #
-    #  :paragon_level, :seasonal, :name, :hero_id,
-    #  :level, :hardcore, :gender, :dead, :hero_class, :last_update,
-    #  :active_skills, :passive_skills, :region, :battle_tag, :career
+    #    :life, :damage, :attack_speed, :armor, :strength, :dexterity, :vitality,
+    #    :intelligence, :physical_resist, :fire_resist, :cold_resist,
+    #    :lightning_resist, :poison_resist, :arcane_resist, :crit_damage,
+    #    :block_chance, :block_amount_min, :block_amount_max, :damage_increase,
+    #    :crit_chance, :damage_reduction, :thorns, :life_steal, :life_per_kill,
+    #    :gold_find, :magic_find, :life_on_Hit, :primary_resource,
+    #    :secondary_resource
+    #
+    #  and the following misc attributes
+    #
+    #    :paragon_level, :seasonal, :name, :hero_id,
+    #    :level, :hardcore, :gender, :dead, :hero_class, :last_update,
+    #    :active_skills, :passive_skills, :region, :battle_tag, :career
 
     Bnet::Diablo3::Hero.find(battle_tag: 'PlayerOne-1309', region: 'us', hero_id: 1304986)
 

@@ -13,7 +13,7 @@
 - [x] Bnet::Diabo3::Career                        [x] doc
   - [x] Heroes (as `Hero`)                        [x] doc
 - [x] Bnet::Diabo3::Hero                          [x] doc
-  - [x] Bnet::Diablo3::Skill                      [ ] doc
+  - [x] Bnet::Diablo3::Skill
 - [ ] Bnet::Diablo3::Data                         [ ] doc
   - [ ] Items                                     [ ] doc
   - [ ] Followers                                 [ ] doc
