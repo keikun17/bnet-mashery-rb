@@ -20,6 +20,42 @@ describe Bnet::Diablo3::Hero do
         expect(subject.hero_class).to eq('wizard')
       end
 
+      it "assigns items"
+
+      it "assigns stats" do
+        expect(subject).to have_attributes({
+          life:                 266712,
+          damage:               412878.0,
+          attack_speed:         1.284000051021576,
+          armor:                5327,
+          strength:             77,
+          dexterity:            77,
+          vitality:             3089,
+          intelligence:         7189,
+          physical_resist:      1021,
+          fire_resist:          1152,
+          cold_resist:          897,
+          lightning_resist:     1190,
+          poison_resist:        897,
+          arcane_resist:        1040,
+          crit_damage:          3.18,
+          block_chance:         0.0,
+          block_amount_min:     0,
+          block_amount_max:     0,
+          damage_increase:      0.0,
+          crit_chance:          0.38500000075,
+          damage_reduction:     0.0,
+          thorns:               0.0,
+          life_steal:           0.0,
+          life_per_kill:        6701.0,
+          gold_find:            2.03,
+          magic_find:           0.0,
+          life_on_Hit:          6542.0,
+          primary_resource:     133,
+          secondary_resource:   0
+        })
+      end
+
       it "assigns skills" do
         expect(subject.active_skills.map(&:name)).
           to match_array([ "Magic Missile", "Arcane Orb",
