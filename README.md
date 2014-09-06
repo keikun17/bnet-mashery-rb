@@ -72,7 +72,8 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     #
     #    :paragon_level, :seasonal, :name, :hero_id,
     #    :level, :hardcore, :gender, :dead, :hero_class, :last_update,
-    #    :active_skills, :passive_skills, :region, :battle_tag, :career
+    #    :active_skills, :passive_skills, :region, :battle_tag, :career,
+    #    :items
 
     Bnet::Diablo3::Hero.find(battle_tag: 'PlayerOne-1309', region: 'us', hero_id: 1304986)
 
