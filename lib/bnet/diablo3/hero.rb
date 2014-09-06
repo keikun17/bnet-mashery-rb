@@ -126,16 +126,7 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
   def self.assign_followers_from_raw_followers(hero, raw_followers)
     followers = []
     raw_followers.each do |follower_type, follower_props|
-      follower = Bnet::Diablo3::Follower.new
-      follower.follower_type = follower_type
-      # follower.raw_attributes = follower_props
-      follower.level = follower_props["level"]
-      # follower.items = follower_props["items"]
-      # follower.skills = follower_props["skills"]
-      follower.magic_find = follower_props["stats"]["magicFind"]
-      follower.gold_find = follower_props["stats"]["goldFind"]
-      follower.experience_bonus =  follower_props["stats"]["experienceBonus"]
-
+      follower = Bnet::Diablo3::Follower.from_api(follower_type, follower_props)
       followers << follower
     end
 
