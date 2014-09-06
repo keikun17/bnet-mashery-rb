@@ -133,11 +133,7 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
 
   def self.assign_items_from_raw_items(hero, raw_items)
     hero.items = raw_items.collect do |location, item_props|
-      item = Bnet::Diablo3::Item.new
-      item.location = location
-      item.item_id = item_props["id"]
-      item.name = item_props["name"]
-      item
+      Bnet::Diablo3::Item.from_api(location, item_props)
     end
 
     return hero
