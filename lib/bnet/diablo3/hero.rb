@@ -112,26 +112,30 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
     hero = super(response)
 
     if hero
-      hero.assign_skills_from_raw_skills(response["skills"]) if response["skills"]
-      hero.assign_stats_from_raw_stats(response["stats"]) if response["stats"]
-      hero.assign_items_from_raw_items(response["items"]) if response["items"]
+      assign_skills_from_raw_skills(hero, response["skills"]) if response["skills"]
+      assign_stats_from_raw_stats(hero, response["stats"]) if response["stats"]
+      assign_items_from_raw_items(hero, response["items"]) if response["items"]
     end
 
     return hero
   end
 
-  def assign_items_from_raw_items(raw_items)
-    self.items = raw_items.collect do |location, item_props|
+  private
+
+  def self.assign_items_from_raw_items(hero, raw_items)
+    hero.items = raw_items.collect do |location, item_props|
       item = Bnet::Diablo3::Item.new
       item.location = location
       item.item_id = item_props["id"]
       item.name = item_props["name"]
       item
     end
+
+    return hero
   end
 
-  def assign_skills_from_raw_skills(raw_skills)
-    self.active_skills = raw_skills["active"].collect do |active|
+  def self.assign_skills_from_raw_skills(hero, raw_skills)
+    hero.active_skills = raw_skills["active"].collect do |active|
       skill = Bnet::Diablo3::Skill.new
       if active["skill"]
         skill.name = active["skill"]["name"]
@@ -143,45 +147,49 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
       skill
     end
 
-    self.passive_skills = raw_skills["passive"].collect do |passive|
+    hero.passive_skills = raw_skills["passive"].collect do |passive|
       skill =  Bnet::Diablo3::Skill.new
       if passive["skill"]
         skill.name = passive["skill"]["name"]
       end
       skill
     end
+
+    return hero
   end
 
-  def assign_stats_from_raw_stats(raw_stats)
-    self.life               = raw_stats["life"]
-    self.damage             = raw_stats["damage"]
-    self.attack_speed       = raw_stats["attackSpeed"]
-    self.armor              = raw_stats["armor"]
-    self.strength           = raw_stats["strength"]
-    self.dexterity          = raw_stats["dexterity"]
-    self.vitality           = raw_stats["vitality"]
-    self.intelligence       = raw_stats["intelligence"]
-    self.physical_resist    = raw_stats["physicalResist"]
-    self.fire_resist        = raw_stats["fireResist"]
-    self.cold_resist        = raw_stats["coldResist"]
-    self.lightning_resist   = raw_stats["lightningResist"]
-    self.poison_resist      = raw_stats["poisonResist"]
-    self.arcane_resist      = raw_stats["arcaneResist"]
-    self.crit_damage        = raw_stats["critDamage"]
-    self.block_chance       = raw_stats["blockChance"]
-    self.block_amount_min   = raw_stats["blockAmountMin"]
-    self.block_amount_max   = raw_stats["blockAmountMax"]
-    self.damage_increase    = raw_stats["damageIncrease"]
-    self.crit_chance        = raw_stats["critChance"]
-    self.damage_reduction   = raw_stats["damageReduction"]
-    self.thorns             = raw_stats["thorns"]
-    self.life_steal         = raw_stats["lifeSteal"]
-    self.life_per_kill      = raw_stats["lifePerKill"]
-    self.gold_find          = raw_stats["goldFind"]
-    self.magic_find         = raw_stats["magicFind"]
-    self.life_on_Hit        = raw_stats["lifeOnHit"]
-    self.primary_resource   = raw_stats["primaryResource"]
-    self.secondary_resource = raw_stats["secondaryResource"]
+  def self.assign_stats_from_raw_stats(hero, raw_stats)
+    hero.life               = raw_stats["life"]
+    hero.damage             = raw_stats["damage"]
+    hero.attack_speed       = raw_stats["attackSpeed"]
+    hero.armor              = raw_stats["armor"]
+    hero.strength           = raw_stats["strength"]
+    hero.dexterity          = raw_stats["dexterity"]
+    hero.vitality           = raw_stats["vitality"]
+    hero.intelligence       = raw_stats["intelligence"]
+    hero.physical_resist    = raw_stats["physicalResist"]
+    hero.fire_resist        = raw_stats["fireResist"]
+    hero.cold_resist        = raw_stats["coldResist"]
+    hero.lightning_resist   = raw_stats["lightningResist"]
+    hero.poison_resist      = raw_stats["poisonResist"]
+    hero.arcane_resist      = raw_stats["arcaneResist"]
+    hero.crit_damage        = raw_stats["critDamage"]
+    hero.block_chance       = raw_stats["blockChance"]
+    hero.block_amount_min   = raw_stats["blockAmountMin"]
+    hero.block_amount_max   = raw_stats["blockAmountMax"]
+    hero.damage_increase    = raw_stats["damageIncrease"]
+    hero.crit_chance        = raw_stats["critChance"]
+    hero.damage_reduction   = raw_stats["damageReduction"]
+    hero.thorns             = raw_stats["thorns"]
+    hero.life_steal         = raw_stats["lifeSteal"]
+    hero.life_per_kill      = raw_stats["lifePerKill"]
+    hero.gold_find          = raw_stats["goldFind"]
+    hero.magic_find         = raw_stats["magicFind"]
+    hero.life_on_Hit        = raw_stats["lifeOnHit"]
+    hero.primary_resource   = raw_stats["primaryResource"]
+    hero.secondary_resource = raw_stats["secondaryResource"]
+
+    return hero
   end
 
 end
