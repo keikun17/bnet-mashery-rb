@@ -5,7 +5,7 @@
 - [ ] Bnet::Community                             [ ] doc
 - [ ] Bnet::Diablo3                               [ ] doc
 - [ ] Bnet::Starcraft2                            [ ] doc
-- [ ] Bnet::Wow                                   [ ] doc
+- [ ] Bnet::WOW                                   [ ] doc
 - [ ] Bnet::Rails                                 [ ] doc
 
 ### Diablo

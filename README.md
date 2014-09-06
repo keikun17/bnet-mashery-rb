@@ -14,7 +14,7 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
 
 ## Configuration
 
-    # initializer file (cnonfig/initializer/bnet_initializer.rb)
+    # initializer file (config/initializer/bnet_initializer.rb)
     Bnet.configuration.api_key = 'your_api_key'
 
 ## Diablo
