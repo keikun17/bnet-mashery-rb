@@ -25,5 +25,8 @@ describe Bnet::Diablo3::Follower do
         }
       )
     end
+
+    it "assign follower skills"
+    it "assign follower items"
   end
 end
