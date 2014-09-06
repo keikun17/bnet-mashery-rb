@@ -111,35 +111,37 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
   def self.from_api(response)
     hero = super(response)
 
-    if hero && response["skills"]
-      hero.active_skills = response["skills"]["active"].collect do |active|
+    if hero
+      hero.assign_skills_from_raw_skills(response["skills"]) if response["skills"]
+      hero.assign_stats_from_raw_stats(response["stats"]) if response["stats"]
+      hero.assign_items_from_raw_items(response["items"]) if response["items"]
+    end
 
-        skill = Bnet::Diablo3::Skill.new
-        if active["skill"]
-          skill.name = active["skill"]["name"]
-        end
-        if active["rune"]
-          skill.rune = active["rune"]["name"]
-        end
+    return hero
+  end
 
         skill
 
+  def assign_skills_from_raw_skills(raw_skills)
+    self.active_skills = raw_skills["active"].collect do |active|
+      skill = Bnet::Diablo3::Skill.new
+      if active["skill"]
+        skill.name = active["skill"]["name"]
+      end
+      if active["rune"]
+        skill.rune = active["rune"]["name"]
       end
 
-      hero.passive_skills = response["skills"]["passive"].collect do |passive|
-        skill =  Bnet::Diablo3::Skill.new
-        if passive["skill"]
-          skill.name = passive["skill"]["name"]
-        end
-        skill
+      skill
+    end
+
+    self.passive_skills = raw_skills["passive"].collect do |passive|
+      skill =  Bnet::Diablo3::Skill.new
+      if passive["skill"]
+        skill.name = passive["skill"]["name"]
       end
+      skill
     end
-
-    if hero && response["stats"]
-      hero.assign_stats_from_raw_stats(response["stats"])
-    end
-
-    hero
   end
 
   def assign_stats_from_raw_stats(raw_stats)

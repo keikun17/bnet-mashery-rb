@@ -62,11 +62,11 @@ describe Bnet::Diablo3::Hero do
                            "Hydra", "Familiar", "Magic Weapon",
                            "Teleport" ])
 
-        expect(subject.active_skills.map(&:rune)).
-          to match_array([ "Seeker", "Frozen Orb", "Frost Hydra", "Sparkflint",
-                           "Force Weapon", "Fracture"])
+          expect(subject.active_skills.map(&:rune)).
+            to match_array([ "Seeker", "Frozen Orb", "Frost Hydra", "Sparkflint",
+                             "Force Weapon", "Fracture"])
 
-        expect(subject.passive_skills.map(&:name)).
+            expect(subject.passive_skills.map(&:name)).
           to match_array([ "Elemental Exposure", "Prodigy", "Astral Presence",
                            "Cold Blooded" ])
       end
