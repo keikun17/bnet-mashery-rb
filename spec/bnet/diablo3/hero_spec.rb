@@ -24,29 +24,32 @@ describe Bnet::Diablo3::Hero do
         expect(subject.followers).to match([
           an_object_having_attributes(
             follower_type: 'templar', level: 70,
-            gold_find: 11, magic_find: 0, experience_bonus: 19
-            # items: [
-            #   an_object_having_attributes(name: "intrepid trinket", item_id: 'templar_special_203', location: 'special'),
-            #   an_object_having_attributes(name: "cut blast", item_id: "axe_1h_301", location: "mainhand")
-            # ]
+            gold_find: 11, magic_find: 0, experience_bonus: 19,
+            items: include(
+              an_object_having_attributes(name: "Intrepid Trinket", item_id: 'Templar_Special_203', location: 'special'),
+              an_object_having_attributes(name: "Cut Blast", item_id: 'Axe_1H_301', location: 'mainHand'),
+              an_object_having_attributes(name: "Savior's Interceptor", item_id: 'Shield_208', location: 'offHand')
+            )
           ),
 
           an_object_having_attributes(
             follower_type: 'scoundrel', level: 70,
-            gold_find: 0, magic_find: 0, experience_bonus: 0
-            # items: [
-            #   an_object_having_attributes(name: "intrepid trinket", item_id: 'templar_special_203', location: 'special'),
-            #   an_object_having_attributes(name: "cut blast", item_id: "axe_1h_301", location: "mainhand")
-            # ]
-          ),
+            gold_find: 0, magic_find: 0, experience_bonus: 0,
+            items: include(
+              an_object_having_attributes(name: "Unwavering Find", item_id: 'Scoundrel_Special_204', location: 'special'),
+              an_object_having_attributes(name: "Light Crossbow of Slaying", item_id: 'Crossbow_001', location: 'mainHand'),
+              an_object_having_attributes(name: "Loyalty Aim", item_id: 'Ring_18', location: 'rightFinger')
+            )
+         ),
 
           an_object_having_attributes(
             follower_type: 'enchantress', level: 70,
-            gold_find: 0, magic_find: 0, experience_bonus: 0
-            # items: [
-            #   an_object_having_attributes(name: "intrepid trinket", item_id: 'templar_special_203', location: 'special'),
-            #   an_object_having_attributes(name: "cut blast", item_id: "axe_1h_301", location: "mainhand")
-            # ]
+            gold_find: 0, magic_find: 0, experience_bonus: 0,
+            items: include(
+              an_object_having_attributes(name: "Citadel Bounty", item_id: 'Enchantress_Special_204', location: 'special'),
+              an_object_having_attributes(name: "Adept's Atrocity", item_id: 'Staff_203', location: 'mainHand'),
+              an_object_having_attributes(name: "Black Wheel", item_id: 'Ring_19', location: 'rightFinger')
+            )
           )
         ])
       end
