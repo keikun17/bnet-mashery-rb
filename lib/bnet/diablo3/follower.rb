@@ -11,7 +11,8 @@ class Bnet::Diablo3::Follower < Bnet::BnetResource
     follower.level = raw_response["level"]
 
     assign_items_from_raw_items(follower, raw_response["items"]) if raw_response["items"]
-    # follower.skills = raw_response["skills"]
+    assign_skills_from_raw_skills(follower, raw_response["skills"]) if raw_response["skills"]
+
     follower.magic_find = raw_response["stats"]["magicFind"]
     follower.gold_find = raw_response["stats"]["goldFind"]
     follower.experience_bonus =  raw_response["stats"]["experienceBonus"]
@@ -25,6 +26,16 @@ class Bnet::Diablo3::Follower < Bnet::BnetResource
     follower.items = raw_items.collect do |location, item_props|
       Bnet::Diablo3::Item.from_api(location, item_props)
     end
+
+    return follower
+  end
+
+  def self.assign_skills_from_raw_skills(follower, raw_skills)
+    follower.skills = raw_skills.collect do |raw_skill|
+      Bnet::Diablo3::Skill.from_api(raw_skill) unless raw_skill.empty?
+    end
+
+    follower.skills = follower.skills.compact
 
     return follower
   end

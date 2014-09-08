@@ -11,9 +11,13 @@ class Bnet::Diablo3::Skill < Bnet::BnetResource
   #
   # Returns:
   #
-  # #<Bnet::Diablo3::Skill:0x007fd111396360 @name: "", @rune=>
+  # #<Bnet::Diablo3::Skill:0x007fd111396360 @name: "", @rune: "">
   def self.from_api(response)
-    new(name: response['skill']['name'], rune: response['rune']['name'])
+    skill = new
+    skill.name = response['skill']['name']
+    skill.rune = response['rune']['name'] if response["rune"]
+
+    return skill
   end
 
 end

@@ -25,6 +25,12 @@ describe Bnet::Diablo3::Hero do
           an_object_having_attributes(
             follower_type: 'templar', level: 70,
             gold_find: 11, magic_find: 0, experience_bonus: 19,
+            skills: include(
+              an_object_having_attributes(name: "Intervene"),
+              an_object_having_attributes(name: "Loyalty"),
+              an_object_having_attributes(name: "Charge"),
+              an_object_having_attributes(name: "Inspire")
+            ),
             items: include(
               an_object_having_attributes(name: "Intrepid Trinket", item_id: 'Templar_Special_203', location: 'special'),
               an_object_having_attributes(name: "Cut Blast", item_id: 'Axe_1H_301', location: 'mainHand'),
@@ -35,6 +41,7 @@ describe Bnet::Diablo3::Hero do
           an_object_having_attributes(
             follower_type: 'scoundrel', level: 70,
             gold_find: 0, magic_find: 0, experience_bonus: 0,
+            skills: match([]),
             items: include(
               an_object_having_attributes(name: "Unwavering Find", item_id: 'Scoundrel_Special_204', location: 'special'),
               an_object_having_attributes(name: "Light Crossbow of Slaying", item_id: 'Crossbow_001', location: 'mainHand'),
