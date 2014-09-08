@@ -2,18 +2,18 @@ class Bnet::Diablo3::Career < Bnet::BnetResource
 
   attr_accessor :heroes, :last_hero_played, :last_updated, :kills, :time_played,
     :fallen_heroes, :paragon_level, :paragon_level_hardcore, :battle_tag,
-    :progression, :region
+    :progression, :region, :raw_attributes
 
   PARAMS_MAPPING =  {
-      "lastHeroPlayed" => :last_hero_played,
-      "lastUpdated" => :last_updated,
-      "kills" => :kills,
-      "timePlayed" => :time_played,
-      "fallenHeroes" => :fallen_heroes,
-      "paragonLevel" => :paragon_level,
-      "paragonLevelHardcore" => :paragon_level_hardcore,
-      "battleTag" => :battle_tag,
-      "progression" => :progression
+    "lastHeroPlayed" => :last_hero_played,
+    "lastUpdated" => :last_updated,
+    "kills" => :kills,
+    "timePlayed" => :time_played,
+    "fallenHeroes" => :fallen_heroes,
+    "paragonLevel" => :paragon_level,
+    "paragonLevelHardcore" => :paragon_level_hardcore,
+    "battleTag" => :battle_tag,
+    "progression" => :progression
   }
 
   def battle_tag
@@ -50,42 +50,46 @@ class Bnet::Diablo3::Career < Bnet::BnetResource
     base_api = Bnet::Diablo3.new(region: region)
     call_url = base_api.url + "profile/#{battle_tag}/?apikey=#{api_key}&locale=#{locale}"
 
-    # NOTE common tasks below - marker for easier method extraction
-    response = JSON.parse( URI.parse(call_url).read )
+    begin
+      data = open(call_url)
+      raw_response = JSON.parse(data.read)
 
-    data = open(call_url)
-    raw_response = JSON.parse(data.read)
+      if Bnet::API.valid_call?(data.status, raw_response)
+        career = from_api(raw_response)
+        career.raw_attributes = raw_response
+        career.region = region
 
-    if Bnet::API.valid_call?(data.status, raw_response)
-      career = from_api(raw_response)
-    else
-      career = nil
-    end
-    # NOTE end of common tasks
-
-    if career
-      career.battle_tag = battle_tag
-      career.region = region
-
-      # Association tasks (TODO: convert to hook)
-      if raw_response["heroes"]
-        heroes = response["heroes"].collect do |raw_hero_attrs|
-          hero = Bnet::Diablo3::Hero.from_api(raw_hero_attrs)
-          hero.career = career
-          hero.battle_tag = career.battle_tag
-          hero.region = career.region
-          hero.reload
-          hero
-        end
-
-        career.heroes = heroes
+        assign_heroes_from_raw_heroes(career, raw_response["heroes"]) if raw_response["heroes"]
+      else
+        career = nil
       end
-      # End of association tasks
 
+    rescue OpenURI::HTTPError => e
+      career = nil
     end
 
     return career
   end
 
+  def self.from_api(response)
+    career = super(response)
+    career.raw_attributes = response
+    return career
+  end
+
+  private
+
+  def self.assign_heroes_from_raw_heroes(career, raw_heroes)
+    career.heroes = raw_heroes.collect do |raw_hero_attrs|
+      hero = Bnet::Diablo3::Hero.from_api(raw_hero_attrs)
+      hero.career = career
+      hero.battle_tag = career.battle_tag
+      hero.region = career.region
+      hero.reload
+      hero
+    end
+
+    return career
+  end
 
 end
