@@ -14,7 +14,10 @@
 - [x] Bnet::Diabo3::Hero                          [x] doc
   - [x] Bnet::Diablo3::Skill
   - [x] Bnet::Diablo3::Item
-  - [ ] Bnet::Diablo3::Follower
+  - [x] Bnet::Diablo3::Follower
+    - [x] Skills as (`Skill`)
+    - [x] Items as ('Item')
+
 - [ ] Bnet::Diablo3::Data                         [ ] doc
   - [ ] Items                                     [ ] doc
   - [ ] Followers                                 [ ] doc
