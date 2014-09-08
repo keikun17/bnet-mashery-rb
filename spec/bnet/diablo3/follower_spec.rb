@@ -6,23 +6,23 @@ describe Bnet::Diablo3::Follower do
     subject {described_class.from_api(follower_type, raw_response)}
     let(:follower_type) {'templar'}
     let(:raw_response) do
-      {'level' => 69,
-       'stats' => {
-        'magicFind' => 50,
-        'experienceBonus' => 40,
-        'goldFind' => 30
-      },
+      {
+        'level' => 69,
+        'stats' => {
+          'magicFind' => 50,
+          'experienceBonus' => 40,
+          'goldFind' => 30
+        },
 
-      'skills' => [
-        { 'skill' => {'name' => 'Falcon Punch'}},
-        { 'skill' => {'name' => 'Surprise Abortion'}}
-      ],
+        'skills' => [
+          { 'skill' => {'name' => 'Falcon Punch'}},
+          { 'skill' => {'name' => 'Surprise Abortion'}}
+        ],
 
-      'items' => {
-        'head' => {'name' => 'Falcon Helmet', 'id' => 'Falcon_Helm'},
-        'hands' => {'name' => 'Falcon Gloves', 'id' => 'Falcon Gloves'}
-      }
-
+        'items' => {
+          'head' => {'name' => 'Falcon Helmet', 'id' => 'Falcon_Helm'},
+          'hands' => {'name' => 'Falcon Gloves', 'id' => 'Falcon_Gloves'}
+        }
       }
     end
 
@@ -46,6 +46,11 @@ describe Bnet::Diablo3::Follower do
       ])
     end
 
-    it "assign follower items"
+    it "assign follower items" do
+      expect(subject.items).to match([
+        an_object_having_attributes(location: 'head', name: 'Falcon Helmet', item_id: 'Falcon_Helm'),
+        an_object_having_attributes(location: 'hands', name: 'Falcon Gloves', item_id: 'Falcon_Gloves')
+      ])
+    end
   end
 end
