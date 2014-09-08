@@ -3,7 +3,7 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
   attr_accessor :paragon_level, :seasonal, :name, :hero_id,
     :level, :hardcore, :gender, :dead, :hero_class, :last_update,
     :active_skills, :passive_skills, :region, :battle_tag, :career,
-    :items, :followers,
+    :items, :followers, :raw_attributes,
 
     # stats
     :life, :damage, :attack_speed, :armor, :strength, :dexterity, :vitality,
@@ -110,6 +110,8 @@ class Bnet::Diablo3::Hero < Bnet::BnetResource
   # Create an instance by passing in the args from the response
   def self.from_api(response)
     hero = super(response)
+
+    hero.raw_attributes = response
 
     if hero
       assign_skills_from_raw_skills(hero, response["skills"]) if response["skills"]
