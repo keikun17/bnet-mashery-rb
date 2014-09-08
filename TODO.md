@@ -16,7 +16,7 @@
   - [x] Bnet::Diablo3::Item
   - [x] Bnet::Diablo3::Follower
     - [x] Skills as (`Skill`)
-    - [x] Items as ('Item')
+    - [x] Items as (`Item`)
 
 - [ ] Bnet::Diablo3::Data                         [ ] doc
   - [ ] Items                                     [ ] doc
