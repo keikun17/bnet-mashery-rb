@@ -67,4 +67,26 @@ describe Bnet::Starcraft2::Profile do
     end
   end
 
+  describe '#matches' do
+    context 'Naniwa user is found', vcr: {cassette_name: 'SC2 Naniwa profile found' } do
+      subject { profile.matches }
+      # subject { binding.pry }
+      let(:profile) {
+        a = Bnet::Starcraft2::Profile.find(profile_id: 2210662, name: 'NaNiwa', region: 'eu')
+      }
+
+      it "returns a collection of matches for a given profile"  do
+        expect(subject).to_not be_empty
+        expect(subject).to include(
+          an_object_having_attributes( map: "Deadwing LE", match_type: "SOLO", decision: "WIN", speed: "FASTER", date: 1410222237),
+          an_object_having_attributes( map: "Deadwing LE", match_type: "SOLO", decision: "WIN", speed: "FASTER", date: 1410221657),
+          an_object_having_attributes( map: "King Sejong Station LE", match_type: "SOLO", decision: "WIN", speed: "FASTER", date: 1410220846)
+        )
+      end
+    end
+  end
+
+  describe '#ladders' do
+    subject {profile.ladders}
+  end
 end

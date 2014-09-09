@@ -79,6 +79,14 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
     @career ||= []
   end
 
+  def matches
+    @matches ||= Bnet::Starcraft2::Match.all(self)
+  end
+
+  def ladders
+    # @ladders ||=
+  end
+
   def self.from_api(response)
     bnet_resource = super(response)
     if bnet_resource && response["achievements"]
