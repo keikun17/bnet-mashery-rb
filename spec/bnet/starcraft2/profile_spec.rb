@@ -88,5 +88,6 @@ describe Bnet::Starcraft2::Profile do
 
   describe '#ladders' do
     subject {profile.ladders}
+    it "returns the ladder statistics for the profile"
   end
 end
