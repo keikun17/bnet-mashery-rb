@@ -72,8 +72,11 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     #
     #    :paragon_level, :seasonal, :name, :hero_id,
     #    :level, :hardcore, :gender, :dead, :hero_class, :last_update,
-    #    :active_skills, :passive_skills, :region, :battle_tag, :career,
-    #    :items
+    #    :region, :battle_tag
+    #
+    #  and these methods return a collection of associated objects
+    #
+    #    :followers, :items, :active_skills, :passive_skills, :career
 
     Bnet::Diablo3::Hero.find(battle_tag: 'PlayerOne-1309', region: 'us', hero_id: 1304986)
 
@@ -92,11 +95,15 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     #     :locale     - (defaults to 'en_US')
     #     :api_key    - the api key
     #
-    # Returns a Profile object with the following attributes
+    # Returns a Profile object with the following attributes...
     #
     #      :profile_id, :realm, :display_name, :clan_name, :clan_tag,
     #      :achievement_points, :swarm_level, :terran_level, :zerg_level,
-    #      :protoss_level, :acievement_points
+    #      :protoss_level, :acievement_points,
+    #
+    # ...And the following associations
+    #
+    #      :career, :matches, :ladders
     #
     # Example: If US account 'Playerone#1309' the profile can be accessible via
     # web from 'http://us.battle.net/sc2/en/profile/2143215/1/PlayerOne/'
