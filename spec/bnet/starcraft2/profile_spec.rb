@@ -39,6 +39,18 @@ describe Bnet::Starcraft2::Profile do
         expect(subject.protoss_level).to eq(2)
         expect(subject.zerg_level).to eq(0)
       end
+
+      it "assigns the career" do
+        expect(subject.career).to have_attributes(
+          :career_total_games =>  780,
+          :highest_1v1_rank   =>  "DIAMOND",
+          :highest_team_rank  =>  "MASTER",
+          :primary_race       =>  "PROTOSS",
+          :season_total_games =>  0,
+          :terran_wins        =>  0,
+          :zerg_wins          =>  0
+        )
+      end
     end
 
     context "specified user does not exist on the server", {vcr: {cassette_name: "sc2_profile_not_found" }} do

@@ -3,15 +3,15 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
 
   attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag,
     :achievement_points, :swarm_level, :terran_level, :zerg_level,
-    :protoss_level, :acievement_points, :raw_attributes
+    :protoss_level, :acievement_points, :career,
+    :raw_attributes
 
   PARAMS_MAPPING = {
       "id" => :profile_id,
       "realm" =>  :realm,
       "displayName" => :display_name,
       "clanName" => :clan_name,
-      "clanTag" => :clan_tag,
-      "career" => :career
+      "clanTag" => :clan_tag
     }
 
   def initialize args
@@ -90,6 +90,16 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
       bnet_resource.zerg_level    = response["swarmLevels"]["zerg"]["level"]
     end
 
+    assign_career_from_raw_career(bnet_resource, response["career"]) if response["career"]
+
     bnet_resource
   end
+
+  private
+
+  def self.assign_career_from_raw_career(profile, raw_career)
+    profile.career = Bnet::Starcraft2::Career.from_api(raw_career)
+    return profile
+  end
+
 end
