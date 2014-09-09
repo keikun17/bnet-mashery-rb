@@ -26,7 +26,11 @@ describe Bnet::Starcraft2::Profile do
         {region: 'us', profile_id: 2143215, name: 'PlayerOne'}
       }
       it "returns an instance" do
-        expect(subject.display_name).to eq("PlayerOne")
+        expect(subject.name).to eq("PlayerOne")
+      end
+
+      it "sets the region" do
+        expect(subject.region).to eq('us')
       end
 
       it "sets the achievement point details" do
