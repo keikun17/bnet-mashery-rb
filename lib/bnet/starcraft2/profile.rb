@@ -3,7 +3,7 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
 
   attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag,
     :achievement_points, :swarm_level, :terran_level, :zerg_level,
-    :protoss_level, :acievement_points
+    :protoss_level, :acievement_points, :raw_attributes
 
   PARAMS_MAPPING = {
       "id" => :profile_id,
@@ -60,6 +60,7 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
 
       if Bnet::API.valid_call?(data.status, raw_response)
         bnet_object = from_api(raw_response)
+        bnet_object.raw_attributes = raw_response
       else
         bnet_object = nil
       end
