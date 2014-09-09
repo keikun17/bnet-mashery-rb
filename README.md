@@ -99,7 +99,7 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     #
     #      :profile_id, :realm, :display_name, :clan_name, :clan_tag,
     #      :achievement_points, :swarm_level, :terran_level, :zerg_level,
-    #      :protoss_level, :acievement_points,
+    #      :protoss_level, :acievement_points, :region,
     #
     # ...And the following associations
     #
