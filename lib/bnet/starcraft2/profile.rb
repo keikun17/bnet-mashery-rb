@@ -44,12 +44,12 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
   #      :achievement_points, :swarm_level, :terran_level, :zerg_level,
   #      :protoss_level, :acievement_points
   def self.find args
-    region     = args.delete(:region)
-    profile_id = args.delete(:profile_id)
-    name       = args.delete(:name)
-    realm      = args.delete(:realm) || '1'
-    locale     = args.delete(:locale) || 'en_US'
-    api_key        = args.delete(:api_key) || Bnet.configuration.api_key
+    region     = args[:region]
+    profile_id = args[:profile_id]
+    name       = args[:name]
+    realm      = args[:realm] || '1'
+    locale     = args[:locale] || 'en_US'
+    api_key        = args[:api_key] || Bnet.configuration.api_key
 
     base_api = Bnet::Starcraft2.new(region: region)
     call_url = base_api.url + "profile/#{profile_id}/#{realm}/#{name}/?locale=#{locale}&apikey=#{api_key}"
