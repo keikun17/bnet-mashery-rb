@@ -23,7 +23,7 @@
 ### Starcraft
 
 - [x] Bnet::Starcraft2::Profile                   [x] doc
-  - [ ] Bnet::Starcraft2::Matches                 [ ] doc
+  - [x] Bnet::Starcraft2::Matches                 [ ] doc
   - [ ] Bnet::Starcraft2::Ladder                  [ ] doc
   - [x] Bnet::Starcraft2::Career                  [ ] doc
 - [ ] Bnet::Starcraft2::Ladder                    [ ] doc
