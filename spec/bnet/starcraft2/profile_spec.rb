@@ -15,7 +15,7 @@ describe Bnet::Starcraft2::Profile do
 
     it "is initialized" do
       expect(subject).to be_a_kind_of(described_class)
-      expect(subject.display_name).to eq("Testname")
+      expect(subject.name).to eq("Testname")
     end
   end
 
@@ -52,8 +52,6 @@ describe Bnet::Starcraft2::Profile do
         )
       end
 
-      it "assigns matches"
-      it "assigns ladders"
     end
 
     context "specified user does not exist on the server", {vcr: {cassette_name: "sc2_profile_not_found" }} do

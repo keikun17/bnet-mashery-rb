@@ -1,7 +1,7 @@
 # TODO: Associations for career, current_season
 class Bnet::Starcraft2::Profile < Bnet::BnetResource
 
-  attr_accessor :profile_id, :realm, :display_name, :clan_name, :clan_tag,
+  attr_accessor :profile_id, :realm, :name, :clan_name, :clan_tag,
     :achievement_points, :swarm_level, :terran_level, :zerg_level,
     :protoss_level, :acievement_points, :career, :region,
     :raw_attributes
@@ -9,7 +9,7 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
   PARAMS_MAPPING = {
       "id" => :profile_id,
       "realm" =>  :realm,
-      "displayName" => :display_name,
+      "displayName" => :name,
       "clanName" => :clan_name,
       "clanTag" => :clan_tag
     }
@@ -25,13 +25,14 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
   #
   # Hash Params:
   #   Required
-  #     :realm      - (required but defaults to '1')
-  #     :profile_id - ID (Honestly i do not know why Blizzard still needs this if
-  #                   localized Battletag is unique enough)
-  #     :name       - Just the name string in the Battle tag.
+  #     :realm         - (required but defaults to '1')
+  #     :profile_id    - ID (Honestly i do not know why Blizzard still needs this if
+  #                      localized Battletag is unique enough)
+  #     :name  - Just the name string in the Battle tag.
+  #
   #   Optional
-  #     :locale     - (defaults to 'en_US')
-  #     :api_key    - the api key
+  #     :locale        - (defaults to 'en_US')
+  #     :api_key       - the api key
   #
   # Example: If US account 'Playerone#1309' the profile can be accessible via
   # web from 'http://us.battle.net/sc2/en/profile/2143215/1/PlayerOne/'
@@ -40,7 +41,7 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
   #
   # Returns a Profile object with the following attributes
   #
-  #      :profile_id, :realm, :display_name, :clan_name, :clan_tag,
+  #      :profile_id, :realm, :name, :clan_name, :clan_tag,
   #      :achievement_points, :swarm_level, :terran_level, :zerg_level,
   #      :protoss_level, :acievement_points
   def self.find args
