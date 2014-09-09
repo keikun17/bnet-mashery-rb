@@ -1,0 +1,197 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/sc2/profile/2210662/1/NaNiwa/matches?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-GB
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 09 Sep 2014 14:49:15 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-49.mashery.com
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "matches" : [ {
+            "map" : "Deadwing LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410222237
+          }, {
+            "map" : "Deadwing LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410221657
+          }, {
+            "map" : "King Sejong Station LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410220846
+          }, {
+            "map" : "Nimbus LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410220050
+          }, {
+            "map" : "Overgrowth LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410209470
+          }, {
+            "map" : "Catallena LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410193244
+          }, {
+            "map" : "Nimbus LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410192625
+          }, {
+            "map" : "Overgrowth LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410191639
+          }, {
+            "map" : "King Sejong Station LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410189259
+          }, {
+            "map" : "Merry Go Round LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410188148
+          }, {
+            "map" : "King Sejong Station LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410187577
+          }, {
+            "map" : "Overgrowth LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410187027
+          }, {
+            "map" : "King Sejong Station LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410186146
+          }, {
+            "map" : "Deadwing LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410185353
+          }, {
+            "map" : "Overgrowth LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410182938
+          }, {
+            "map" : "Overgrowth LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410180677
+          }, {
+            "map" : "King Sejong Station LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410180018
+          }, {
+            "map" : "Overgrowth LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410179666
+          }, {
+            "map" : "Nimbus LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410179103
+          }, {
+            "map" : "Deadwing LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410178312
+          }, {
+            "map" : "Catallena LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410177602
+          }, {
+            "map" : "Merry Go Round LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410176799
+          }, {
+            "map" : "Catallena LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410175162
+          }, {
+            "map" : "Catallena LE",
+            "type" : "SOLO",
+            "decision" : "WIN",
+            "speed" : "FASTER",
+            "date" : 1410130625
+          }, {
+            "map" : "Merry Go Round LE",
+            "type" : "SOLO",
+            "decision" : "LOSS",
+            "speed" : "FASTER",
+            "date" : 1410129633
+          } ]
+        }
+    http_version: 
+  recorded_at: Tue, 09 Sep 2014 14:49:16 GMT
+recorded_with: VCR 2.9.2
