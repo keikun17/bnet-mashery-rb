@@ -51,6 +51,9 @@ describe Bnet::Starcraft2::Profile do
           :zerg_wins          =>  0
         )
       end
+
+      it "assigns matches"
+      it "assigns ladders"
     end
 
     context "specified user does not exist on the server", {vcr: {cassette_name: "sc2_profile_not_found" }} do
