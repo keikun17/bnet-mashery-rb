@@ -83,8 +83,12 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
     @matches ||= Bnet::Starcraft2::Match.all(self)
   end
 
-  def ladders
-    # @ladders ||=
+  def current_ladder_season
+    @ladders ||= Bnet::Starcraft2::Ladder.find_current(self)
+  end
+
+  def previous_ladder_season
+    @lader ||=- Bnet::Starcraft2::Ladder.find_previous(self)
   end
 
   def self.from_api(response)
