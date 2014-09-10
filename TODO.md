@@ -8,6 +8,7 @@
 
 - [x] Bnet::Diabo3::Career                        [x] doc
   - [x] Heroes (as `Hero`)                        [x] doc
+
 - [x] Bnet::Diabo3::Hero                          [x] doc
   - [x] Bnet::Diablo3::Skill
   - [x] Bnet::Diablo3::Item
@@ -25,8 +26,9 @@
 - [x] Bnet::Starcraft2::Profile                   [x] doc
   - [x] Bnet::Starcraft2::Matches                 [ ] doc
   - [ ] Bnet::Starcraft2::Ladder                  [ ] doc
+    - [ ] Bnet::Starcraft2::Character             [ ] doc
   - [x] Bnet::Starcraft2::Career                  [ ] doc
-- [ ] Bnet::Starcraft2::Ladder                    [ ] doc
+
 - [ ] Bnet::Starcraft2::Data                      [ ] doc
   - [ ] Achievements                              [ ] doc
   - [ ] Rewards                                   [ ] doc
@@ -50,17 +52,21 @@
     - [ ] Talents (as `Talent`)                   [ ] doc
     - [ ] Titles                                  [ ] doc
     - [ ] Audit                                   [ ] doc
+
 - [ ] Bnet::WOW::Item (as `Item`)                 [ ] doc
     - [ ] Set                                     [ ] doc
+
 - [ ] Bnet::WOW::Guild                            [ ] doc
     - [ ] Members                                 [ ] doc
     - [ ] Achievements (as `Achievement`)         [ ] doc
     - [ ] News                                    [ ] doc
     - [ ] Challenge                               [ ] doc
+
 - [ ] Bnet::WOW::PVP                              [ ] doc
 - [ ] Bnet::WOW::Quest (as `Quest`)               [ ] doc
 - [ ] Bnet::WOW::Realm                            [ ] doc
     - [ ] Status                                  [ ] doc
+
 - [ ] Bnet::WOW::Recipe                           [ ] doc
 - [ ] Bnet::WOW::Spell                            [ ] doc
 - [x] Bnet::WOW::Data                             [ ] doc
