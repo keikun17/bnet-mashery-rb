@@ -70,9 +70,8 @@ describe Bnet::Starcraft2::Profile do
   describe '#matches' do
     context 'Naniwa user is found', vcr: {cassette_name: 'SC2 Naniwa profile found' } do
       subject { profile.matches }
-      # subject { binding.pry }
       let(:profile) {
-        a = Bnet::Starcraft2::Profile.find(profile_id: 2210662, name: 'NaNiwa', region: 'eu')
+        Bnet::Starcraft2::Profile.find(profile_id: 2210662, name: 'NaNiwa', region: 'eu')
       }
 
       it "returns a collection of matches for a given profile"  do
