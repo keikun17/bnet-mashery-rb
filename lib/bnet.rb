@@ -25,7 +25,7 @@ require 'bnet/diablo3/skill'
 require 'bnet/diablo3/follower'
 # require 'bnet/community' #TODO remove?
 require 'bnet/starcraft2'
-# require 'bnet/starcraft2/ladder'
+require 'bnet/starcraft2/ladder'
 require 'bnet/starcraft2/match'
 require 'bnet/starcraft2/career'
 require 'bnet/starcraft2/profile'

@@ -1,0 +1,1031 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/sc2/profile/2144359/1/JaBiTo/ladders?apikey=api_key_from_secrets_rb&locale=ko_KR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 10 Sep 2014 15:42:26 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-50.mashery.com
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "currentSeason" : [ {
+            "ladder" : [ {
+              "ladderName" : "Arbiter Epsilon",
+              "ladderId" : 175161,
+              "division" : 72,
+              "rank" : 47,
+              "league" : "DIAMOND",
+              "matchMakingQueue" : "HOTS_SOLO",
+              "wins" : 21,
+              "losses" : 7,
+              "showcase" : true
+            }, {
+              "ladderName" : "Defiler Quest",
+              "ladderId" : 174773,
+              "division" : 50,
+              "rank" : 84,
+              "league" : "GOLD",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 2,
+              "losses" : 1,
+              "showcase" : true
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Xerana Foxtrot",
+              "ladderId" : 174596,
+              "division" : 13,
+              "rank" : 38,
+              "league" : "PLATINUM",
+              "matchMakingQueue" : "HOTS_TWOS",
+              "wins" : 12,
+              "losses" : 8,
+              "showcase" : true
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Mar Sara Zeta",
+              "ladderId" : 174195,
+              "division" : 3,
+              "rank" : 16,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 6,
+              "losses" : 2,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 705464,
+              "realm" : 1,
+              "displayName" : "Forlorn",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/705464/1/Forlorn/"
+            }, {
+              "id" : 2134489,
+              "realm" : 1,
+              "displayName" : "Zritex",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2134489/1/Zritex/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Moria Mu",
+              "ladderId" : 174559,
+              "division" : 6,
+              "rank" : 82,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 4,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 355060,
+              "realm" : 1,
+              "displayName" : "IIIIIIIIIIII",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/355060/1/IIIIIIIIIIII/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3157213,
+              "realm" : 1,
+              "displayName" : "lance",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157213/1/lance/"
+            } ],
+            "nonRanked" : [ ]
+          } ],
+          "previousSeason" : [ {
+            "ladder" : [ ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 2327985,
+              "realm" : 1,
+              "displayName" : "chewy",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/2327985/1/chewy/"
+            }, {
+              "id" : 3157213,
+              "realm" : 1,
+              "displayName" : "lance",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157213/1/lance/"
+            } ],
+            "nonRanked" : [ {
+              "mmq" : "HOTS_FOURS",
+              "gamesPlayed" : 3
+            } ]
+          }, {
+            "ladder" : [ ],
+            "characters" : [ {
+              "id" : 2068331,
+              "realm" : 1,
+              "displayName" : "SaiirupPC",
+              "clanName" : "xXxClan",
+              "clanTag" : "pinoy",
+              "profilePath" : "/profile/2068331/1/SaiirupPC/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ {
+              "mmq" : "HOTS_THREES",
+              "gamesPlayed" : 4
+            } ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Thor Oscar",
+              "ladderId" : 171549,
+              "division" : 9,
+              "rank" : 31,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 5,
+              "losses" : 2,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2068331,
+              "realm" : 1,
+              "displayName" : "SaiirupPC",
+              "clanName" : "xXxClan",
+              "clanTag" : "pinoy",
+              "profilePath" : "/profile/2068331/1/SaiirupPC/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 2294156,
+              "realm" : 1,
+              "displayName" : "ImJamesBOND",
+              "clanName" : "MI6 007",
+              "clanTag" : "007MI6",
+              "profilePath" : "/profile/2294156/1/ImJamesBOND/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Aldaris Xi",
+              "ladderId" : 171262,
+              "division" : 2,
+              "rank" : 1,
+              "league" : "PLATINUM",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 14,
+              "losses" : 6,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3157213,
+              "realm" : 1,
+              "displayName" : "lance",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157213/1/lance/"
+            }, {
+              "id" : 3157914,
+              "realm" : 1,
+              "displayName" : "SUPERDENNIS",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157914/1/SUPERDENNIS/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 2327985,
+              "realm" : 1,
+              "displayName" : "chewy",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/2327985/1/chewy/"
+            }, {
+              "id" : 3158601,
+              "realm" : 1,
+              "displayName" : "TotoyBato",
+              "clanName" : "xXxClan",
+              "clanTag" : "pinoy",
+              "profilePath" : "/profile/3158601/1/TotoyBato/"
+            } ],
+            "nonRanked" : [ {
+              "mmq" : "HOTS_FOURS",
+              "gamesPlayed" : 1
+            } ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Ramsey Gamma",
+              "ladderId" : 171676,
+              "division" : 72,
+              "rank" : 59,
+              "league" : "DIAMOND",
+              "matchMakingQueue" : "HOTS_SOLO",
+              "wins" : 20,
+              "losses" : 7,
+              "showcase" : false
+            }, {
+              "ladderName" : "Overlord Alamo",
+              "ladderId" : 171916,
+              "division" : 16,
+              "rank" : 42,
+              "league" : "PLATINUM",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 14,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Braken Foxtrot",
+              "ladderId" : 172318,
+              "division" : 9,
+              "rank" : 58,
+              "league" : "DIAMOND",
+              "matchMakingQueue" : "HOTS_TWOS",
+              "wins" : 15,
+              "losses" : 11,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Tosh Alpha",
+              "ladderId" : 171238,
+              "division" : 7,
+              "rank" : 65,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 4,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 1237386,
+              "realm" : 1,
+              "displayName" : "XEVIOUS",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/1237386/1/XEVIOUS/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3139620,
+              "realm" : 1,
+              "displayName" : "mhptozz",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/3139620/1/mhptozz/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Hierarch Dixie",
+              "ladderId" : 172091,
+              "division" : 5,
+              "rank" : 54,
+              "league" : "GOLD",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 4,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 355060,
+              "realm" : 1,
+              "displayName" : "IIIIIIIIIIII",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/355060/1/IIIIIIIIIIII/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3139620,
+              "realm" : 1,
+              "displayName" : "mhptozz",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/3139620/1/mhptozz/"
+            } ],
+            "nonRanked" : [ ]
+          } ],
+          "showcasePlacement" : [ ]
+        }
+    http_version: 
+  recorded_at: Wed, 10 Sep 2014 15:42:27 GMT
+- request:
+    method: get
+    uri: https://us.api.battle.net/sc2/profile/2144359/1/JaBiTo/ladders?apikey=api_key_from_secrets_rb&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 10 Sep 2014 15:42:28 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-46.mashery.com
+      Content-Length:
+      - '1184'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "currentSeason" : [ {
+            "ladder" : [ {
+              "ladderName" : "Arbiter Epsilon",
+              "ladderId" : 175161,
+              "division" : 72,
+              "rank" : 47,
+              "league" : "DIAMOND",
+              "matchMakingQueue" : "HOTS_SOLO",
+              "wins" : 21,
+              "losses" : 7,
+              "showcase" : true
+            }, {
+              "ladderName" : "Defiler Quest",
+              "ladderId" : 174773,
+              "division" : 50,
+              "rank" : 84,
+              "league" : "GOLD",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 2,
+              "losses" : 1,
+              "showcase" : true
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Xerana Foxtrot",
+              "ladderId" : 174596,
+              "division" : 13,
+              "rank" : 38,
+              "league" : "PLATINUM",
+              "matchMakingQueue" : "HOTS_TWOS",
+              "wins" : 12,
+              "losses" : 8,
+              "showcase" : true
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Mar Sara Zeta",
+              "ladderId" : 174195,
+              "division" : 3,
+              "rank" : 16,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 6,
+              "losses" : 2,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 705464,
+              "realm" : 1,
+              "displayName" : "Forlorn",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/705464/1/Forlorn/"
+            }, {
+              "id" : 2134489,
+              "realm" : 1,
+              "displayName" : "Zritex",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2134489/1/Zritex/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Moria Mu",
+              "ladderId" : 174559,
+              "division" : 6,
+              "rank" : 82,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 4,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 355060,
+              "realm" : 1,
+              "displayName" : "IIIIIIIIIIII",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/355060/1/IIIIIIIIIIII/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3157213,
+              "realm" : 1,
+              "displayName" : "lance",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157213/1/lance/"
+            } ],
+            "nonRanked" : [ ]
+          } ],
+          "previousSeason" : [ {
+            "ladder" : [ ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 2327985,
+              "realm" : 1,
+              "displayName" : "chewy",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/2327985/1/chewy/"
+            }, {
+              "id" : 3157213,
+              "realm" : 1,
+              "displayName" : "lance",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157213/1/lance/"
+            } ],
+            "nonRanked" : [ {
+              "mmq" : "HOTS_FOURS",
+              "gamesPlayed" : 3
+            } ]
+          }, {
+            "ladder" : [ ],
+            "characters" : [ {
+              "id" : 2068331,
+              "realm" : 1,
+              "displayName" : "SaiirupPC",
+              "clanName" : "xXxClan",
+              "clanTag" : "pinoy",
+              "profilePath" : "/profile/2068331/1/SaiirupPC/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ {
+              "mmq" : "HOTS_THREES",
+              "gamesPlayed" : 4
+            } ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Thor Oscar",
+              "ladderId" : 171549,
+              "division" : 9,
+              "rank" : 31,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 5,
+              "losses" : 2,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2068331,
+              "realm" : 1,
+              "displayName" : "SaiirupPC",
+              "clanName" : "xXxClan",
+              "clanTag" : "pinoy",
+              "profilePath" : "/profile/2068331/1/SaiirupPC/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 2294156,
+              "realm" : 1,
+              "displayName" : "ImJamesBOND",
+              "clanName" : "MI6 007",
+              "clanTag" : "007MI6",
+              "profilePath" : "/profile/2294156/1/ImJamesBOND/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Aldaris Xi",
+              "ladderId" : 171262,
+              "division" : 2,
+              "rank" : 1,
+              "league" : "PLATINUM",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 14,
+              "losses" : 6,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3157213,
+              "realm" : 1,
+              "displayName" : "lance",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157213/1/lance/"
+            }, {
+              "id" : 3157914,
+              "realm" : 1,
+              "displayName" : "SUPERDENNIS",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/3157914/1/SUPERDENNIS/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 2327985,
+              "realm" : 1,
+              "displayName" : "chewy",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/2327985/1/chewy/"
+            }, {
+              "id" : 3158601,
+              "realm" : 1,
+              "displayName" : "TotoyBato",
+              "clanName" : "xXxClan",
+              "clanTag" : "pinoy",
+              "profilePath" : "/profile/3158601/1/TotoyBato/"
+            } ],
+            "nonRanked" : [ {
+              "mmq" : "HOTS_FOURS",
+              "gamesPlayed" : 1
+            } ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Ramsey Gamma",
+              "ladderId" : 171676,
+              "division" : 72,
+              "rank" : 59,
+              "league" : "DIAMOND",
+              "matchMakingQueue" : "HOTS_SOLO",
+              "wins" : 20,
+              "losses" : 7,
+              "showcase" : false
+            }, {
+              "ladderName" : "Overlord Alamo",
+              "ladderId" : 171916,
+              "division" : 16,
+              "rank" : 42,
+              "league" : "PLATINUM",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 14,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Braken Foxtrot",
+              "ladderId" : 172318,
+              "division" : 9,
+              "rank" : 58,
+              "league" : "DIAMOND",
+              "matchMakingQueue" : "HOTS_TWOS",
+              "wins" : 15,
+              "losses" : 11,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Tosh Alpha",
+              "ladderId" : 171238,
+              "division" : 7,
+              "rank" : 65,
+              "league" : "SILVER",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 4,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 1237386,
+              "realm" : 1,
+              "displayName" : "XEVIOUS",
+              "clanName" : "HailPhilippines",
+              "clanTag" : "Pinoys",
+              "profilePath" : "/profile/1237386/1/XEVIOUS/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3139620,
+              "realm" : 1,
+              "displayName" : "mhptozz",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/3139620/1/mhptozz/"
+            } ],
+            "nonRanked" : [ ]
+          }, {
+            "ladder" : [ {
+              "ladderName" : "Hierarch Dixie",
+              "ladderId" : 172091,
+              "division" : 5,
+              "rank" : 54,
+              "league" : "GOLD",
+              "matchMakingQueue" : "HOTS_FOURS",
+              "wins" : 4,
+              "losses" : 1,
+              "showcase" : false
+            } ],
+            "characters" : [ {
+              "id" : 355060,
+              "realm" : 1,
+              "displayName" : "IIIIIIIIIIII",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/355060/1/IIIIIIIIIIII/"
+            }, {
+              "id" : 2144359,
+              "realm" : 1,
+              "displayName" : "JaBiTo",
+              "clanName" : "",
+              "clanTag" : "",
+              "profilePath" : "/profile/2144359/1/JaBiTo/"
+            }, {
+              "id" : 2144909,
+              "realm" : 1,
+              "displayName" : "xXxmickey",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/2144909/1/xXxmickey/"
+            }, {
+              "id" : 3139620,
+              "realm" : 1,
+              "displayName" : "mhptozz",
+              "clanName" : "P1NOY",
+              "clanTag" : "P1NOY",
+              "profilePath" : "/profile/3139620/1/mhptozz/"
+            } ],
+            "nonRanked" : [ ]
+          } ],
+          "showcasePlacement" : [ ]
+        }
+    http_version: 
+  recorded_at: Wed, 10 Sep 2014 15:42:30 GMT
+recorded_with: VCR 2.9.2
