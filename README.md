@@ -103,7 +103,7 @@ This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-masher
     #
     # ...And the following associations
     #
-    #      :career, :matches, :ladders
+    #      :career, :matches, :previous_ladder_season, current_ladder_season
     #
     # Example: If US account 'Playerone#1309' the profile can be accessible via
     # web from 'http://us.battle.net/sc2/en/profile/2143215/1/PlayerOne/'
