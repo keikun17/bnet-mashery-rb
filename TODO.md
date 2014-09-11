@@ -25,8 +25,8 @@
 
 - [x] Bnet::Starcraft2::Profile                   [x] doc
   - [x] Bnet::Starcraft2::Matches                 [ ] doc
-  - [ ] Bnet::Starcraft2::Ladder                  [ ] doc
-    - [ ] Bnet::Starcraft2::Character             [ ] doc
+  - [x] Bnet::Starcraft2::Ladder                  [ ] doc
+    - [x] Bnet::Starcraft2::Character             [ ] doc
   - [x] Bnet::Starcraft2::Career                  [ ] doc
 
 - [ ] Bnet::Starcraft2::Data                      [ ] doc
