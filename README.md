@@ -3,9 +3,9 @@ bnet-mashery-rb
 
 Ruby gem for accessing Blizzard's Mashery API
 
-This repository (will) contain various libraries for interfacing with Blizzard's Battle.net API [https://dev.battle.net](https://dev.battle.net).
+This repository contains various libraries for interfacing with Blizzard's Battle.net API [https://dev.battle.net](https://dev.battle.net).
 
-This is a work in progress : [TODO-LIST](https://github.com/keikun17/bnet-mashery-rb/blob/master/TODO.md)
+This is a work in progress: [TODO-LIST](https://github.com/keikun17/bnet-mashery-rb/blob/master/TODO.md)
 
 ### Installation
 
