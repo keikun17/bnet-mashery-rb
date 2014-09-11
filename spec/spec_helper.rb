@@ -5,6 +5,8 @@ Coveralls.wear! #  Load this ffirst before the tested library
 
 ########## Usual things ##########
 
+require 'rspec/collection_matchers'
+
 require 'pry'
 require 'bnet'
 require 'vcr'
