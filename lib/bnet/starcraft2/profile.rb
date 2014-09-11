@@ -88,7 +88,7 @@ class Bnet::Starcraft2::Profile < Bnet::BnetResource
   end
 
   def previous_ladder_season
-    @lader ||=- Bnet::Starcraft2::Ladder.find_previous(self)
+    @ladders ||= Bnet::Starcraft2::Ladder.find_previous(self)
   end
 
   def self.from_api(response)

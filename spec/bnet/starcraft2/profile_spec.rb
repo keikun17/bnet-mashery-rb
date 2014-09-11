@@ -86,11 +86,12 @@ describe Bnet::Starcraft2::Profile do
   end
 
   describe '#current_ladder_season' do
+    subject { profile.current_ladder_season }
     context "Jabito's ladder records user are found", vcr: {cassette_name: "SC2 Jabito's Ladder Records" } do
-      subject { profile.current_ladder_season }
       let(:profile) do
         Bnet::Starcraft2::Profile.find(profile_id: 2144359, name: 'JaBiTo', region: 'us')
       end
+
       it "returns the current ladders statistics for the profile" do
         expect(subject).to_not be_empty
         expect(subject).to include( an_object_having_attributes(ladder_name: 'Arbiter Epsilon'))
@@ -107,8 +108,8 @@ describe Bnet::Starcraft2::Profile do
       end
 
       it "returns the previous ladder statisttics for the profile" do
-        expect(subject).to_not be_empty
-        expect(subject).to include( an_object_having_attributes(ladder_name: 'Arbiter Epsilon'))
+        expect(subject).to have(7).items
+        expect(subject).to include( an_object_having_attributes(ladder_name: 'Thor Oscar'))
         expect(subject[0].characters[0]['displayName']).to eq('JaBiTo')
       end
     end
