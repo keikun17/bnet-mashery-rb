@@ -15,7 +15,6 @@ class Bnet::Starcraft2::Ladder < Bnet::BnetResource
     "losses"            => :losses
   }
 
-
   def self.find_current(profile, args = {})
     profile_id = profile.profile_id
     name = profile.name
@@ -31,20 +30,7 @@ class Bnet::Starcraft2::Ladder < Bnet::BnetResource
       raw_collection_response = JSON.parse(data.read)
 
       if Bnet::API.valid_call?(data.status, raw_collection_response)
-
-        ladders = raw_collection_response["currentSeason"].collect do |raw_ladder_character_response|
-          raw_characters = raw_ladder_character_response["characters"]
-          raw_ladders = raw_ladder_character_response["ladder"].collect do |raw_ladder| 
-            ladder = from_api(raw_ladder)
-            ladder.characters = raw_characters
-            ladder
-          end
-
-          raw_ladders
-        end
-
-        ladders.flatten!
-
+        ladders = collection_from_api(raw_collection_response["currentSeason"])
       else
         ladders = []
       end
@@ -72,20 +58,7 @@ class Bnet::Starcraft2::Ladder < Bnet::BnetResource
       raw_collection_response = JSON.parse(data.read)
 
       if Bnet::API.valid_call?(data.status, raw_collection_response)
-
-        ladders = raw_collection_response["previousSeason"].collect do |raw_ladder_character_response|
-          raw_characters = raw_ladder_character_response["characters"]
-          raw_ladders = raw_ladder_character_response["ladder"].collect do |raw_ladder| 
-            ladder = from_api(raw_ladder)
-            ladder.characters = raw_characters
-            ladder
-          end
-
-          raw_ladders
-        end
-
-        ladders.flatten!
-
+        ladders = collection_from_api(raw_collection_response["previousSeason"])
       else
         ladders = []
       end
@@ -97,5 +70,24 @@ class Bnet::Starcraft2::Ladder < Bnet::BnetResource
     return ladders
 
   end
+
+  private
+
+  def self.collection_from_api(raw_collection_response)
+    ladders = raw_collection_response.collect do |raw_response|
+      raw_characters = raw_response["characters"]
+      raw_ladders = raw_response["ladder"].collect do |raw_ladder|
+        ladder = from_api(raw_ladder)
+        ladder.characters = raw_characters
+        ladder
+      end
+
+      raw_ladders
+    end
+
+    ladders.flatten!
+
+  end
+
 
 end
