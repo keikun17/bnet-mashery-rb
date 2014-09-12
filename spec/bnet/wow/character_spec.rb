@@ -48,8 +48,7 @@ describe Bnet::WOW::Character do
     context "specified character does not exist on the server", vcr: {cassette_name: 'wow_character_not_found'} do
       let(:attrs){
         {
-          region: 'us', name: 'NotHereYo', realm: 'Dragonmaw',
-          key: VCR::SECRETS["api_key"]
+          region: 'us', name: 'NotHereYo', realm: 'Dragonmaw'
         }
       }
       it { is_expected.to be_nil }
