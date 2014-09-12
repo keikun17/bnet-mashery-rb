@@ -24,14 +24,14 @@ class Bnet::WOW::Character < Bnet::BnetResource
   #   :name, :realm, :battlegroup, :class, :race, :gender, :level,
   #   :achievement_points, :total_honorable_kills, :calc_class
   def self.find args
-    region     = args.delete(:region)
-    realm      = args.delete(:realm)
-    name       = args.delete(:name)
-    locale     = args.delete(:locale) || 'en_US'
-    api_key    = args.delete(:api_key) || Bnet.configuration.api_key
+    region     = args[:region]
+    realm      = args[:realm]
+    name       = args[:name]
+    locale     = args[:locale] || 'en_US'
+    api_key    = args[:api_key] || Bnet.configuration.api_key
 
-    base_api = Bnet::WOW.new(region: region)
-    call_url = base_api.url + "character/#{realm}/#{name}?locale=#{locale}&apikey=#{api_key}"
+    client = Bnet::WOW.new(region: region)
+    call_url = client.url + "character/#{realm}/#{name}?locale=#{locale}&apikey=#{api_key}"
 
     begin
       data = open(call_url)
