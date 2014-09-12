@@ -40,6 +40,8 @@ describe Bnet::WOW::Character do
       it "returns the instance" do
         expect(subject).to be_a_kind_of(described_class)
         expect(subject.name).to eq("Alexeistukov")
+        expect(subject.realm).to eq("Dragonmaw")
+        expect(subject.region).to eq("us")
       end
     end
 
