@@ -1,7 +1,8 @@
 class Bnet::WOW::Character < Bnet::BnetResource
 
   attr_accessor :name, :realm, :battlegroup, :class, :race, :gender, :level,
-    :achievement_points, :total_honorable_kills, :calc_class
+    :achievement_points, :total_honorable_kills, :calc_class, :region, 
+    :raw_attributes
 
   # Query Battlenet API for the character profile
   #
@@ -38,6 +39,7 @@ class Bnet::WOW::Character < Bnet::BnetResource
 
       if data.status == ['200', 'OK'] && raw_response["code"] != 'NOTFOUND'
         bnet_object = from_api(raw_response)
+        bnet_object.region = region
       else
         bnet_object = nil
       end
