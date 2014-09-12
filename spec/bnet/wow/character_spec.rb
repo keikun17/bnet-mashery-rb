@@ -55,4 +55,12 @@ describe Bnet::WOW::Character do
     end
   end
 
+  context "Alexeistukov character" do
+    subject(:character) { described_class.new(region: 'us', realm: 'Dragonmaw', name: 'Alexeistukov')}
+
+    describe "#achievements", vcr: {cassette_name: 'WoW Alexeistukov achievements'} do
+      it { expect(subject.achievements).to_not be_empty }
+    end
+  end
+
 end
