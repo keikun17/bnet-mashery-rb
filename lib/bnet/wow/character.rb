@@ -51,6 +51,12 @@ class Bnet::WOW::Character < Bnet::BnetResource
     return bnet_object
   end
 
+  def self.from_api(raw_response)
+    character = super(raw_response)
+    character.raw_attributes = raw_response
+    character
+  end
+
   def gender
     case @gender
     when 0
