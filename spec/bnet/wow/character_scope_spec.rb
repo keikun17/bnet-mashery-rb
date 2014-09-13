@@ -92,10 +92,10 @@ describe Bnet::WOW::Character do
       end
     end
 
-    describe "#quests", vcr: {cassette_name: 'wow alexeistukov Quests'} do
-      it { expect(subject.quests).to_not be_empty }
+    describe "#reputation", vcr: {cassette_name: 'wow alexeistukov Reputation'} do
+      it { expect(subject.reputation).to_not be_empty }
       it_behaves_like 'memoized WoW character scope' do
-        let(:scope) {'quests'}
+        let(:scope) {'reputation'}
       end
     end
 

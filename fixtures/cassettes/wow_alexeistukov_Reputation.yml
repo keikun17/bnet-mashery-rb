@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=reputation&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 14:47:33 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1b-39.mashery.com
+      Content-Length:
+      - '1709'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","reputation":[{"id":1375,"name":"Dominance
+        Offensive","standing":3,"value":0,"max":3000},{"id":1098,"name":"Knights of
+        the Ebon Blade","standing":5,"value":888,"max":12000},{"id":1090,"name":"Kirin
+        Tor","standing":4,"value":5961,"max":6000},{"id":1091,"name":"The Wyrmrest
+        Accord","standing":5,"value":5027,"max":12000},{"id":1358,"name":"Nat Pagle","standing":3,"value":0,"max":3000},{"id":1359,"name":"The
+        Black Prince","standing":3,"value":2800,"max":3000},{"id":1119,"name":"The
+        Sons of Hodir","standing":0,"value":0,"max":36000},{"id":21,"name":"Booty
+        Bay","standing":4,"value":1532,"max":6000},{"id":270,"name":"Zandalar Tribe","standing":3,"value":0,"max":3000},{"id":1105,"name":"The
+        Oracles","standing":3,"value":0,"max":3000},{"id":1104,"name":"Frenzyheart
+        Tribe","standing":3,"value":0,"max":3000},{"id":809,"name":"Shen''dralar","standing":3,"value":0,"max":3000},{"id":1345,"name":"The
+        Lorewalkers","standing":3,"value":0,"max":3000},{"id":1106,"name":"Argent
+        Crusade","standing":5,"value":2976,"max":12000},{"id":1135,"name":"The Earthen
+        Ring","standing":7,"value":999,"max":999},{"id":1133,"name":"Bilgewater Cartel","standing":7,"value":999,"max":999},{"id":1124,"name":"The
+        Sunreavers","standing":5,"value":7742,"max":12000},{"id":1388,"name":"Sunreaver
+        Onslaught","standing":4,"value":0,"max":6000},{"id":529,"name":"Argent Dawn","standing":3,"value":200,"max":3000},{"id":530,"name":"Darkspear
+        Trolls","standing":7,"value":999,"max":999},{"id":59,"name":"Thorium Brotherhood","standing":3,"value":0,"max":3000},{"id":68,"name":"Undercity","standing":4,"value":5999,"max":6000},{"id":70,"name":"Syndicate","standing":0,"value":32000,"max":36000},{"id":609,"name":"Cenarion
+        Circle","standing":5,"value":6396,"max":12000},{"id":1038,"name":"Ogri''la","standing":3,"value":0,"max":3000},{"id":76,"name":"Orgrimmar","standing":6,"value":7326,"max":21000},{"id":889,"name":"Warsong
+        Outriders","standing":3,"value":0,"max":3000},{"id":349,"name":"Ravenholdt","standing":3,"value":0,"max":3000},{"id":1302,"name":"The
+        Anglers","standing":3,"value":0,"max":3000},{"id":1031,"name":"Sha''tari Skyguard","standing":3,"value":0,"max":3000},{"id":87,"name":"Bloodsail
+        Buccaneers","standing":0,"value":34975,"max":36000},{"id":81,"name":"Thunder
+        Bluff","standing":6,"value":2441,"max":21000},{"id":1052,"name":"Horde Expedition","standing":7,"value":999,"max":999},{"id":1282,"name":"Fish
+        Fellreed","standing":0,"value":0,"max":8400},{"id":93,"name":"Magram Clan
+        Centaur","standing":3,"value":2000,"max":3000},{"id":1283,"name":"Farmer Fung","standing":0,"value":0,"max":8400},{"id":92,"name":"Gelkis
+        Clan Centaur","standing":3,"value":2000,"max":3000},{"id":1280,"name":"Tina
+        Mudclaw","standing":0,"value":0,"max":8400},{"id":1281,"name":"Gina Mudclaw","standing":0,"value":0,"max":8400},{"id":1337,"name":"The
+        Klaxxi","standing":3,"value":0,"max":3000},{"id":576,"name":"Timbermaw Hold","standing":2,"value":100,"max":3000},{"id":1067,"name":"The
+        Hand of Vengeance","standing":6,"value":641,"max":21000},{"id":577,"name":"Everlook","standing":4,"value":1270,"max":6000},{"id":1064,"name":"The
+        Taunka","standing":6,"value":3646,"max":21000},{"id":1341,"name":"The August
+        Celestials","standing":3,"value":0,"max":3000},{"id":369,"name":"Gadgetzan","standing":4,"value":2661,"max":6000},{"id":1085,"name":"Warsong
+        Offensive","standing":6,"value":13584,"max":21000},{"id":1073,"name":"The
+        Kalu''ak","standing":4,"value":4035,"max":6000},{"id":1077,"name":"Shattered
+        Sun Offensive","standing":3,"value":0,"max":3000},{"id":1216,"name":"Shang
+        Xi''s Academy","standing":3,"value":0,"max":3000},{"id":947,"name":"Thrallmar","standing":5,"value":5576,"max":12000},{"id":941,"name":"The
+        Mag''har","standing":4,"value":68,"max":6000},{"id":942,"name":"Cenarion Expedition","standing":5,"value":3810,"max":12000},{"id":933,"name":"The
+        Consortium","standing":4,"value":1895,"max":6000},{"id":932,"name":"The Aldor","standing":0,"value":33436,"max":36000},{"id":935,"name":"The
+        Sha''tar","standing":3,"value":2690,"max":3000},{"id":934,"name":"The Scryers","standing":4,"value":5104,"max":6000},{"id":922,"name":"Tranquillien","standing":7,"value":999,"max":999},{"id":911,"name":"Silvermoon
+        City","standing":6,"value":5173,"max":21000},{"id":1270,"name":"Shado-Pan","standing":3,"value":5,"max":3000},{"id":910,"name":"Brood
+        of Nozdormu","standing":0,"value":0,"max":36000},{"id":1271,"name":"Order
+        of the Cloud Serpent","standing":4,"value":0,"max":6000},{"id":909,"name":"Darkmoon
+        Faire","standing":3,"value":0,"max":3000},{"id":1269,"name":"Golden Lotus","standing":3,"value":0,"max":3000},{"id":1278,"name":"Sho","standing":0,"value":0,"max":8400},{"id":1279,"name":"Haohan
+        Mudclaw","standing":0,"value":0,"max":8400},{"id":1276,"name":"Old Hillpaw","standing":0,"value":0,"max":8400},{"id":1277,"name":"Chee
+        Chee","standing":0,"value":0,"max":8400},{"id":1275,"name":"Ella","standing":0,"value":0,"max":8400},{"id":1272,"name":"The
+        Tillers","standing":3,"value":0,"max":3000},{"id":1273,"name":"Jogu the Drunk","standing":0,"value":0,"max":8400},{"id":1156,"name":"The
+        Ashen Verdict","standing":3,"value":0,"max":3000},{"id":749,"name":"Hydraxian
+        Waterlords","standing":3,"value":73,"max":3000},{"id":1158,"name":"Guardians
+        of Hyjal","standing":7,"value":999,"max":999},{"id":470,"name":"Ratchet","standing":4,"value":1270,"max":6000},{"id":1435,"name":"Shado-Pan
+        Assault","standing":3,"value":0,"max":3000},{"id":1011,"name":"Lower City","standing":4,"value":4152,"max":6000},{"id":1012,"name":"Ashtongue
+        Deathsworn","standing":3,"value":0,"max":3000},{"id":1015,"name":"Netherwing","standing":0,"value":0,"max":36000},{"id":1168,"name":"Guild","standing":4,"value":879,"max":6000},{"id":1171,"name":"Therazane","standing":7,"value":999,"max":999},{"id":1172,"name":"Dragonmaw
+        Clan","standing":7,"value":4,"max":999},{"id":1173,"name":"Ramkahen","standing":7,"value":241,"max":999},{"id":1178,"name":"Hellscream''s
+        Reach","standing":7,"value":999,"max":999},{"id":510,"name":"The Defilers","standing":3,"value":0,"max":3000},{"id":990,"name":"The
+        Scale of the Sands","standing":3,"value":0,"max":3000},{"id":989,"name":"Keepers
+        of Time","standing":3,"value":962,"max":3000},{"id":729,"name":"Frostwolf
+        Clan","standing":3,"value":0,"max":3000},{"id":970,"name":"Sporeggar","standing":2,"value":1476,"max":3000},{"id":1204,"name":"Avengers
+        of Hyjal","standing":3,"value":0,"max":3000},{"id":967,"name":"The Violet
+        Eye","standing":3,"value":0,"max":3000}],"totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 14:47:33 GMT
+recorded_with: VCR 2.9.2
