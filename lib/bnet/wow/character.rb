@@ -150,6 +150,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     @stats = client.scoped('stats', realm: realm, name: name)
   end
 
+  def talents
+    return @talents if @talents
+    client = Bnet::WOW.new(region: region)
+    @talents = client.scoped('talents', realm: realm, name: name)
+  end
 
 
 

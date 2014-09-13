@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=talents&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 14:54:29 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-50.mashery.com
+      Content-Length:
+      - '1365'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","talents":[{"selected":true,"talents":[{"tier":0,"column":0,"spell":{"id":85499,"name":"Speed
+        of Light","icon":"ability_paladin_speedoflight","description":"Increases your
+        movement speed by 70% for 8 sec.","powerCost":"3.5% of base mana","castTime":"Instant","cooldown":"45
+        sec cooldown"}},{"tier":1,"column":0,"spell":{"id":105593,"name":"Fist of
+        Justice","icon":"spell_holy_fistofjustice","description":"Stuns the target
+        for 6 sec.\n\n\n\nReplaces Hammer of Justice.","range":"20 yd range","powerCost":"3.5%
+        of base mana","castTime":"Instant","cooldown":"30 sec cooldown"}},{"tier":2,"column":1,"spell":{"id":114163,"name":"Eternal
+        Flame","icon":"inv_torch_thrown","description":"Consumes up to 3 Holy Power
+        to place a protective Holy flame on a friendly target, which heals them for
+        5,629 and an additional 519 every 3 sec for 30 sec. Healing increased per
+        charge of Holy Power. The heal over time is increased by 100% if used on the
+        Paladin.\n\n\n\nReplaces Word of Glory.","range":"40 yd range","powerCost":"1
+        Holy Power","castTime":"Instant","cooldown":"1.5 sec cooldown"}},{"tier":3,"column":1,"spell":{"id":114154,"name":"Unbreakable
+        Spirit","icon":"spell_holy_unyieldingfaith","description":"When your Divine
+        Shield, Divine Protection or Lay on Hands are on cooldown, spending Holy Power
+        will reduce the remaining cooldown by 1% per Holy Power spent, up to a maximum
+        of 50% reduction.","castTime":"Passive"}},{"tier":4,"column":0,"spell":{"id":105809,"name":"Holy
+        Avenger","icon":"ability_paladin_holyavenger","description":"Abilities that
+        generate Holy Power will deal 30% additional damage and healing, and generate
+        3 charges of Holy Power for the next 18 sec.","castTime":"Instant","cooldown":"2
+        min cooldown"}}],"glyphs":{"major":[{"glyph":704,"item":45744,"name":"Glyph
+        of the Alabaster Shield","icon":"trade_archaeology_stoneshield"},{"glyph":996,"item":81956,"name":"Glyph
+        of the Battle Healer","icon":"spell_holy_vindication"},{"glyph":186,"item":41096,"name":"Glyph
+        of Divine Protection","icon":"spell_holy_divineprotection"}],"minor":[{"glyph":457,"item":43369,"name":"Glyph
+        of Fire From the Heavens","icon":"ability_mage_firestarter"},{"glyph":988,"item":80585,"name":"Glyph
+        of Righteous Retreat","icon":"achievement_guildperk_hastyhearth"},{"glyph":452,"item":43365,"name":"Glyph
+        of Contemplation","icon":"inv_relics_libramofhope"}]},"spec":{"name":"Protection","role":"TANK","backgroundImage":"bg-paladin-protection","icon":"ability_paladin_shieldofthetemplar","description":"Uses
+        Holy magic to shield herself and defend allies from attackers.","order":1},"calcTalent":"00110.","calcSpec":"Z","calcGlyph":"pGYOHj"},{"talents":[],"glyphs":{"major":[],"minor":[]},"spec":{"name":"Retribution","role":"DPS","backgroundImage":"bg-paladin-retribution","icon":"spell_holy_auraoflight","description":"A
+        righteous crusader who judges and punishes opponents with weapons and Holy
+        magic.","order":2},"calcTalent":"","calcSpec":"b","calcGlyph":""}],"totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 14:54:30 GMT
+recorded_with: VCR 2.9.2
