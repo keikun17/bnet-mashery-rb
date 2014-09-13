@@ -119,6 +119,19 @@ class Bnet::WOW::Character < Bnet::BnetResource
     client = Bnet::WOW.new(region: region)
     @pets = client.scoped('pets', realm: realm, name: name)
   end
+
+  def pet_slots
+    return @pet_slots if @pet_slots
+    client = Bnet::WOW.new(region: region)
+    @pet_slots = client.scoped('petSlots', realm: realm, name: name)
+  end
+
+  def progression
+    return @progression if @progression
+    client = Bnet::WOW.new(region: region)
+    @progression = client.scoped('progression', realm: realm, name: name)
+  end
+
   private
 
   def self.params_mapping

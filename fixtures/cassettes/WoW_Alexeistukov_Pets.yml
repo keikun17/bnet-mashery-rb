@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=pets&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 14:22:15 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-49.mashery.com
+      Content-Length:
+      - '1255'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","pets":{"numCollected":15,"numNotCollected":572,"collected":[{"name":"Baneling","spellId":131650,"creatureId":66984,"itemId":90177,"qualityId":3,"icon":"ability_pet_baneling","stats":{"speciesId":903,"breedId":10,"petQualityId":3,"level":1,"health":151,"power":13,"speed":10},"battlePetGuid":"00000000018FA51D","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Baneling","canBattle":true},{"name":"Deathy","spellId":94070,"creatureId":51122,"itemId":67418,"qualityId":3,"icon":"inv_dragonwhelpcataclysm","stats":{"speciesId":294,"breedId":8,"petQualityId":3,"level":1,"health":152,"power":12,"speed":12},"battlePetGuid":"00000000018FA4F1","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Deathy","canBattle":true},{"name":"Fetish
+        Shaman","spellId":105633,"creatureId":56266,"itemId":76062,"qualityId":3,"icon":"inv_spear_05","stats":{"speciesId":346,"breedId":3,"petQualityId":3,"level":1,"health":155,"power":11,"speed":11},"battlePetGuid":"00000000018FA51F","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Fetish
+        Shaman","canBattle":true},{"name":"Murkablo","spellId":101606,"creatureId":54438,"itemId":71726,"qualityId":3,"icon":"inv_pet_diablobabymurloc","stats":{"speciesId":329,"breedId":8,"petQualityId":3,"level":1,"health":152,"power":12,"speed":12},"battlePetGuid":"00000000018FA51E","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Murkablo","canBattle":true},{"name":"Ancona
+        Chicken","spellId":10685,"creatureId":7394,"itemId":11023,"qualityId":2,"icon":"spell_magic_polymorphchicken","stats":{"speciesId":52,"breedId":21,"petQualityId":2,"level":1,"health":150,"power":10,"speed":11},"battlePetGuid":"00000000018FA4EB","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Ancona
+        Chicken","canBattle":true},{"name":"Black Kingsnake","spellId":10714,"creatureId":7565,"itemId":10360,"qualityId":2,"icon":"spell_nature_guardianward","stats":{"speciesId":75,"breedId":5,"petQualityId":2,"level":1,"health":145,"power":10,"speed":12},"battlePetGuid":"00000000018FA4EE","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Black
+        Kingsnake","canBattle":true},{"name":"Brown Snake","spellId":10716,"creatureId":7562,"itemId":10361,"qualityId":2,"icon":"spell_nature_guardianward","stats":{"speciesId":77,"breedId":13,"petQualityId":2,"level":1,"health":151,"power":10,"speed":10},"battlePetGuid":"00000000018FA4EC","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Brown
+        Snake","canBattle":true},{"name":"Crimson Snake","spellId":10717,"creatureId":7567,"itemId":10392,"qualityId":2,"icon":"spell_nature_guardianward","stats":{"speciesId":78,"breedId":22,"petQualityId":2,"level":1,"health":150,"power":11,"speed":10},"battlePetGuid":"00000000018FA4EF","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Crimson
+        Snake","canBattle":true},{"name":"Gold Mini Jouster","spellId":78685,"creatureId":42183,"itemId":65662,"qualityId":2,"icon":"ability_hunter_pet_vulture","stats":{"speciesId":260,"breedId":8,"petQualityId":2,"level":1,"health":148,"power":11,"speed":10},"battlePetGuid":"00000000018FA4F2","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Gold
+        Mini Jouster","canBattle":true},{"name":"Mr. Chilly","spellId":55068,"creatureId":29726,"itemId":41133,"qualityId":2,"icon":"inv_misc_penguinpet","stats":{"speciesId":192,"breedId":9,"petQualityId":2,"level":1,"health":153,"power":10,"speed":11},"battlePetGuid":"00000000018FA4EA","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Mr.
+        Chilly","canBattle":true},{"name":"Perky Pug","spellId":70613,"creatureId":37865,"itemId":49912,"qualityId":2,"icon":"inv_misc_bone_01","stats":{"speciesId":250,"breedId":8,"petQualityId":2,"level":1,"health":145,"power":12,"speed":10},"battlePetGuid":"00000000018FA4F4","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Perky
+        Pug","canBattle":true},{"name":"Siamese Cat","spellId":10677,"creatureId":7380,"itemId":8490,"qualityId":2,"icon":"inv_pet_cats_siamesecat","stats":{"speciesId":44,"breedId":5,"petQualityId":2,"level":1,"health":142,"power":10,"speed":13},"battlePetGuid":"00000000018FA4F0","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Siamese
+        Cat","canBattle":true},{"name":"Toxic Wasteling","spellId":71840,"creatureId":38374,"itemId":50446,"qualityId":2,"icon":"inv_misc_slime_01","stats":{"speciesId":251,"breedId":3,"petQualityId":2,"level":1,"health":154,"power":11,"speed":9},"battlePetGuid":"00000000018FA4F3","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Toxic
+        Wasteling","canBattle":true},{"name":"Winter Reindeer","spellId":26529,"creatureId":15706,"itemId":21308,"qualityId":2,"icon":"inv_misc_bell_01","stats":{"speciesId":118,"breedId":3,"petQualityId":2,"level":1,"health":151,"power":10,"speed":10},"battlePetGuid":"00000000018FA4ED","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Winter
+        Reindeer","canBattle":true},{"name":"Alliance Balloon","spellId":101986,"creatureId":54539,"itemId":72042,"qualityId":1,"icon":"inv_misc_balloon_04","stats":{"speciesId":0,"breedId":3,"petQualityId":1,"level":0,"health":0,"power":0,"speed":0},"battlePetGuid":"00000000019303F4","isFavorite":false,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Alliance
+        Balloon","canBattle":false}]},"totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 14:22:15 GMT
+recorded_with: VCR 2.9.2

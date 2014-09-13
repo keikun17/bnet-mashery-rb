@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=mounts&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 14:20:42 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1b-45.mashery.com
+      Content-Length:
+      - '665'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","mounts":{"numCollected":9,"numNotCollected":276,"collected":[{"name":"Black
+        War Wolf","spellId":22724,"creatureId":14329,"itemId":29469,"qualityId":4,"icon":"ability_mount_blackdirewolf","isGround":true,"isFlying":false,"isAquatic":true,"isJumping":true},{"name":"Celestial
+        Steed","spellId":75614,"creatureId":40625,"itemId":54811,"qualityId":4,"icon":"ability_mount_celestialhorse","isGround":true,"isFlying":true,"isAquatic":true,"isJumping":true},{"name":"Goblin
+        Turbo-Trike","spellId":87091,"creatureId":46755,"itemId":62462,"qualityId":4,"icon":"inv_misc_key_04","isGround":true,"isFlying":false,"isAquatic":true,"isJumping":true},{"name":"Red
+        Skeletal Warhorse","spellId":22722,"creatureId":14331,"itemId":29470,"qualityId":4,"icon":"ability_mount_undeadhorse","isGround":true,"isFlying":false,"isAquatic":true,"isJumping":true},{"name":"Winged
+        Guardian","spellId":98727,"creatureId":53273,"itemId":69846,"qualityId":4,"icon":"inv_mount_wingedlion","isGround":true,"isFlying":true,"isAquatic":true,"isJumping":true},{"name":"Abyssal
+        Seahorse","spellId":75207,"creatureId":40054,"itemId":54465,"qualityId":3,"icon":"ability_mount_seahorse","isGround":false,"isFlying":false,"isAquatic":true,"isJumping":false},{"name":"Goblin
+        Trike","spellId":87090,"creatureId":46754,"itemId":62461,"qualityId":3,"icon":"inv_misc_key_03","isGround":true,"isFlying":false,"isAquatic":true,"isJumping":true},{"name":"Thalassian
+        Charger","spellId":34767,"creatureId":20030,"itemId":0,"qualityId":1,"icon":"ability_mount_charger","isGround":true,"isFlying":false,"isAquatic":true,"isJumping":true},{"name":"Thalassian
+        Warhorse","spellId":34769,"creatureId":20029,"itemId":0,"qualityId":1,"icon":"spell_nature_swiftness","isGround":true,"isFlying":false,"isAquatic":true,"isJumping":true}]},"totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 14:20:43 GMT
+recorded_with: VCR 2.9.2
