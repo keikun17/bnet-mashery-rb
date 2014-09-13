@@ -38,21 +38,21 @@
 - [x] Bnet::WOW::Character                        [x] doc
   - Scopes
     - [x] Achievements
-    - [ ] Appearance
-    - [ ] Feed
-    - [ ] Guild
-    - [ ] HunterPets
-    - [ ] Items
-    - [ ] Mounts
-    - [ ] PetSlots
-    - [ ] Progression
-    - [ ] PVP
-    - [ ] Quests
-    - [ ] Reputation
-    - [ ] Stats
-    - [ ] Talents
-    - [ ] Titles
-    - [ ] Audit
+    - [x] Appearance
+    - [x] Feed
+    - [x] Guild
+    - [x] HunterPets
+    - [x] Items
+    - [x] Mounts
+    - [x] PetSlots
+    - [x] Progression
+    - [x] PVP
+    - [x] Quests
+    - [x] Reputation
+    - [x] Stats
+    - [x] Talents
+    - [x] Titles
+    - [x] Audit
 
 - [ ] Bnet::WOW::Item (as `Item`)                 [ ] doc
     - [ ] Set                                     [ ] doc
