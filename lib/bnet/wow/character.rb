@@ -76,6 +76,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     client.scoped('appearance', realm: realm, name: name)
   end
 
+  def feed
+    client = Bnet::WOW.new(region: region)
+    client.scoped('feed', realm: realm, name: name)
+  end
+
   private
 
   def self.params_mapping

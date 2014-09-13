@@ -65,6 +65,10 @@ describe Bnet::WOW::Character do
     describe "#appearance", vcr: {cassette_name: 'WoW Alexeistukov Appearance'} do
       it { expect(subject.appearance).to_not be_empty }
     end
+
+    describe "#feed", vcr: {cassette_name: 'WoW Alexeistukov Feed'} do
+      it { expect(subject.feed).to_not be_empty }
+    end
   end
 
 end
