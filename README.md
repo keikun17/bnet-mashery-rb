@@ -123,10 +123,15 @@ This is a work in progress: [TODO-LIST](https://github.com/keikun17/bnet-mashery
     #     :locale          - String locale (defaults to 'en_US')
     #     :api_key         - String api key
     #
-    # Returns a Character with the following attributes
+    # Returns a Character with the following attributes...
     #
     #   :name, :realm, :battlegroup, :class, :race, :gender, :level,
     #   :achievement_points, :total_honorable_kills, :calc_class
+    #
+    # ... And responds to the following methods to return their corresponding scope in Hash form
+    #
+    #   :achievements, :appearance, :feed, :guild, :hunter_pets, :items, :mounts, :petslots,
+    #   :progression, :pvp, :quests, :reputation, :stats, :talents, :titles, :audit
     #
     # Example : IF a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
 
