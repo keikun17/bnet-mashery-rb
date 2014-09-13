@@ -61,6 +61,10 @@ describe Bnet::WOW::Character do
     describe "#achievements", vcr: {cassette_name: 'WoW Alexeistukov achievements'} do
       it { expect(subject.achievements).to_not be_empty }
     end
+
+    describe "#appearance", vcr: {cassette_name: 'WoW Alexeistukov Appearance'} do
+      it { expect(subject.appearance).to_not be_empty }
+    end
   end
 
 end

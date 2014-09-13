@@ -71,6 +71,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     client.scoped('achievements', realm: realm, name: name)
   end
 
+  def appearance
+    client = Bnet::WOW.new(region: region)
+    client.scoped('appearance', realm: realm, name: name)
+  end
+
   private
 
   def self.params_mapping
