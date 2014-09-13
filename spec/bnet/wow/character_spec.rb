@@ -69,6 +69,11 @@ describe Bnet::WOW::Character do
     describe "#feed", vcr: {cassette_name: 'WoW Alexeistukov Feed'} do
       it { expect(subject.feed).to_not be_empty }
     end
+
+    describe "#guild", vcr: {cassette_name: 'WoW Alexeistukov Guild'} do
+      it { binding.pry }
+      it { expect(subject.guild).to_not be_empty }
+    end
   end
 
 end

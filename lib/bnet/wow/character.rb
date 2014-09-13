@@ -81,6 +81,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     client.scoped('feed', realm: realm, name: name)
   end
 
+  def guild
+    client = Bnet::WOW.new(region: region)
+    client.scoped('guild', realm: realm, name: name)
+  end
+
   private
 
   def self.params_mapping
