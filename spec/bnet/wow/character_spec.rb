@@ -116,6 +116,15 @@ describe Bnet::WOW::Character do
         let(:scope) {'mounts'}
       end
     end
+
+    describe "#pets", vcr: {cassette_name: 'WoW Alexeistukov Pets'} do
+      it { expect(subject.pets).to_not be_empty }
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'pets'}
+      end
+    end
+
+
   end
 
 end

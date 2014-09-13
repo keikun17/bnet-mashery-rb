@@ -114,6 +114,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     @mounts = client.scoped('mounts', realm: realm, name: name)
   end
 
+  def pets
+    return @pets if @pets
+    client = Bnet::WOW.new(region: region)
+    @pets = client.scoped('pets', realm: realm, name: name)
+  end
   private
 
   def self.params_mapping
