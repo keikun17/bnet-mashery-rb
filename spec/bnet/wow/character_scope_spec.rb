@@ -72,7 +72,6 @@ describe Bnet::WOW::Character do
     end
 
     describe "#pet_slots", vcr: {cassette_name: 'WoW Alexeistukov Pet Slots'} do
-      it []
       it { expect(subject.pet_slots).to_not be_empty }
       it_behaves_like 'memoized WoW character scope' do
         let(:scope) {'pet_slots'}
