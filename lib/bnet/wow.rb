@@ -26,7 +26,7 @@ module Bnet
         raw_response = {}
       end
 
-      return raw_response
+      return raw_response[scope]
     end
 
   end
