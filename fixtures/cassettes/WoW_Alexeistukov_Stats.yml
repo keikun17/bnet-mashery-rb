@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=stats&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 14:48:59 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1b-42.mashery.com
+      Content-Length:
+      - '689'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","stats":{"health":149803,"powerType":"mana","power":20000,"str":3260,"agi":344,"sta":7627,"int":109,"spr":112,"attackPower":6755,"rangedAttackPower":0,"pvpResilienceBonus":0.0,"mastery":20.488842,"masteryRating":2239,"crit":6.177863,"critRating":205,"hitPercent":0.0,"hitRating":0,"haste":1.397812,"hasteRating":179,"hasteRatingPercent":1.397813,"expertiseRating":322,"spellPower":99,"spellPen":0,"spellCrit":4.651437,"spellCritRating":205,"spellHitPercent":3.143127,"spellHitRating":0,"mana5":526.0,"mana5Combat":400.0,"spellHaste":1.397812,"spellHasteRating":179,"spellHasteRatingPercent":1.397813,"armor":35923,"dodge":10.165505,"dodgeRating":1306,"parry":21.989586,"parryRating":1293,"block":33.045708,"blockRating":0,"pvpResilience":40.0,"pvpResilienceRating":0,"mainHandDmgMin":3153.0,"mainHandDmgMax":4783.0,"mainHandSpeed":2.564,"mainHandDps":1547.6777,"mainHandExpertise":3.143127,"offHandDmgMin":0.0,"offHandDmgMax":0.0,"offHandSpeed":1.972,"offHandDps":0.0,"offHandExpertise":3.143127,"rangedDmgMin":-1.0,"rangedDmgMax":-1.0,"rangedSpeed":-1.0,"rangedDps":-1.0,"rangedExpertise":3.143127,"rangedCrit":6.177863,"rangedCritRating":205,"rangedHitPercent":0.0,"rangedHitRating":0,"rangedHaste":1.397812,"rangedHasteRating":179,"rangedHasteRatingPercent":1.397813,"pvpPower":0.0,"pvpPowerRating":0,"pvpPowerDamage":0.0,"pvpPowerHealing":0.0},"totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 14:48:59 GMT
+recorded_with: VCR 2.9.2

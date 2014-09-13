@@ -143,6 +143,24 @@ class Bnet::WOW::Character < Bnet::BnetResource
     client = Bnet::WOW.new(region: region)
     @reputation = client.scoped('reputation', realm: realm, name: name)
   end
+
+  def stats
+    return @stats if @stats
+    client = Bnet::WOW.new(region: region)
+    @stats = client.scoped('stats', realm: realm, name: name)
+  end
+
+
+
+
+
+
+
+
+
+
+
+
   private
 
   def self.params_mapping
