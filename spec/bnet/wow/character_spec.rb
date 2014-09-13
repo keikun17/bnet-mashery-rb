@@ -108,15 +108,14 @@ describe Bnet::WOW::Character do
       it_behaves_like 'memoized WoW character scope' do
         let(:scope) {'items'}
       end
-      it "is memoized" do
-        client = instance_double('Bnet::WOW')
-        expect(Bnet::WOW).to receive(:new).and_return(client).at_most(:once)
-        expect(client).to receive(:scoped).at_most(:once).and_return([1,2,3])
-        subject.items
-        subject.items
-      end
     end
 
+    describe "#mounts", vcr: {cassette_name: 'WoW Alexeistukov Mounts'} do
+      it { expect(subject.mounts).to_not be_empty }
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'mounts'}
+      end
+    end
   end
 
 end
