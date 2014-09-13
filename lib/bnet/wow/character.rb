@@ -2,13 +2,7 @@ class Bnet::WOW::Character < Bnet::BnetResource
 
   attr_accessor :name, :realm, :battlegroup, :class, :race, :gender, :level,
     :achievement_points, :total_honorable_kills, :calc_class, :region,
-    :raw_attributes,
-
-    #associations
-    :items
-
-
-
+    :raw_attributes
 
   # Query Battlenet API for the character profile
   #
