@@ -86,6 +86,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     client.scoped('guild', realm: realm, name: name)
   end
 
+  def hunter_pets
+    client = Bnet::WOW.new(region: region)
+    client.scoped('hunterPets', realm: realm, name: name)
+  end
+
   private
 
   def self.params_mapping

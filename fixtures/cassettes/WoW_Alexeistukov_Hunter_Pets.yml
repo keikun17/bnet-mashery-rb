@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=hunterPets&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 10:50:36 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1b-45.mashery.com
+      Content-Length:
+      - '209'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 10:50:38 GMT
+recorded_with: VCR 2.9.2
