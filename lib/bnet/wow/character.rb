@@ -73,13 +73,15 @@ class Bnet::WOW::Character < Bnet::BnetResource
   end
 
   def achievements
+    return @achievements if @achievements
     client = Bnet::WOW.new(region: region)
-    client.scoped('achievements', realm: realm, name: name)
+    @achievements = client.scoped('achievements', realm: realm, name: name)
   end
 
   def appearance
+    return @appearance if @appearance
     client = Bnet::WOW.new(region: region)
-    client.scoped('appearance', realm: realm, name: name)
+    @appearance = client.scoped('appearance', realm: realm, name: name)
   end
 
   def feed

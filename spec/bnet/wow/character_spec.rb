@@ -70,12 +70,16 @@ describe Bnet::WOW::Character do
 
     describe "#achievements", vcr: {cassette_name: 'WoW Alexeistukov achievements'} do
       it { expect(subject.achievements).to_not be_empty }
-      it "is memoized"
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'achievements'}
+      end
     end
 
     describe "#appearance", vcr: {cassette_name: 'WoW Alexeistukov Appearance'} do
       it { expect(subject.appearance).to_not be_empty }
-      it "is memoized"
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'appearance'}
+      end
     end
 
     describe "#feed", vcr: {cassette_name: 'WoW Alexeistukov Feed'} do
