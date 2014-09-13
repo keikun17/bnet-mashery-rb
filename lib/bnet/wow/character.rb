@@ -131,6 +131,13 @@ class Bnet::WOW::Character < Bnet::BnetResource
     client = Bnet::WOW.new(region: region)
     @pvp = client.scoped('pvp', realm: realm, name: name)
   end
+
+  def quests
+    return @quests if @quests
+    client = Bnet::WOW.new(region: region)
+    @quests = client.scoped('quests', realm: realm, name: name)
+  end
+
   private
 
   def self.params_mapping

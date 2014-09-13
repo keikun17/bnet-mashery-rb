@@ -92,5 +92,12 @@ describe Bnet::WOW::Character do
       end
     end
 
+    describe "#quests", vcr: {cassette_name: 'wow alexeistukov Quests'} do
+      it { expect(subject.quests).to_not be_empty }
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'quests'}
+      end
+    end
+
   end
 end
