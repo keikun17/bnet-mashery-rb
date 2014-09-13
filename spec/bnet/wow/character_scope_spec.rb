@@ -85,5 +85,13 @@ describe Bnet::WOW::Character do
         let(:scope) {'progression'}
       end
     end
+
+    describe "#pvp", vcr: {cassette_name: 'WoW Alexeistukov PVP'} do
+      it { expect(subject.pvp).to_not be_empty }
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'pvp'}
+      end
+    end
+
   end
 end

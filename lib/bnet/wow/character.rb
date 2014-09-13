@@ -126,6 +126,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     @progression = client.scoped('progression', realm: realm, name: name)
   end
 
+  def pvp
+    return @pvp if @pvp
+    client = Bnet::WOW.new(region: region)
+    @pvp = client.scoped('pvp', realm: realm, name: name)
+  end
   private
 
   def self.params_mapping
