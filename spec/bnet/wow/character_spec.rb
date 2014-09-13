@@ -1,5 +1,15 @@
 require 'spec_helper'
 
+shared_examples_for "memoized WoW character scope" do
+  it 'memoizes character scope calls' do
+    client = instance_double('Bnet::WOW')
+    expect(Bnet::WOW).to receive(:new).and_return(client).exactly(:once)
+    expect(client).to receive(:scoped).exactly(:once).and_return([1,2,3])
+    subject.send(scope)
+    subject.send(scope)
+  end
+end
+
 describe Bnet::WOW::Character do
 
   describe ".from_api" do
@@ -75,16 +85,23 @@ describe Bnet::WOW::Character do
 
     describe "#guild", vcr: {cassette_name: 'WoW Alexeistukov Guild'} do
       it { expect(subject.guild).to_not be_empty }
-      it "is memoized"
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'guild'}
+      end
     end
 
     describe "#hunter_pets", vcr: {cassette_name: 'WoW Alexeistukov Hunter Pets'} do
       it { expect(subject.hunter_pets).to be_nil }
-      it "is memoized"
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'hunter_pets'}
+      end
     end
 
     describe "#items", vcr: {cassette_name: 'WoW Alexeistukov Items'} do
       it { expect(subject.items).to_not be_empty }
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'items'}
+      end
       it "is memoized" do
         client = instance_double('Bnet::WOW')
         expect(Bnet::WOW).to receive(:new).and_return(client).at_most(:once)

@@ -88,13 +88,15 @@ class Bnet::WOW::Character < Bnet::BnetResource
   end
 
   def guild
+    return @guild if @guild
     client = Bnet::WOW.new(region: region)
-    client.scoped('guild', realm: realm, name: name)
+    @guild = client.scoped('guild', realm: realm, name: name)
   end
 
   def hunter_pets
+    return @hunter_pets if @hunter_pets
     client = Bnet::WOW.new(region: region)
-    client.scoped('hunterPets', realm: realm, name: name)
+    @hunter_pets = client.scoped('hunterPets', realm: realm, name: name)
   end
 
   def items
