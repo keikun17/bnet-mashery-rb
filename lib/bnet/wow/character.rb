@@ -156,15 +156,11 @@ class Bnet::WOW::Character < Bnet::BnetResource
     @talents = client.scoped('talents', realm: realm, name: name)
   end
 
-
-
-
-
-
-
-
-
-
+  def audit
+    return @audit if @audit
+    client = Bnet::WOW.new(region: region)
+    @audit = client.scoped('audit', realm: realm, name: name)
+  end
 
   private
 

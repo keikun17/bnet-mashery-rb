@@ -112,5 +112,12 @@ describe Bnet::WOW::Character do
         let(:scope) {'talents'}
       end
     end
+
+    describe "#audit", vcr: {cassette_name: 'WoW Alexeistukov Audit'} do
+      it { expect(subject.audit).to_not be_empty }
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'audit'}
+      end
+    end
   end
 end

@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=audit&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 14:55:56 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-50.mashery.com
+      Content-Length:
+      - '740'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","audit":{"numberOfIssues":2,"slots":{"7":1,"4":1,"15":1,"16":1,"14":1},"emptyGlyphSlots":0,"unspentTalentPoints":0,"noSpec":false,"unenchantedItems":{"7":1,"4":1,"15":1,"16":1,"14":1},"emptySockets":0,"itemsWithEmptySockets":{},"appropriateArmorType":4,"inappropriateArmorType":{},"lowLevelItems":{},"lowLevelThreshold":0,"missingExtraSockets":{},"missingBlacksmithSockets":{},"missingEnchanterEnchants":{},"missingEngineerEnchants":{},"missingScribeEnchants":{},"nMissingJewelcrafterGems":1,"recommendedJewelcrafterGem":{"id":52196,"description":"","name":"Chimera''s
+        Eye","icon":"item_cutmetagemb","stackable":20,"itemBind":0,"bonusStats":[],"itemSpells":[],"buyPrice":0,"itemClass":3,"itemSubClass":8,"containerSlots":0,"inventoryType":0,"equippable":false,"itemLevel":85,"maxCount":0,"maxDurability":0,"minFactionId":0,"minReputation":0,"quality":3,"sellPrice":5000,"requiredSkill":755,"requiredLevel":0,"requiredSkillRank":500,"itemSource":{"sourceId":16624,"sourceType":"VENDOR"},"baseArmor":0,"hasSockets":false,"isAuctionable":true,"armor":0,"displayInfoId":92161,"nameDescription":"","nameDescriptionColor":"000000","upgradable":false,"heroicTooltip":false},"missingLeatherworkerEnchants":{}},"totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 14:55:56 GMT
+recorded_with: VCR 2.9.2
