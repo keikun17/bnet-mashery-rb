@@ -83,8 +83,9 @@ class Bnet::WOW::Character < Bnet::BnetResource
   end
 
   def feed
+    return @feed if @feed
     client = Bnet::WOW.new(region: region)
-    client.scoped('feed', realm: realm, name: name)
+    @feed = client.scoped('feed', realm: realm, name: name)
   end
 
   def guild

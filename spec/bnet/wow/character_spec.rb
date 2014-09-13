@@ -80,7 +80,9 @@ describe Bnet::WOW::Character do
 
     describe "#feed", vcr: {cassette_name: 'WoW Alexeistukov Feed'} do
       it { expect(subject.feed).to_not be_empty }
-      it "is memoized"
+      it_behaves_like 'memoized WoW character scope' do
+        let(:scope) {'feed'}
+      end
     end
 
     describe "#guild", vcr: {cassette_name: 'WoW Alexeistukov Guild'} do
