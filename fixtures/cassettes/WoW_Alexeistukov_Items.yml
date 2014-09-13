@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.api.battle.net/wow/character/Dragonmaw/Alexeistukov?apikey=api_key_from_secrets_rb&fields=items&locale=en_US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 13 Sep 2014 11:20:21 GMT
+      Last-Modified:
+      - Mon, 06 Jan 2014 22:41:29 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-50.mashery.com
+      Content-Length:
+      - '1503'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"lastModified":1389048089000,"name":"Alexeistukov","realm":"Dragonmaw","battlegroup":"Reckoning","class":2,"race":10,"gender":0,"level":85,"achievementPoints":1980,"thumbnail":"dragonmaw/68/70154564-avatar.jpg","calcClass":"b","items":{"averageItemLevel":361,"averageItemLevelEquipped":361,"head":{"id":90294,"name":"Peacebreaker''s
+        Heavy Helm","icon":"inv_helmet_130","quality":2,"itemLevel":372,"tooltipParams":{},"stats":[{"stat":49,"amount":286},{"stat":4,"amount":385},{"stat":13,"amount":207},{"stat":7,"amount":578}],"armor":2891},"neck":{"id":57932,"name":"The
+        Lustrous Eye","icon":"inv_misc_necklacea10","quality":3,"itemLevel":346,"tooltipParams":{},"stats":[{"stat":49,"amount":112},{"stat":4,"amount":168},{"stat":13,"amount":112},{"stat":7,"amount":252}],"armor":0},"shoulder":{"id":69573,"name":"Pauldrons
+        of Sacrifice","icon":"inv_shoulder_84","quality":4,"itemLevel":353,"tooltipParams":{"gem0":52215,"enchant":4198},"stats":[{"stat":49,"amount":136},{"stat":4,"amount":219},{"stat":14,"amount":162},{"stat":7,"amount":360}],"armor":2525},"back":{"id":71270,"name":"Mantle
+        of Patience","icon":"inv_cape_firelands_fireset_d_01","quality":4,"itemLevel":365,"tooltipParams":{},"stats":[{"stat":49,"amount":134},{"stat":4,"amount":201},{"stat":13,"amount":134},{"stat":7,"amount":301}],"armor":647},"chest":{"id":90303,"name":"Heavy
+        Chestpiece of Eminent Domain","icon":"inv_chest_plate_24","quality":2,"itemLevel":372,"tooltipParams":{},"stats":[{"stat":49,"amount":201},{"stat":4,"amount":385},{"stat":14,"amount":290},{"stat":7,"amount":578}],"armor":3559},"shirt":{"id":4336,"name":"Black
+        Swashbuckler''s Shirt","icon":"inv_shirt_black_01","quality":1,"itemLevel":1,"tooltipParams":{},"stats":[],"armor":0},"tabard":{"id":45582,"name":"Darkspear
+        Tabard","icon":"inv_misc_tournaments_tabard_troll","quality":1,"itemLevel":1,"tooltipParams":{},"stats":[],"armor":0},"wrist":{"id":62449,"name":"Sandguard
+        Bracers","icon":"inv_bracer_plate_raidwarrior_i_01","quality":4,"itemLevel":359,"tooltipParams":{"enchant":4086},"stats":[{"stat":4,"amount":136},{"stat":13,"amount":190},{"stat":7,"amount":286},{"stat":37,"amount":111}],"armor":1499},"hands":{"id":58105,"name":"Numbing
+        Handguards","icon":"inv_gauntlets_plate_dungeonplate_c_04","quality":3,"itemLevel":346,"tooltipParams":{"gem0":52242,"enchant":4082},"stats":[{"stat":49,"amount":140},{"stat":4,"amount":215},{"stat":13,"amount":130},{"stat":7,"amount":337}],"armor":2061},"waist":{"id":62384,"name":"Belt
+        of the Ferocious Wolf","icon":"inv_belt_plate_raiddeathknight_i_01","quality":4,"itemLevel":359,"tooltipParams":{"gem0":52242,"gem1":52219,"extraSocket":true,"reforge":142},"stats":[{"stat":49,"amount":169},{"stat":32,"amount":90,"reforgedAmount":-59},{"stat":4,"amount":233},{"stat":7,"amount":380},{"stat":13,"amount":59,"reforged":true}],"armor":1927},"legs":{"id":60357,"name":"Reinforced
+        Sapphirium Legguards","icon":"inv_pants_plate_raidpaladin_i_01","quality":4,"itemLevel":359,"tooltipParams":{"gem0":52259,"gem1":52233,"enchant":4127,"set":[60357]},"stats":[{"stat":4,"amount":301},{"stat":13,"amount":188},{"stat":14,"amount":228},{"stat":7,"amount":512}],"armor":2998},"feet":{"id":90321,"name":"Landfall
+        Plate Boots","icon":"inv_boots_plate_09","quality":2,"itemLevel":372,"tooltipParams":{},"stats":[{"stat":49,"amount":172},{"stat":4,"amount":286},{"stat":14,"amount":202},{"stat":7,"amount":429}],"armor":2447},"finger1":{"id":62362,"name":"Signet
+        of the Elder Council","icon":"inv_misc_diamondring2","quality":4,"itemLevel":359,"tooltipParams":{"reforge":153},"stats":[{"stat":49,"amount":127},{"stat":3,"amount":190},{"stat":36,"amount":77,"reforgedAmount":-50},{"stat":7,"amount":286},{"stat":37,"amount":50,"reforged":true}],"armor":0},"finger2":{"id":69553,"name":"Talonguard
+        Band","icon":"inv_jewelry_ring_14","quality":4,"itemLevel":353,"tooltipParams":{},"stats":[{"stat":4,"amount":180},{"stat":14,"amount":125},{"stat":7,"amount":270},{"stat":37,"amount":111}],"armor":0},"trinket1":{"id":62463,"name":"Unsolvable
+        Riddle","icon":"inv_misc_stonetablet_11","quality":4,"itemLevel":359,"tooltipParams":{},"stats":[{"stat":49,"amount":321}],"armor":0},"trinket2":{"id":62464,"name":"Impatience
+        of Youth","icon":"inv_misc_idol_05","quality":4,"itemLevel":359,"tooltipParams":{},"stats":[{"stat":49,"amount":321}],"armor":0},"mainHand":{"id":90329,"name":"Garrosh''s
+        Vanguard Battleaxe","icon":"inv_axe_104","quality":2,"itemLevel":372,"tooltipParams":{},"stats":[{"stat":32,"amount":115},{"stat":4,"amount":165},{"stat":36,"amount":102},{"stat":7,"amount":248}],"armor":0,"weaponInfo":{"damage":{"min":1899,"max":3529,"exactMin":1899.4908,"exactMax":3528.0},"weaponSpeed":2.6,"dps":1043.7483}},"offHand":{"id":90337,"name":"Marine''s
+        Boarding Plank","icon":"inv_shield_71","quality":2,"itemLevel":372,"tooltipParams":{},"stats":[{"stat":4,"amount":215},{"stat":13,"amount":161},{"stat":14,"amount":112},{"stat":7,"amount":322}],"armor":12103}},"totalHonorableKills":563}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 11:20:23 GMT
+recorded_with: VCR 2.9.2
