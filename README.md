@@ -130,7 +130,7 @@ This is a work in progress: [TODO-LIST](https://github.com/keikun17/bnet-mashery
     #
     # ... And responds to the following methods to return their corresponding scope in Hash form
     #
-    #   :achievements, :appearance, :feed, :guild, :hunter_pets, :items, :mounts, :petslots,
+    #   :achievements, :appearance, :feed, :guild, :hunter_pets, :items, :mounts, :pet_slots,
     #   :progression, :pvp, :quests, :reputation, :stats, :talents, :titles, :audit
     #
     # Example : IF a character named 'AlexeiStukov' is on 'DragonMaw' 'US' server
