@@ -60,23 +60,40 @@ describe Bnet::WOW::Character do
 
     describe "#achievements", vcr: {cassette_name: 'WoW Alexeistukov achievements'} do
       it { expect(subject.achievements).to_not be_empty }
+      it "is memoized"
     end
 
     describe "#appearance", vcr: {cassette_name: 'WoW Alexeistukov Appearance'} do
       it { expect(subject.appearance).to_not be_empty }
+      it "is memoized"
     end
 
     describe "#feed", vcr: {cassette_name: 'WoW Alexeistukov Feed'} do
       it { expect(subject.feed).to_not be_empty }
+      it "is memoized"
     end
 
     describe "#guild", vcr: {cassette_name: 'WoW Alexeistukov Guild'} do
       it { expect(subject.guild).to_not be_empty }
+      it "is memoized"
     end
 
     describe "#hunter_pets", vcr: {cassette_name: 'WoW Alexeistukov Hunter Pets'} do
       it { expect(subject.hunter_pets).to be_nil }
+      it "is memoized"
     end
+
+    describe "#items", vcr: {cassette_name: 'WoW Alexeistukov Items'} do
+      it { expect(subject.items).to_not be_empty }
+      it "is memoized" do
+        client = instance_double('Bnet::WOW')
+        expect(Bnet::WOW).to receive(:new).and_return(client).at_most(:once)
+        expect(client).to receive(:scoped).at_most(:once).and_return([1,2,3])
+        subject.items
+        subject.items
+      end
+    end
+
   end
 
 end

@@ -1,8 +1,14 @@
 class Bnet::WOW::Character < Bnet::BnetResource
 
   attr_accessor :name, :realm, :battlegroup, :class, :race, :gender, :level,
-    :achievement_points, :total_honorable_kills, :calc_class, :region, 
-    :raw_attributes
+    :achievement_points, :total_honorable_kills, :calc_class, :region,
+    :raw_attributes,
+
+    #associations
+    :items
+
+
+
 
   # Query Battlenet API for the character profile
   #
@@ -89,6 +95,12 @@ class Bnet::WOW::Character < Bnet::BnetResource
   def hunter_pets
     client = Bnet::WOW.new(region: region)
     client.scoped('hunterPets', realm: realm, name: name)
+  end
+
+  def items
+    return @items if @items
+    client = Bnet::WOW.new(region: region)
+    @items = client.scoped('items', realm: realm, name: name)
   end
 
   private
