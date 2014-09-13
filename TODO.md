@@ -35,23 +35,24 @@
 
 ### WOW
 
-- [x] Bnet::WOW::Profile                          [x] doc
-    - [ ] Achievements (as `Achievement`)         [ ] doc
-    - [ ] Appearance                              [ ] doc
-    - [ ] Feed                                    [ ] doc
-    - [ ] Guild                                   [ ] doc
-    - [ ] HunterPets                              [ ] doc
-    - [ ] Items (as `Item`)                       [ ] doc
-    - [ ] Mounts                                  [ ] doc
-    - [ ] PetSlots                                [ ] doc
-    - [ ] Progression                             [ ] doc
-    - [ ] PVP                                     [ ] doc
-    - [ ] Quests (as `Quest`)                     [ ] doc
-    - [ ] Reputation                              [ ] doc
-    - [ ] Stats                                   [ ] doc
-    - [ ] Talents (as `Talent`)                   [ ] doc
-    - [ ] Titles                                  [ ] doc
-    - [ ] Audit                                   [ ] doc
+- [x] Bnet::WOW::Character                        [x] doc
+  - Scopes
+    - [x] Achievements
+    - [ ] Appearance
+    - [ ] Feed
+    - [ ] Guild
+    - [ ] HunterPets
+    - [ ] Items
+    - [ ] Mounts
+    - [ ] PetSlots
+    - [ ] Progression
+    - [ ] PVP
+    - [ ] Quests
+    - [ ] Reputation
+    - [ ] Stats
+    - [ ] Talents
+    - [ ] Titles
+    - [ ] Audit
 
 - [ ] Bnet::WOW::Item (as `Item`)                 [ ] doc
     - [ ] Set                                     [ ] doc
