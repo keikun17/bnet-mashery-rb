@@ -108,7 +108,7 @@ This is a work in progress: [TODO-LIST](https://github.com/keikun17/bnet-mashery
     # Example: If US account 'Playerone#1309' the profile can be accessible via
     # web from 'http://us.battle.net/sc2/en/profile/2143215/1/PlayerOne/'
 
-    Bnet::Starcraft2::profile.find(region: 'us', profile_id: 2143215, name: 'PlayerOne')
+    Bnet::Starcraft2::Profile.find(region: 'us', profile_id: 2143215, name: 'PlayerOne')
 
 ## World of Warcraft
 
