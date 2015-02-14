@@ -81,7 +81,7 @@ describe Bnet::Diablo3::Hero do
 
       it "assigns stats" do
         expect(subject).to have_attributes({
-          life:                 266712,
+          life:                 333305,
           damage:               412878.0,
           attack_speed:         1.284000051021576,
           armor:                5327,
@@ -105,9 +105,9 @@ describe Bnet::Diablo3::Hero do
           thorns:               0.0,
           life_steal:           0.0,
           life_per_kill:        6701.0,
-          gold_find:            2.03,
+          gold_find:            2.0300000000000002,
           magic_find:           0.0,
-          life_on_Hit:          6542.0,
+          life_on_Hit:          7886.0,
           primary_resource:     133,
           secondary_resource:   0
         })
